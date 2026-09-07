@@ -10,5 +10,20 @@
   },
   "models/index.qmd": {
     "index.html": "9abc29d9"
+  },
+  "models/PureExch/index.qmd": {
+    "index.html": "556838b8"
+  },
+  "models/PureExch/model1.qmd": {
+    "model1.html": "8b93c47b"
+  },
+  "models/PureExch/model2.qmd": {
+    "model2.html": "389b2cc6"
+  },
+  "models/Prod/model2.qmd": {
+    "model2.html": "1a8211ec"
+  },
+  "models/Prod/model1.qmd": {
+    "model1.html": "430d430b"
   }
 }

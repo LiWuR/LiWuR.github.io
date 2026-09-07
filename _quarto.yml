@@ -7,35 +7,31 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
-      - text: Book
-        href: https://liwur.github.io/GEMBook/
       - href: models/index.qmd
         text: Models        
       - href: discussion.qmd
         text: Discussion
 
-sidebar:
+  sidebar:
     - title: "Models"
       style: "docked"
       search: true
-      collapse-level: 2
+      collapse-level: 1
       contents:
-        #- models/index.qmd
+        - models/index.qmd
 
-        - section: "Static Pure Exchange General Equilibrium"
+        - section: "Static Pure Exchange Equilibrium Models"
           contents:
             # - models/PureExch/index.qmd
-            # - models/PureExch/model1.qmd
-            # - models/PureExch/model2.qmd
+             - models/PureExch/model1.qmd
+             - models/PureExch/model2.qmd
 
-        - section: "Static Production General Equilibrium Models"
+        - section: "Static Production Equilibrium Models"
           contents:
-            # - models/Prod/model1.qmd
-            # - models/Prod/model2.qmd
+             - models/Prod/model1.qmd
+             - models/Prod/model2.qmd
 
-        - section: "Intertemporal General Equilibrium Models"
+        - section: "Intertemporal Equilibrium Models"
           contents:
             # - models/Intertemporal/model1.qmd
             # - models/Intertemporal/model2.qmd

@@ -1,7 +1,21 @@
 ---
-title: "LiWuR.github.io"
+title: "LI Wu"
 ---
+
+Email: [liwu@staff.shu.edu.cn](mailto:liwu@staff.shu.edu.cn)
+
+
+I am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages `GE` and `CGE` and the Julia package `GeneralEquilibriumModeling.jl`.
 
 ## Books
 
 - [GeneralEquilibriumModeling.jl and Structural Equilibrium Models](https://liwur.github.io/GEMBook/)
+- [LI Wu (2019) *General Equilibrium and Structural Dynamics: Perspectives of New Structural Economics*. Beijing: Economic Science Press. (In Chinese)](https://baike.baidu.com/item/%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8A%A8%E6%80%81%E7%A0%94%E7%A9%B6/59812598)
+
+## Tools
+
+- [GeneralEquilibriumModeling.jl](https://github.com/LiWuR/GeneralEquilibriumModeling.jl)
+- [GE Package for R](https://cran.r-project.org/web/packages/GE/)
+
+## Related Website
+- [Institute of New Structural Economics, Peking University](https://www.nse.pku.edu.cn/)

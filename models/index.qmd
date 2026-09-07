@@ -1,7 +1,10 @@
 ---
-title: "Introduction to Structural Equilibrium Models"
+title: "Introduction"
 ---
 
-## Structural Equilibrium Models
+The book [*GeneralEquilibriumModeling.jl and Structural Equilibrium Models*](https://liwur.github.io/GEMBook/) presents a collection of basic applied general equilibrium models together with numerical solution programs based on `GeneralEquilibriumModeling.jl`.
 
+This collection presents further applied economic models. Most of them are formulated mathematically as structural equilibrium models and solved numerically using the Julia package `GeneralEquilibriumModeling.jl` and the R package `GE`.
+
+## Introduction to Structural Equilibrium Models
 - [The von Neumann Equilibrium Model and Structural Equilibrium Models](https://liwur.github.io/GEMBook/Ch1SEM.html)
