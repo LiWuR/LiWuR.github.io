@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -66,6 +85,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5XKP5QW2FE"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -154,8 +182,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../models/PureExch/model2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Model 2</span></a>
+  <a href="../../models/PureExch/MonopolisticSupply.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monopolistic Supply</span></a>
   </div>
 </li>
       </ul>
@@ -218,10 +246,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Forthcoming.</p>
+<ol type="1">
+<li><span class="citation" data-cites="diamond1965">Diamond (<a href="#ref-diamond1965" role="doc-biblioref">1965</a>)</span></li>
+</ol>
+<p><span class="citation" data-cites="diamond1965">Diamond (<a href="#ref-diamond1965" role="doc-biblioref">1965, p. 1130</a>)</span></p>
+<ol start="2" type="1">
+<li><p><span class="citation" data-cites="diamond1965">(<a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965</a>)</span></p></li>
+<li><p>See <span class="citation" data-cites="diamond1965">(<a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965</a>)</span></p></li>
+</ol>
+<p><span class="citation" data-cites="diamond1965">(see <a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965</a>)</span></p>
+<p><span class="citation" data-cites="diamond1965">(see also <a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965</a>)</span></p>
+<p><span class="citation" data-cites="diamond1965">(<a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965, p. 1130</a>)</span></p>
+<p><span class="citation" data-cites="diamond1965">(<a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965, pp. 1128–1132</a>)</span></p>
+<p>Several studies have examined this issue <span class="citation" data-cites="diamond1965 liwu2019e">(<a href="#ref-diamond1965" role="doc-biblioref">Diamond, 1965</a>; <a href="#ref-liwu2019e" role="doc-biblioref">Li, 2019</a>)</span>.</p>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-diamond1965" class="csl-entry" role="listitem">
+Diamond, P. (1965) <span>“National debt in a neoclassical growth model,”</span> <em>American Economic Review</em>, 55(5), pp. 1126–1150.
+</div>
+<div id="ref-liwu2019e" class="csl-entry" role="listitem">
+Li, W. (2019) <em>General equilibrium and structural dynamics: Perspectives of new structural economics</em>. Beijing: Economic Science Press.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -314,7 +363,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/LiWuR\.github\.io\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

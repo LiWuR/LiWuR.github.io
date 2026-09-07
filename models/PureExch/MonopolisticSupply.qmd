@@ -1,0 +1,222 @@
+---
+title: "Monopolistic Supply"
+format: html
+---
+## The Model
+Assume the following [see @liwu2019e, p. 146]:
+
+1. The economy contains two commodities and two consumers. Commodity 2 is the numeraire commodity, so the price vector is
+
+   $$
+   \mathbf p=(p_1,1)^\top
+   $$
+
+2. Consumer 1 is endowed with $s_1>0$ units of commodity 1, while consumer 2 is endowed with $s_2>0$ units of commodity 2. The supply matrix is
+
+   $$
+   \mathbf S=
+   \begin{bmatrix}
+   s_1&0\\
+   0&s_2
+   \end{bmatrix}
+   $$
+
+3. The two consumers have the same CES utility function
+
+   $$
+   u(x_1,x_2)
+   =
+   (x_1^{-1}+x_2^{-1})^{-1}
+   $$
+
+4. In the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose the quantity of commodity 1 supplied to the market, whereas consumer 2 continues to supply its full endowment.
+
+For the above utility function, the demand matrix can be written as
+
+$$
+\mathbf D(\mathbf p,\mathbf u)
+=
+\begin{bmatrix}
+u_1\left(1+\frac{1}{\sqrt{p_1}}\right)
+&
+u_2\left(1+\frac{1}{\sqrt{p_1}}\right)
+\\
+u_1(1+\sqrt{p_1})
+&
+u_2(1+\sqrt{p_1})
+\end{bmatrix}
+$$
+
+## Analytical Solution
+
+Under full endowment supply, solving the equality-form wide-sense structural equilibrium model gives
+
+$$
+\mathbf p^*
+=
+\left(
+\left(\frac{s_2}{s_1}\right)^2,
+1
+\right)^\top
+$$
+
+and
+
+$$
+u_1^*
+=
+\frac{s_1s_2^2}{(s_1+s_2)^2},
+\qquad
+u_2^*
+=
+\frac{s_2s_1^2}{(s_1+s_2)^2}
+$$
+
+For fixed $s_2$, consumer 1's equilibrium utility satisfies
+
+$$
+\frac{d u_1^*}{d s_1}
+=
+\frac{s_2^2(s_2-s_1)}{(s_1+s_2)^3}
+$$
+
+Hence $u_1^*$ increases with $s_1$ when $s_1<s_2$, decreases with $s_1$ when $s_1>s_2$, and reaches its maximum at $s_1=s_2$.
+
+Suppose now that consumer 1 can choose its actual supply $q$, where
+
+$$
+0<q\leq s_1
+$$
+
+For any given $q$, the resulting competitive equilibrium is obtained by replacing $s_1$ with $q$. Thus,
+
+$$
+p_1(q)
+=
+\left(\frac{s_2}{q}\right)^2
+$$
+
+and consumer 1's equilibrium utility is
+
+$$
+u_1(q)
+=
+\frac{q s_2^2}{(q+s_2)^2}
+$$
+
+The monopoly supply problem is therefore
+
+$$
+\max_{0<q\leq s_1}u_1(q)
+$$
+
+Since
+
+$$
+\frac{d u_1}{dq}
+=
+\frac{s_2^2(s_2-q)}{(q+s_2)^3}
+$$
+
+the optimal supply is
+
+$$
+q^*
+=
+\min\{s_1,s_2\}
+$$
+
+In particular, if $s_1>s_2$,
+
+$$
+q^*=s_2<s_1
+$$
+
+so consumer 1 increases its equilibrium utility by withholding part of its endowment from the market.
+
+For example, let
+
+$$
+s_1=200,
+\qquad
+s_2=100
+$$
+
+Under full supply, the competitive equilibrium is
+
+$$
+\mathbf p^*=(0.25,1)^\top
+$$
+
+with
+
+$$
+u_1^*=22.2222,
+\qquad
+u_2^*=44.4444
+$$
+
+The monopoly solution is
+
+$$
+q^*=100
+$$
+
+which gives
+
+$$
+\mathbf p^*=(1,1)^\top
+$$
+
+and
+
+$$
+u_1^*=u_2^*=25
+$$
+
+Consumer 1 therefore raises its equilibrium utility from approximately $22.2222$ to $25$ by reducing its supply from $200$ to $100$.
+
+## Numerical Solution
+
+The numerical solution treats the monopoly problem as a hierarchical equilibrium problem. For each candidate supply $q$, the inner problem constructs the corresponding pure-exchange economy and solves its competitive equilibrium with GEMB. The resulting equilibrium utility of consumer 1 is then returned to the outer optimization problem. The numerical procedure can be summarized as
+
+$$
+q
+\longrightarrow
+\text{competitive equilibrium}
+\longrightarrow
+\mathbf p^*(q),\mathbf u^*(q)
+\longrightarrow
+u_1^*(q)
+\longrightarrow
+\max_q u_1^*(q)
+$$
+
+With $s_1=200$ and $s_2=100$, the numerical solution gives
+
+$$
+q^*\approx100,
+\qquad
+\mathbf p^*\approx(1,1)^\top
+$$
+
+and
+
+$$
+u_1^*\approx25,
+\qquad
+u_2^*\approx25
+$$
+
+which agrees with the analytical solution.
+
+::: {#lst-gemb_pureExchange_monopoly_hierarchicalEquilibrium_nc2_na2}
+
+```{.julia include="../../code/gemb_pureExchange_monopoly_hierarchicalEquilibrium_nc2_na2_v1.jl"}
+```
+
+A $2\times2$ Pure-Exchange Monopoly Model with Hierarchical Equilibrium
+
+:::
+
+

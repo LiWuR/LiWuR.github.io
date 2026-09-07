@@ -92,7 +92,7 @@
     "href": "models/PureExch/model1.html",
     "title": "Model 1",
     "section": "",
-    "text": "Forthcoming.",
+    "text": "Forthcoming.\n\nDiamond (1965)\n\nDiamond (1965, p. 1130)\n\n(Diamond, 1965)\nSee (Diamond, 1965)\n\n(see Diamond, 1965)\n(see also Diamond, 1965)\n(Diamond, 1965, p. 1130)\n(Diamond, 1965, pp. 1128–1132)\nSeveral studies have examined this issue (Diamond, 1965; Li, 2019).\n\n\n\n\nReferences\n\nDiamond, P. (1965) “National debt in a neoclassical growth model,” American Economic Review, 55(5), pp. 1126–1150.\n\n\nLi, W. (2019) General equilibrium and structural dynamics: Perspectives of new structural economics. Beijing: Economic Science Press.",
     "crumbs": [
       "Models",
       "Static Pure Exchange Equilibrium Models",
@@ -109,6 +109,54 @@
       "Models",
       "Static Production Equilibrium Models",
       "Model 2"
+    ]
+  },
+  {
+    "objectID": "models/PureExch/MonopolisticSupply.html",
+    "href": "models/PureExch/MonopolisticSupply.html",
+    "title": "Monopolistic Supply",
+    "section": "",
+    "text": "Assume the following (see Li, 2019, p. 146):\n\nThe economy contains two commodities and two consumers. Commodity 2 is the numeraire commodity, so the price vector is\n\\[\n\\mathbf p=(p_1,1)^\\top\n\\]\nConsumer 1 is endowed with \\(s_1&gt;0\\) units of commodity 1, while consumer 2 is endowed with \\(s_2&gt;0\\) units of commodity 2. The supply matrix is\n\\[\n\\mathbf S=\n\\begin{bmatrix}\ns_1&0\\\\\n0&s_2\n\\end{bmatrix}\n\\]\nThe two consumers have the same CES utility function\n\\[\nu(x_1,x_2)\n=\n(x_1^{-1}+x_2^{-1})^{-1}\n\\]\nIn the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose the quantity of commodity 1 supplied to the market, whereas consumer 2 continues to supply its full endowment.\n\nFor the above utility function, the demand matrix can be written as\n\\[\n\\mathbf D(\\mathbf p,\\mathbf u)\n=\n\\begin{bmatrix}\nu_1\\left(1+\\frac{1}{\\sqrt{p_1}}\\right)\n&\nu_2\\left(1+\\frac{1}{\\sqrt{p_1}}\\right)\n\\\\\nu_1(1+\\sqrt{p_1})\n&\nu_2(1+\\sqrt{p_1})\n\\end{bmatrix}\n\\]",
+    "crumbs": [
+      "Models",
+      "Static Pure Exchange Equilibrium Models",
+      "Monopolistic Supply"
+    ]
+  },
+  {
+    "objectID": "models/PureExch/MonopolisticSupply.html#the-model",
+    "href": "models/PureExch/MonopolisticSupply.html#the-model",
+    "title": "Monopolistic Supply",
+    "section": "",
+    "text": "Assume the following (see Li, 2019, p. 146):\n\nThe economy contains two commodities and two consumers. Commodity 2 is the numeraire commodity, so the price vector is\n\\[\n\\mathbf p=(p_1,1)^\\top\n\\]\nConsumer 1 is endowed with \\(s_1&gt;0\\) units of commodity 1, while consumer 2 is endowed with \\(s_2&gt;0\\) units of commodity 2. The supply matrix is\n\\[\n\\mathbf S=\n\\begin{bmatrix}\ns_1&0\\\\\n0&s_2\n\\end{bmatrix}\n\\]\nThe two consumers have the same CES utility function\n\\[\nu(x_1,x_2)\n=\n(x_1^{-1}+x_2^{-1})^{-1}\n\\]\nIn the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose the quantity of commodity 1 supplied to the market, whereas consumer 2 continues to supply its full endowment.\n\nFor the above utility function, the demand matrix can be written as\n\\[\n\\mathbf D(\\mathbf p,\\mathbf u)\n=\n\\begin{bmatrix}\nu_1\\left(1+\\frac{1}{\\sqrt{p_1}}\\right)\n&\nu_2\\left(1+\\frac{1}{\\sqrt{p_1}}\\right)\n\\\\\nu_1(1+\\sqrt{p_1})\n&\nu_2(1+\\sqrt{p_1})\n\\end{bmatrix}\n\\]",
+    "crumbs": [
+      "Models",
+      "Static Pure Exchange Equilibrium Models",
+      "Monopolistic Supply"
+    ]
+  },
+  {
+    "objectID": "models/PureExch/MonopolisticSupply.html#analytical-solution",
+    "href": "models/PureExch/MonopolisticSupply.html#analytical-solution",
+    "title": "Monopolistic Supply",
+    "section": "Analytical Solution",
+    "text": "Analytical Solution\nUnder full endowment supply, solving the equality-form wide-sense structural equilibrium model gives\n\\[\n\\mathbf p^*\n=\n\\left(\n\\left(\\frac{s_2}{s_1}\\right)^2,\n1\n\\right)^\\top\n\\]\nand\n\\[\nu_1^*\n=\n\\frac{s_1s_2^2}{(s_1+s_2)^2},\n\\qquad\nu_2^*\n=\n\\frac{s_2s_1^2}{(s_1+s_2)^2}\n\\]\nFor fixed \\(s_2\\), consumer 1’s equilibrium utility satisfies\n\\[\n\\frac{d u_1^*}{d s_1}\n=\n\\frac{s_2^2(s_2-s_1)}{(s_1+s_2)^3}\n\\]\nHence \\(u_1^*\\) increases with \\(s_1\\) when \\(s_1&lt;s_2\\), decreases with \\(s_1\\) when \\(s_1&gt;s_2\\), and reaches its maximum at \\(s_1=s_2\\).\nSuppose now that consumer 1 can choose its actual supply \\(q\\), where\n\\[\n0&lt;q\\leq s_1\n\\]\nFor any given \\(q\\), the resulting competitive equilibrium is obtained by replacing \\(s_1\\) with \\(q\\). Thus,\n\\[\np_1(q)\n=\n\\left(\\frac{s_2}{q}\\right)^2\n\\]\nand consumer 1’s equilibrium utility is\n\\[\nu_1(q)\n=\n\\frac{q s_2^2}{(q+s_2)^2}\n\\]\nThe monopoly supply problem is therefore\n\\[\n\\max_{0&lt;q\\leq s_1}u_1(q)\n\\]\nSince\n\\[\n\\frac{d u_1}{dq}\n=\n\\frac{s_2^2(s_2-q)}{(q+s_2)^3}\n\\]\nthe optimal supply is\n\\[\nq^*\n=\n\\min\\{s_1,s_2\\}\n\\]\nIn particular, if \\(s_1&gt;s_2\\),\n\\[\nq^*=s_2&lt;s_1\n\\]\nso consumer 1 increases its equilibrium utility by withholding part of its endowment from the market.\nFor example, let\n\\[\ns_1=200,\n\\qquad\ns_2=100\n\\]\nUnder full supply, the competitive equilibrium is\n\\[\n\\mathbf p^*=(0.25,1)^\\top\n\\]\nwith\n\\[\nu_1^*=22.2222,\n\\qquad\nu_2^*=44.4444\n\\]\nThe monopoly solution is\n\\[\nq^*=100\n\\]\nwhich gives\n\\[\n\\mathbf p^*=(1,1)^\\top\n\\]\nand\n\\[\nu_1^*=u_2^*=25\n\\]\nConsumer 1 therefore raises its equilibrium utility from approximately \\(22.2222\\) to \\(25\\) by reducing its supply from \\(200\\) to \\(100\\).",
+    "crumbs": [
+      "Models",
+      "Static Pure Exchange Equilibrium Models",
+      "Monopolistic Supply"
+    ]
+  },
+  {
+    "objectID": "models/PureExch/MonopolisticSupply.html#numerical-solution",
+    "href": "models/PureExch/MonopolisticSupply.html#numerical-solution",
+    "title": "Monopolistic Supply",
+    "section": "Numerical Solution",
+    "text": "Numerical Solution\nThe numerical solution treats the monopoly problem as a hierarchical equilibrium problem. For each candidate supply \\(q\\), the inner problem constructs the corresponding pure-exchange economy and solves its competitive equilibrium with GEMB. The resulting equilibrium utility of consumer 1 is then returned to the outer optimization problem. The numerical procedure can be summarized as\n\\[\nq\n\\longrightarrow\n\\text{competitive equilibrium}\n\\longrightarrow\n\\mathbf p^*(q),\\mathbf u^*(q)\n\\longrightarrow\nu_1^*(q)\n\\longrightarrow\n\\max_q u_1^*(q)\n\\]\nWith \\(s_1=200\\) and \\(s_2=100\\), the numerical solution gives\n\\[\nq^*\\approx100,\n\\qquad\n\\mathbf p^*\\approx(1,1)^\\top\n\\]\nand\n\\[\nu_1^*\\approx25,\n\\qquad\nu_2^*\\approx25\n\\]\nwhich agrees with the analytical solution.\n\n\n\nListing 1: A \\(2\\times2\\) Pure-Exchange Monopoly Model with Hierarchical Equilibrium\n\n\nusing GeneralEquilibriumModeling\nusing Optim\n\ns1 = 200.0\ns2 = 100.0\n\n# u(x1, x2) = (x1^(-1) + x2^(-1))^(-1)\nconst preference = GEMB.CESSpec(\n    [1.0, 1.0];\n    es=0.5,\n)\n\nfunction solve_competitive_equilibrium(q, s2)\n    model = GEMB.GEMBModel(\n        [\n            GEMB.CommoditySpec(\n                :commodity_1;\n                price_lower_bound=1.0e-8,\n            ),\n            :commodity_2,\n        ];\n        numeraire=:commodity_2,\n    )\n\n    GEMB.add_agent!(\n        model,\n        preference;\n        demands=[:commodity_1, :commodity_2],\n        endowments=:commodity_1,\n        endowment_quantities=q,\n        activity_start=100.0,\n        name=:consumer_1,\n    )\n\n    GEMB.add_agent!(\n        model,\n        preference;\n        demands=[:commodity_1, :commodity_2],\n        endowments=:commodity_2,\n        endowment_quantities=s2,\n        activity_start=100.0,\n        name=:consumer_2,\n    )\n\n    result = GEMB.solve(\n        model;\n        silent=true,\n    )\n\n    u1 = result.agent_variable_values[1][1]\n    u2 = result.agent_variable_values[2][1]\n\n    return (\n        model=model,\n        result=result,\n        u1=u1,\n        u2=u2,\n    )\nend\n\nfunction monopoly_objective(q)\n    equilibrium = solve_competitive_equilibrium(q, s2)\n    return -equilibrium.u1\nend\n\n# 避免 q = 0 导致内层均衡退化\nq_lower = 0.01 * s1\n\noptimization = optimize(\n    monopoly_objective,\n    q_lower,\n    s1,\n    Brent();\n    rel_tol=1.0e-8,\n    abs_tol=1.0e-8,\n)\n\nq_star = Optim.minimizer(optimization)\n\nbaseline = solve_competitive_equilibrium(s1, s2)\nmonopoly = solve_competitive_equilibrium(q_star, s2)\n\nprintln(\"========== Baseline competitive equilibrium ==========\")\nprintln(\"Supply of consumer 1 = \", s1)\nprintln(\"Prices = \", baseline.result.prices)\nprintln(\"Utility of consumer 1 = \", baseline.u1)\nprintln(\"Utility of consumer 2 = \", baseline.u2)\n\nprintln(\"\\n========== Monopoly equilibrium ==========\")\nprintln(\"Optimal supply of consumer 1 = \", q_star)\nprintln(\"Prices = \", monopoly.result.prices)\nprintln(\"Utility of consumer 1 = \", monopoly.u1)\nprintln(\"Utility of consumer 2 = \", monopoly.u2)\nprintln(\"Outer optimization converged = \", Optim.converged(optimization))\n\nGEMB.print_equilibrium_statistics(\n    monopoly.model,\n    monopoly.result,\n)",
+    "crumbs": [
+      "Models",
+      "Static Pure Exchange Equilibrium Models",
+      "Monopolistic Supply"
     ]
   }
 ]

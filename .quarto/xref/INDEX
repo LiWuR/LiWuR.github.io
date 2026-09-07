@@ -25,5 +25,8 @@
   },
   "models/Prod/model1.qmd": {
     "model1.html": "430d430b"
+  },
+  "models/PureExch/MonopolisticSupply.qmd": {
+    "MonopolisticSupply.html": "09477271"
   }
 }

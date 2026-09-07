@@ -25,13 +25,12 @@ website:
         - section: "Static Pure Exchange Equilibrium Models"
           contents:
             # - models/PureExch/index.qmd
-             - models/PureExch/model1.qmd
-             - models/PureExch/model2.qmd
+             - models/PureExch/MonopolisticSupply.qmd
 
         - section: "Static Production Equilibrium Models"
           contents:
-             - models/Prod/model1.qmd
-             - models/Prod/model2.qmd
+            # - models/Prod/model1.qmd
+            # - models/Prod/model2.qmd
 
         - section: "Intertemporal Equilibrium Models"
           contents:
@@ -45,5 +44,11 @@ format:
     css: styles.css
     toc: true
 
+filters:
+  - include-code-files
 
+bibliography: references.bib
+csl: harvard-cite-them-right.csl
 
+nocite: |
+#  @grandmont1977
