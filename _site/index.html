@@ -127,6 +127,7 @@ gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
   <ul>
   <li><a href="#books" id="toc-books" class="nav-link active" data-scroll-target="#books">Books</a></li>
   <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#awards" id="toc-awards" class="nav-link" data-scroll-target="#awards">Awards</a></li>
   <li><a href="#related-website" id="toc-related-website" class="nav-link" data-scroll-target="#related-website">Related Website</a></li>
   </ul>
 </nav>
@@ -159,7 +160,7 @@ gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="books">Books</h2>
 <ul>
 <li><a href="https://liwur.github.io/GEMBook/">GeneralEquilibriumModeling.jl and Structural Equilibrium Models</a></li>
-<li><a href="https://baike.baidu.com/item/%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8A%A8%E6%80%81%E7%A0%94%E7%A9%B6/59812598">LI Wu (2019) <em>General Equilibrium and Structural Dynamics: Perspectives of New Structural Economics</em>. Beijing: Economic Science Press. (In Chinese)</a></li>
+<li><a href="https://baike.baidu.com/item/%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8A%A8%E6%80%81%E7%A0%94%E7%A9%B6/59812598">LI Wu (2019) <em>General Equilibrium and Structural Dynamics: Perspectives of New Structural Economics</em>. Beijing: Economic Science Press. (In Chinese)</a>. — National Social Science Fund of China (NSSFC) Post-Funded Project</li>
 </ul>
 </section>
 <section id="tools" class="level2">
@@ -167,6 +168,13 @@ gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
 <ul>
 <li><a href="https://github.com/LiWuR/GeneralEquilibriumModeling.jl">GeneralEquilibriumModeling.jl</a></li>
 <li><a href="https://cran.r-project.org/web/packages/GE/">GE Package for R</a></li>
+</ul>
+</section>
+<section id="awards" class="level2">
+<h2 class="anchored" data-anchor-id="awards">Awards</h2>
+<ul>
+<li>2010 IIOA Leontief Memorial Prize, for <em>“A Structural Growth Model and Its Applications to Sraffa’s System”</em></li>
+<li>Second Prize of the Science and Technology Progress Award of the Ministry of Education of China, fifth contributor</li>
 </ul>
 </section>
 <section id="related-website" class="level2">
@@ -271,7 +279,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/LiWuR\.github\.io\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
