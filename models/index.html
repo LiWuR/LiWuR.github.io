@@ -76,6 +76,35 @@ gtag('js', new Date());
 gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -211,8 +240,44 @@ gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
 <p>This collection presents further applied economic models. Most of them are formulated mathematically as structural equilibrium models and solved numerically using the Julia package <code>GeneralEquilibriumModeling.jl</code> and the R package <code>GE</code>.</p>
 <section id="introduction-to-structural-equilibrium-models" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-structural-equilibrium-models">Introduction to Structural Equilibrium Models</h2>
+<p>The <strong>strict-sense structural equilibrium model</strong> extends the input and output coefficient matrices of the von Neumann equilibrium model to unit demand and unit supply matrices that may depend on prices, utility levels, and activity levels. After incorporating any discount factor into the unit supply matrix, it can be written as</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf p^{\top}\mathbf A(\cdot)
+&amp;\geq
+\mathbf p^{\top}\mathbf B(\cdot)\\
+\mathbf A(\cdot)\mathbf z
+&amp;\leq
+\mathbf B(\cdot)\mathbf z
+\end{aligned}
+\]</span></p>
+<p>where the first condition represents unit revenue-expenditure balance and the second represents supply-demand balance.</p>
+<p>The <strong>mixed-form wide-sense structural equilibrium model</strong> is written directly in terms of the demand and supply matrices of economic agents:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf p^{\top}\mathbf D(\cdot)
+&amp;=
+\mathbf p^{\top}\mathbf S(\cdot)\\
+\mathbf D(\cdot)\mathbf 1
+&amp;\leq
+\mathbf S(\cdot)\mathbf 1
+\end{aligned}
+\]</span></p>
+<p>The first condition represents total revenue-expenditure balance for each economic agent, while the second states that aggregate demand for each commodity does not exceed aggregate supply.</p>
+<p>If no commodity is in excess supply at equilibrium, the model becomes the <strong>equality-form wide-sense structural equilibrium model</strong>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf p^{\top}\mathbf D(\cdot)
+&amp;=
+\mathbf p^{\top}\mathbf S(\cdot)\\
+\mathbf D(\cdot)\mathbf 1
+&amp;=
+\mathbf S(\cdot)\mathbf 1
+\end{aligned}
+\]</span></p>
+<p>Here, every economic agent satisfies total revenue-expenditure balance, and supply equals demand for every commodity.</p>
 <ul>
-<li><a href="https://liwur.github.io/GEMBook/Ch1SEM.html">The von Neumann Equilibrium Model and Structural Equilibrium Models</a></li>
+<li>For details, see <a href="https://liwur.github.io/GEMBook/Ch1SEM.html">The von Neumann Equilibrium Model and Structural Equilibrium Models</a>.</li>
 </ul>
 
 
