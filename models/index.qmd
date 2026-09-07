@@ -7,4 +7,50 @@ The book [*GeneralEquilibriumModeling.jl and Structural Equilibrium Models*](htt
 This collection presents further applied economic models. Most of them are formulated mathematically as structural equilibrium models and solved numerically using the Julia package `GeneralEquilibriumModeling.jl` and the R package `GE`.
 
 ## Introduction to Structural Equilibrium Models
-- [The von Neumann Equilibrium Model and Structural Equilibrium Models](https://liwur.github.io/GEMBook/Ch1SEM.html)
+
+The **strict-sense structural equilibrium model** extends the input and output coefficient matrices of the von Neumann equilibrium model to unit demand and unit supply matrices that may depend on prices, utility levels, and activity levels. After incorporating any discount factor into the unit supply matrix, it can be written as
+
+$$
+\begin{aligned}
+\mathbf p^{\top}\mathbf A(\cdot)
+&\geq
+\mathbf p^{\top}\mathbf B(\cdot)\\
+\mathbf A(\cdot)\mathbf z
+&\leq
+\mathbf B(\cdot)\mathbf z
+\end{aligned}
+$$
+
+where the first condition represents unit revenue-expenditure balance and the second represents supply-demand balance.
+
+The **mixed-form wide-sense structural equilibrium model** is written directly in terms of the demand and supply matrices of economic agents:
+
+$$
+\begin{aligned}
+\mathbf p^{\top}\mathbf D(\cdot)
+&=
+\mathbf p^{\top}\mathbf S(\cdot)\\
+\mathbf D(\cdot)\mathbf 1
+&\leq
+\mathbf S(\cdot)\mathbf 1
+\end{aligned}
+$$
+
+The first condition represents total revenue-expenditure balance for each economic agent, while the second states that aggregate demand for each commodity does not exceed aggregate supply.
+
+If no commodity is in excess supply at equilibrium, the model becomes the **equality-form wide-sense structural equilibrium model**:
+
+$$
+\begin{aligned}
+\mathbf p^{\top}\mathbf D(\cdot)
+&=
+\mathbf p^{\top}\mathbf S(\cdot)\\
+\mathbf D(\cdot)\mathbf 1
+&=
+\mathbf S(\cdot)\mathbf 1
+\end{aligned}
+$$
+
+Here, every economic agent satisfies total revenue-expenditure balance, and supply equals demand for every commodity.
+
+* For details, see [The von Neumann Equilibrium Model and Structural Equilibrium Models](https://liwur.github.io/GEMBook/Ch1SEM.html).
