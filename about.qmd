@@ -2,4 +2,11 @@
 title: "About"
 ---
 
-About this site
+I am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages `GE` and `CGE` and the Julia package `GeneralEquilibriumModeling.jl`.
+
+In 2019, I published the book *General Equilibrium and Structural Dynamics: A New Structural Economics Perspective*.
+
+Email: [liwu@staff.shu.edu.cn](mailto:liwu@staff.shu.edu.cn)
+
+Related website: [Institute of New Structural Economics, Peking University](https://www.nse.pku.edu.cn/)
+
