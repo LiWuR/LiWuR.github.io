@@ -7,6 +7,13 @@ Email: [liwu@staff.shu.edu.cn](mailto:liwu@staff.shu.edu.cn)
 
 I am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages `GE` and `CGE` and the Julia package `GeneralEquilibriumModeling.jl`.
 
+## Education and Training
+
+- B.S. in Computer Science and Engineering, Xi’an Jiaotong University
+- Ph.D. in Management Science and Engineering, Xi’an Jiaotong University
+- Postdoctoral research in Management Science and Engineering, Shanghai Jiao Tong University
+
+
 ## Books
 
 - [GeneralEquilibriumModeling.jl and Structural Equilibrium Models](https://liwur.github.io/GEMBook/)
