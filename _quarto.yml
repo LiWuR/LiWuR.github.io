@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Li Wu"
+  google-analytics: "G-5XKP5QW2FE"
+  
   navbar:
     left:
       - href: index.qmd
