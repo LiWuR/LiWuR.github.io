@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "discussion.html",
+    "href": "discussion.html",
+    "title": "Website Discussion",
+    "section": "",
+    "text": "Welcome to the discussion page. You are welcome to leave comments, questions, or suggestions here."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "LiWuR.github.io",
@@ -12,12 +26,5 @@
     "title": "LiWuR.github.io",
     "section": "",
     "text": "GeneralEquilibriumModeling.jl and Structural Equilibrium Models"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
