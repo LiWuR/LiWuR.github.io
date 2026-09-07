@@ -1,0 +1,12 @@
+---
+title: "Website Discussion"
+comments:
+  giscus:
+    repo: LiWuR/LiWuR.github.io
+    mapping: title
+    reactions-enabled: true
+    input-position: bottom
+    loading: lazy
+---
+
+Welcome to the discussion page. You are welcome to leave comments, questions, or suggestions here.

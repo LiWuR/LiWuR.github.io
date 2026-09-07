@@ -11,6 +11,8 @@ website:
         text: About
       - text: Book
         href: https://liwur.github.io/GEMBook/
+      - href: discussion.qmd
+        text: Discussion
 
 format:
   html:
