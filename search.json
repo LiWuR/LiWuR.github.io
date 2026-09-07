@@ -1,38 +1,34 @@
 [
   {
-    "objectID": "models/index.html",
-    "href": "models/index.html",
-    "title": "Introduction to Structural Equilibrium Models",
+    "objectID": "models/Prod/model1.html",
+    "href": "models/Prod/model1.html",
+    "title": "Model 1",
     "section": "",
-    "text": "The von Neumann Equilibrium Model and Structural Equilibrium Models"
+    "text": "Forthcoming.",
+    "crumbs": [
+      "Models",
+      "Static Production Equilibrium Models",
+      "Model 1"
+    ]
   },
   {
-    "objectID": "models/index.html#structural-equilibrium-models",
-    "href": "models/index.html#structural-equilibrium-models",
-    "title": "Introduction to Structural Equilibrium Models",
+    "objectID": "models/PureExch/model2.html",
+    "href": "models/PureExch/model2.html",
+    "title": "Model 2",
     "section": "",
-    "text": "The von Neumann Equilibrium Model and Structural Equilibrium Models"
+    "text": "Forthcoming.",
+    "crumbs": [
+      "Models",
+      "Static Pure Exchange Equilibrium Models",
+      "Model 2"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "LiWuR.github.io",
+    "objectID": "models/PureExch/index.html",
+    "href": "models/PureExch/index.html",
+    "title": "Introduction to Pure Exchange General Equilibrium Models",
     "section": "",
-    "text": "GeneralEquilibriumModeling.jl and Structural Equilibrium Models"
-  },
-  {
-    "objectID": "index.html#books",
-    "href": "index.html#books",
-    "title": "LiWuR.github.io",
-    "section": "",
-    "text": "GeneralEquilibriumModeling.jl and Structural Equilibrium Models"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages GE and CGE and the Julia package GeneralEquilibriumModeling.jl.\nIn 2019, I published the book General Equilibrium and Structural Dynamics: A New Structural Economics Perspective.\n\nEmail: liwu@staff.shu.edu.cn\nRelated website: Institute of New Structural Economics, Peking University"
+    "text": "Testing."
   },
   {
     "objectID": "discussion.html",
@@ -40,5 +36,79 @@
     "title": "Website Discussion",
     "section": "",
     "text": "Welcome to the discussion page. You are welcome to leave comments, questions, or suggestions here."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LI Wu",
+    "section": "",
+    "text": "Email: liwu@staff.shu.edu.cn\nI am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages GE and CGE and the Julia package GeneralEquilibriumModeling.jl."
+  },
+  {
+    "objectID": "index.html#books",
+    "href": "index.html#books",
+    "title": "LI Wu",
+    "section": "Books",
+    "text": "Books\n\nGeneralEquilibriumModeling.jl and Structural Equilibrium Models\nLI Wu (2019) General Equilibrium and Structural Dynamics: Perspectives of New Structural Economics. Beijing: Economic Science Press. (In Chinese)"
+  },
+  {
+    "objectID": "index.html#tools",
+    "href": "index.html#tools",
+    "title": "LI Wu",
+    "section": "Tools",
+    "text": "Tools\n\nGeneralEquilibriumModeling.jl\nGE Package for R"
+  },
+  {
+    "objectID": "index.html#related-website",
+    "href": "index.html#related-website",
+    "title": "LI Wu",
+    "section": "Related Website",
+    "text": "Related Website\n\nInstitute of New Structural Economics, Peking University"
+  },
+  {
+    "objectID": "models/index.html",
+    "href": "models/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The book GeneralEquilibriumModeling.jl and Structural Equilibrium Models presents a collection of basic applied general equilibrium models together with numerical solution programs based on GeneralEquilibriumModeling.jl.\nThis collection presents further applied economic models. Most of them are formulated mathematically as structural equilibrium models and solved numerically using the Julia package GeneralEquilibriumModeling.jl and the R package GE.",
+    "crumbs": [
+      "Models",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "models/index.html#introduction-to-structural-equilibrium-models",
+    "href": "models/index.html#introduction-to-structural-equilibrium-models",
+    "title": "Introduction",
+    "section": "Introduction to Structural Equilibrium Models",
+    "text": "Introduction to Structural Equilibrium Models\n\nThe von Neumann Equilibrium Model and Structural Equilibrium Models",
+    "crumbs": [
+      "Models",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "models/PureExch/model1.html",
+    "href": "models/PureExch/model1.html",
+    "title": "Model 1",
+    "section": "",
+    "text": "Forthcoming.",
+    "crumbs": [
+      "Models",
+      "Static Pure Exchange Equilibrium Models",
+      "Model 1"
+    ]
+  },
+  {
+    "objectID": "models/Prod/model2.html",
+    "href": "models/Prod/model2.html",
+    "title": "Model 2",
+    "section": "",
+    "text": "Forthcoming.",
+    "crumbs": [
+      "Models",
+      "Static Production Equilibrium Models",
+      "Model 2"
+    ]
   }
 ]
