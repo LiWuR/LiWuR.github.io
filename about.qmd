@@ -6,6 +6,8 @@ I am an Associate Professor at the School of Economics, Shanghai University. My 
 
 In 2019, I published the book *General Equilibrium and Structural Dynamics: A New Structural Economics Perspective*.
 
+<!-- LI Wu (2019) General Equilibrium and Structural Dynamics: Perspectives of New Structural Economics. Beijing: Economic Science Press. (In Chinese) -->
+
 Email: [liwu@staff.shu.edu.cn](mailto:liwu@staff.shu.edu.cn)
 
 Related website: [Institute of New Structural Economics, Peking University](https://www.nse.pku.edu.cn/)

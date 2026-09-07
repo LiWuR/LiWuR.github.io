@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages GE and CGE and the Julia package GeneralEquilibriumModeling.jl.\nIn 2019, I published the book General Equilibrium and Structural Dynamics: A New Structural Economics Perspective.\nEmail: liwu@staff.shu.edu.cn\nRelated website: Institute of New Structural Economics, Peking University"
+    "text": "I am an Associate Professor at the School of Economics, Shanghai University. My research focuses primarily on general equilibrium theory and New Structural Economics. I have developed structural equilibrium models, structural dynamic models, and related approaches within the framework of New Structural Economics. I am also the developer of the R packages GE and CGE and the Julia package GeneralEquilibriumModeling.jl.\nIn 2019, I published the book General Equilibrium and Structural Dynamics: A New Structural Economics Perspective.\n\nEmail: liwu@staff.shu.edu.cn\nRelated website: Institute of New Structural Economics, Peking University"
   },
   {
     "objectID": "index.html",
@@ -26,5 +26,19 @@
     "title": "LiWuR.github.io",
     "section": "",
     "text": "GeneralEquilibriumModeling.jl and Structural Equilibrium Models"
+  },
+  {
+    "objectID": "models/index.html",
+    "href": "models/index.html",
+    "title": "Introduction to Structural Equilibrium Models",
+    "section": "",
+    "text": "The von Neumann Equilibrium Model and Structural Equilibrium Models"
+  },
+  {
+    "objectID": "models/index.html#structural-equilibrium-models",
+    "href": "models/index.html#structural-equilibrium-models",
+    "title": "Introduction to Structural Equilibrium Models",
+    "section": "",
+    "text": "The von Neumann Equilibrium Model and Structural Equilibrium Models"
   }
 ]
