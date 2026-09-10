@@ -28,5 +28,32 @@
   },
   "models/PureExch/MonopolisticSupply.qmd": {
     "MonopolisticSupply.html": "09477271"
+  },
+  "models/PureExch/CommodityTaxUnderQuasilinearUtilityFunctions.qmd": {
+    "CommodityTaxUnderQuasilinearUtilityFunctions.html": "288f804d"
+  },
+  "models/Prod/GeneralEquilibriumAndLinearProgramming.qmd": {
+    "GeneralEquilibriumAndLinearProgramming.html": "6e119077"
+  },
+  "models/Prod/MinimumWageAndEndogenousLaborSupply.qmd": {
+    "MinimumWageAndEndogenousLaborSupply.html": "f91ccaf2"
+  },
+  "models/ProdBasic/GeneralEquilibriumAndLinearProgramming.qmd": {
+    "GeneralEquilibriumAndLinearProgramming.html": "1c56fd5b"
+  },
+  "models/ProdBasic/MinimumWageAndEndogenousLaborSupply.qmd": {
+    "MinimumWageAndEndogenousLaborSupply.html": "e20368d7"
+  },
+  "models/ProdExtended/ProductionExternalityAndDegreeOneHomogenization.qmd": {
+    "ProductionExternalityAndDegreeOneHomogenization.html": "7593f42c"
+  },
+  "models/IntertemporalBasic/CanonicalDynamicMacroeconomicEquilibrium.qmd": {
+    "CanonicalDynamicMacroeconomicEquilibrium.html": "4cab70f2"
+  },
+  "models/IntertemporalBasic/ProductionOLGEquilibriumInTimelineForm.qmd": {
+    "ProductionOLGEquilibriumInTimelineForm.html": "afe05a71"
+  },
+  "models/IntertemporalExtended/KnowledgeProduction.qmd": {
+    "KnowledgeProduction.html": "f202e70a"
   }
 }

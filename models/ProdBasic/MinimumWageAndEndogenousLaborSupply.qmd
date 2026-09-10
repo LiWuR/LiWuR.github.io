@@ -1,0 +1,169 @@
+<!-- liwu2 -->
+---
+title: "Minimum-Wage and Endogenous Labor Supply"
+---
+
+
+## The $3\times2$ Model
+
+Assume the following:
+
+1. The economy contains three commodities and two economic agents, a firm and a consumer. The commodities are product, labor, and land. The product is taken as the numeraire commodity.
+
+2. The firm uses labor and land to produce the product according to the constant-returns-to-scale production function
+
+   $$
+   y=\alpha l^\beta t^{1-\beta},
+   \qquad
+   \alpha>0,\quad0<\beta<1
+   $$
+
+   where $l$ and $t$ denote labor and land inputs, respectively.
+
+3. The consumer supplies labor and land and demands only the product. Its product demand is denoted by $c$. The land supply $\bar t>0$ is exogenous, whereas the labor supply $s\geq0$ is endogenous.
+
+4. Assume that labor is abundant and that the minimum wage is binding. The minimum wage may be legally mandated or determined by the subsistence level. In the model, the labor price is fixed exogenously at the minimum wage $\bar w>0$, and the endogenous labor supply $s$ adjusts so that the labor market clears at this fixed wage. In other words, only part of the available labor enters the market, while the remainder stays outside the market.
+
+Let the price vector be
+
+$$
+\mathbf p=(1,w,r)^\top
+$$
+
+where $w$ and $r$ are the prices of labor and land, respectively. Given $y$, $c$, $s$, $w$, and $r$, the demand and supply matrices can be written explicitly as
+
+$$
+\mathbf D(y,c,w,r)=
+\begin{bmatrix}
+0&
+c\\[6pt]
+\frac{y}{\alpha}
+\left(
+\frac{\beta r}{(1-\beta)w}
+\right)^{1-\beta}
+&
+0\\[10pt]
+\frac{y}{\alpha}
+\left(
+\frac{(1-\beta)w}{\beta r}
+\right)^\beta
+&
+0
+\end{bmatrix}
+$$
+
+and
+
+$$
+\mathbf S(y,s)=
+\begin{bmatrix}
+y&0\\
+0&s\\
+0&\bar t
+\end{bmatrix}
+$$
+
+The wide-sense structural equilibrium model is
+
+$$
+\begin{cases}
+\mathbf p^\top\mathbf D(y,w,r)=\mathbf p^\top\mathbf S(y)\\
+\mathbf D(y,w,r)\mathbf 1=\mathbf S(y)\mathbf 1\\
+w=\bar w
+\end{cases}
+$$
+
+where the third equation imposes the binding minimum-wage condition.
+
+## Equilibrium
+
+The equilibrium labor supply is
+
+$$
+s^*
+=
+\bar t
+\left(
+\frac{\alpha\beta}{\bar w}
+\right)^{\frac{1}{1-\beta}}
+$$
+
+and the corresponding equilibrium land price, output, and consumption are
+
+$$
+r^*
+=
+\alpha(1-\beta)
+(s^*)^\beta\bar t^{-\beta}
+$$
+
+$$
+y^*
+=
+\alpha(s^*)^\beta\bar t^{1-\beta}
+$$
+
+and
+
+$$
+c^*=y^*
+$$
+
+For the numerical example, let
+
+$$
+\alpha=2,
+\qquad
+\beta=0.5,
+\qquad
+\bar t=100,
+\qquad
+\bar w=2
+$$
+
+The equilibrium price vector is
+
+$$
+\mathbf p^*=(1,2,0.5)^\top
+$$
+
+and the equilibrium quantities are
+
+$$
+s^*=l^*=25,
+\qquad
+t^*=100,
+\qquad
+y^*=c^*=100
+$$
+
+Accordingly, the equilibrium demand and supply matrices are
+
+$$
+\mathbf D^*=
+\begin{bmatrix}
+0&100\\
+25&0\\
+100&0
+\end{bmatrix},
+\qquad
+\mathbf S^*=
+\begin{bmatrix}
+100&0\\
+0&25\\
+0&100
+\end{bmatrix}
+$$
+
+Thus, fixing the labor price at $\bar w=2$ endogenously determines the equilibrium labor supply as $s^*=25$.
+
+The corresponding GEMB implementation is given in Listing @lst-gemb_minimumWage_endogenousLaborSupply_nc3_na2. The endogenous labor supply is represented by a condition variable paired with the fixed-wage condition. The consumer is represented by an `ActivityDemandSpec`: its activity level determines product consumption, while a customized output specification supplies the endogenous quantity of labor and the fixed quantity of land.
+
+::: {#lst-gemb_minimumWage_endogenousLaborSupply_nc3_na2}
+
+```{.julia include="../../code/gemb_minimumWage_endogenousLaborSupply_nc3_na2_v2.jl"}
+```
+
+A $3\times2$ Equilibrium Model with a Fixed Wage and Endogenous Labor Supply
+
+:::

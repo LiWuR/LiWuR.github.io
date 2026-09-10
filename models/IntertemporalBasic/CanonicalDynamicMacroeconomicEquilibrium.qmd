@@ -1,0 +1,122 @@
+<!-- liwu2 -->
+---
+title: "Finite-Horizon Canonical Dynamic Macroeconomic Equilibrium"
+---
+
+## Equilibrium without Tail Adjustment: A $3\times 3$ Model
+
+Assume the following [see @torres2016introduction, chapter 2]:
+
+1. The economy has $n_p$ periods and $n_p-1$ production intervals. A product firm operating in period $t$ starts production at the beginning of the period and obtains its output at the end of period $t$, or equivalently at the beginning of period $t+1$. Commodities dated at different periods are treated as different commodities.
+
+2. The economy contains three types of dated commodities: products, labor, and capital rentals. Product firms and capital-rental firms operate in periods $t=1,\ldots,n_p-1$, and there is one intertemporal consumer. The product also serves as capital.
+
+3. The product firm operating in period $t$ rents capital $k^{(t)}$ and employs labor $x^{(t)}$ to produce the product available in period $t+1$ according to
+
+$$
+y^{(t+1)}
+=
+\alpha^{(t)}
+\left(k^{(t)}\right)^{\beta_1}
+\left(x^{(t)}\right)^{1-\beta_1}
+$$
+
+where $\beta_1=0.35$ and $\alpha^{(t)}=1$ in the benchmark case.
+
+4. The capital-rental firm purchases the current product as capital, supplies its use to the product firm, and carries the undepreciated capital into the next period. Thus, an activity level of $k^{(t)}$ requires $k^{(t)}$ units of $\mathrm{product}^{(t)}$ and supplies $k^{(t)}$ units of $\mathrm{capital_rental}^{(t)}$ together with $(1-\delta)k^{(t)}$ units of $\mathrm{product}^{(t+1)}$, where $\delta=0.06$. Combining the two production activities, the total product supply generated in period $t$ and available in period $t+1$ is $y^{(t+1)}+(1-\delta)k^{(t)}$.
+
+
+5. The representative consumer initially owns $k^{(1)}=286.6341$ units of product and is endowed with $\omega=100$ units of labor in each production period. Under the post-payment wage assumption, labor supplied in period $t$ and product consumed in period $t+1$ enter the same single-period utility function. Letting $\ell^{(t)}$ denote leisure,
+
+$$
+u^{(t)}
+=
+\left(c^{(t+1)}\right)^{\beta_2}
+\left(\ell^{(t)}\right)^{1-\beta_2}
+$$
+
+where $\beta_2=0.4$. In equilibrium, labor-market clearing implies $\ell^{(t)}=\omega-x^{(t)}$.
+
+The subjective discount factor is $\varGamma=0.97$.
+
+6. Without tail adjustment, the intertemporal utility is formed from the single-period utility levels with relative weights
+
+$$
+1,\varGamma,\varGamma^2,\ldots,\varGamma^{n_p-2}
+$$
+
+Since both the within-period and intertemporal elasticities of substitution equal one, the nested utility function can be represented by a single `CESSpec`. For a sufficiently long horizon, the middle part of the equilibrium path approaches the steady state, although the final periods are affected by the finite-horizon tail effect.
+
+::: {#lst-gemb_canonicalDynamicMacroeconomic_capitalRental_noTailAdjustment_nct3_nat3}
+
+```{.julia include="../../code/gemb_canonicalDynamicMacroeconomic_capitalRental_noTailAdjustment_nct3_nat3_v1.jl"}
+```
+
+A $3\times3$ Canonical Dynamic Macroeconomic Equilibrium Model without Tail Adjustment
+
+:::
+
+## Equilibrium with Tail Adjustment
+
+To mitigate the finite-horizon tail effect, an additional demand for the terminal product is introduced alongside the ordinary single-period utility components. Let $\eta>0$ denote its endogenous weight. The intertemporal utility structure is
+
+$$
+U
+\sim
+\prod_{t=1}^{n_p-1}
+\left(u^{(t)}\right)^{\varGamma^{t-1}}
+\left(c^{(n_p)}\right)^\eta
+$$
+
+The ordinary single-period preferences and discount factors remain unchanged. When the nested Cobb--Douglas utility is represented by a single CESSpec, the weight on the terminal product becomes $\beta_2\varGamma^{n_p-2}+\eta$.
+
+Since capital is the state variable of the model, $\eta$ is paired with the tail condition
+
+$$
+k^{(n_p-2)}
+=
+k^{(n_p-1)}
+$$
+
+Thus, the terminal weight is determined endogenously so that the last two capital stocks coincide.
+
+With $n_p=20$, the steady-state benchmark is approximately
+
+$$
+k^*=286.6,
+\qquad
+x^*=36.04,
+\qquad
+y^*=74.47,
+\qquad
+c^*=57.27
+$$
+
+The tail-adjusted equilibrium gives
+
+$$
+\eta=1.157,
+\qquad
+\frac{\eta}{\varGamma^{18}}
+\approx2.002
+$$
+
+where $\varGamma^{18}$ is the discount weight on the last ordinary single-period utility component. The last two capital stocks are
+
+$$
+k^{(18)}
+=
+k^{(19)}
+=
+286.6
+$$
+
+::: {#lst-gemb_canonicalDynamicMacroeconomic_capitalRental_tailCapital_nct3_nat3}
+
+```{.julia include="../../code/gemb_canonicalDynamicMacroeconomic_capitalRental_tailCapital_nct3_nat3_v1.jl"}
+```
+
+A $3\times3$ Canonical Dynamic Macroeconomic Equilibrium Model with Tail Adjustment
+
+:::
+

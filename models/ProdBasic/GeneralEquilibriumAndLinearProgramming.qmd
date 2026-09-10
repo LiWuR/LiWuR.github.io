@@ -1,0 +1,186 @@
+<!-- liwu2 -->
+---
+title: "General Equilibrium and Linear Programming"
+---
+
+## The $4\times4$ Structural Equilibrium Model
+Assume the following:
+
+1. The economy contains four commodities and four economic agents. The commodities are one product and three primary factors, while the economic agents are three firms and one consumer. The product is taken as the numeraire commodity.
+
+2. Each firm uses the three primary factors to produce the product with fixed input and output coefficients. The unit demand and supply matrices are
+
+   $$
+   \mathbf A(u)
+   =
+   \begin{bmatrix}
+   0&0&0&u\\
+   8&6&1&0\\
+   4&2&1.5&0\\
+   2&1.5&0.5&0
+   \end{bmatrix}
+   $$
+
+   and
+
+   $$
+   \mathbf B
+   =
+   \begin{bmatrix}
+   60&30&20&0\\
+   0&0&0&48\\
+   0&0&0&20\\
+   0&0&0&8
+   \end{bmatrix}
+   $$
+
+3. The consumer demands only the product. Its utility level $u$ is equal to the quantity of the product consumed. Hence maximizing utility is equivalent to maximizing total product output.
+
+4. The consumer supplies $48$, $20$, and $8$ units of the three primary factors, respectively.
+
+Let
+
+$$
+\mathbf p=(1,p_2,p_3,p_4)^\top
+$$
+
+be the price vector and
+
+$$
+\mathbf z=(z_1,z_2,z_3,1)^\top
+$$
+
+the activity-level vector, where $z_1,z_2,z_3$ are the activity levels of the three firms and the consumer population is normalized to one.
+
+The equilibrium can be represented by the structural equilibrium model
+
+$$
+\mathbf p^\top\mathbf A(u)
+\geq
+\mathbf p^\top\mathbf B
+$$
+$$
+\mathbf A(u)\mathbf z
+\leq
+\mathbf B\mathbf z
+$$
+
+
+The equilibrium is
+
+$$
+(z_1^*,z_2^*,z_3^*)
+=
+(2,0,8)
+$$
+
+with
+
+$$
+u^*=280
+$$
+
+and the equilibrium price vector is
+
+$$
+\mathbf p^*
+=
+(1,0,10,10)^\top
+$$
+
+## Primal and Dual Linear Programming Problems
+
+The structural equilibrium model above simultaneously characterizes the solutions to the primal and dual linear programming problems corresponding to the Dakota Furniture Company example in @winston2003operations. Define
+
+$$
+\mathbf z_f=(z_1,z_2,z_3)^\top,
+\qquad
+\mathbf b=(60,30,20)^\top,
+\qquad
+\mathbf e=(48,20,8)^\top
+$$
+
+and the input-coefficient matrix
+
+$$
+\mathbf A_f
+=
+\begin{bmatrix}
+8&6&1\\
+4&2&1.5\\
+2&1.5&0.5
+\end{bmatrix}
+$$
+
+The primal linear programming problem is
+
+$$
+\max_{\mathbf z_f\geq\mathbf0}
+\mathbf b^\top\mathbf z_f
+\qquad
+\text{s.t.}
+\qquad
+\mathbf A_f\mathbf z_f\leq\mathbf e
+$$
+
+Its dual problem is
+
+$$
+\min_{\mathbf p_f\geq\mathbf0}
+\mathbf p_f^\top\mathbf e
+\qquad
+\text{s.t.}
+\qquad
+\mathbf p_f^\top\mathbf A_f\geq\mathbf b^\top
+$$
+
+where
+
+$$
+\mathbf p_f=(p_2,p_3,p_4)^\top
+$$
+
+is the vector of primary-factor prices, with the product price normalized to one.
+
+The equilibrium firm activity levels
+
+$$
+\mathbf z_f^*=(2,0,8)^\top
+$$
+
+solve the primal problem, while the equilibrium factor prices
+
+$$
+\mathbf p_f^*=(0,10,10)^\top
+$$
+
+solve the dual problem. The optimal values of the two problems are equal:
+
+$$
+\mathbf b^\top\mathbf z_f^*
+=
+\mathbf p_f^{*\top}\mathbf e
+=
+280
+$$
+
+Thus, solving the structural equilibrium model simultaneously solves the primal allocation problem and the dual pricing problem.
+
+In the GEMB numerical representation, the consumer population is not represented by a separate activity variable. Instead, the consumer's activity level represents its utility level. The resulting activity levels are therefore
+
+$$
+(2,0,8,280)
+$$
+
+for the three firms and the consumer, respectively.
+
+::: {#lst-gemb_linearProgramming_equilibrium_nc4_na4}
+
+```{.julia include="../../code/gemb_linearProgramming_equilibrium_nc4_na4_v1.jl"}
+```
+
+A $4\times4$ General Equilibrium Representation of a Linear Programming Problem
+
+::: 
+
+

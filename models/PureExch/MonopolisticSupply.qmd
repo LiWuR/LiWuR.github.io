@@ -1,8 +1,9 @@
+<!-- liwu2 -->
 ---
 title: "Monopolistic Supply"
-format: html
 ---
-## The Model
+
+## The $2 \times 2$ Model
 Assume the following [see @liwu2019e, p. 146]:
 
 1. The economy contains two commodities and two consumers. Commodity 2 is the numeraire commodity, so the price vector is
@@ -11,17 +12,17 @@ Assume the following [see @liwu2019e, p. 146]:
    \mathbf p=(p_1,1)^\top
    $$
 
-2. Consumer 1 is endowed with $s_1>0$ units of commodity 1, while consumer 2 is endowed with $s_2>0$ units of commodity 2. The supply matrix is
+2. Consumer 1 is endowed with $s_1>0$ units of commodity 1, while consumer 2 is endowed with $s_2>0$ units of commodity 2. The endowment matrix is
 
-   $$
-   \mathbf S=
-   \begin{bmatrix}
-   s_1&0\\
-   0&s_2
-   \end{bmatrix}
-   $$
+$$
+\mathbf S=
+\begin{bmatrix}
+s_1&0\\
+0&s_2
+\end{bmatrix}
+$$
 
-3. The two consumers have the same CES utility function
+3. The two consumers have the same reduced-form CES utility function
 
    $$
    u(x_1,x_2)
@@ -29,7 +30,8 @@ Assume the following [see @liwu2019e, p. 146]:
    (x_1^{-1}+x_2^{-1})^{-1}
    $$
 
-4. In the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose the quantity of commodity 1 supplied to the market, whereas consumer 2 continues to supply its full endowment.
+4. In the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose to supply only $q$ units of commodity 1, where $0<q\leq s_1$, while the remaining $s_1-q$ units are left idle. The production process and the consumption of final products are omitted in this simplified model. Accordingly, the CES utility function is a reduced-form representation of the utility generated through the omitted production and final-product consumption process, while the two commodities themselves represent production factors. Consumer 2 continues to supply its full endowment.
+
 
 For the above utility function, the demand matrix can be written as
 
@@ -82,13 +84,7 @@ $$
 
 Hence $u_1^*$ increases with $s_1$ when $s_1<s_2$, decreases with $s_1$ when $s_1>s_2$, and reaches its maximum at $s_1=s_2$.
 
-Suppose now that consumer 1 can choose its actual supply $q$, where
-
-$$
-0<q\leq s_1
-$$
-
-For any given $q$, the resulting competitive equilibrium is obtained by replacing $s_1$ with $q$. Thus,
+For any given supply level $q$ chosen by consumer 1, where $0<q\leq s_1$, the resulting competitive equilibrium is obtained by replacing $s_1$ with $q$. Thus,
 
 $$
 p_1(q)

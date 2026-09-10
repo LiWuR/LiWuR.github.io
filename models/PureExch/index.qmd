@@ -1,5 +1,0 @@
----
-title: "Introduction to Pure Exchange General Equilibrium Models"
----
-
-Testing.

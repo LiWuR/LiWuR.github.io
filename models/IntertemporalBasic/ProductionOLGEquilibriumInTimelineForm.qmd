@@ -1,0 +1,199 @@
+<!-- liwu2 -->
+---
+title: "Production OLG Equilibrium in Timeline Form"
+---
+
+## The $2\times2$ Model
+
+Consider a finite-horizon overlapping-generations economy with production, closely related to the classical production OLG model of @diamond1965. The model is represented in timeline form using dated commodities.
+
+Assume the following:
+
+1. The economy contains two commodity types, product and labor, and two economic-agent types, firms and consumers. There are $n_g$ consumer generations and $n_p=n_g+2$ periods. Hence there are $n_p$ dated products and $n_p-1$ dated labor commodities.
+
+2. Consumer generation $g$ lives for three periods and consumes products in periods $g$, $g+1$, and $g+2$. Its Cobb--Douglas utility function is
+
+$$
+u_g
+=
+\left(c_g^{(g)}\right)^{\beta_1}
+\left(c_g^{(g+1)}\right)^{\beta_2}
+\left(c_g^{(g+2)}\right)^{\beta_3}
+$$
+
+where $\beta_1+\beta_2+\beta_3=1$.
+
+A normal generation supplies $\omega_1$ units of labor in the first period of its life and $\omega_2$ units in the second period, while $\omega_3=0$. The first generation additionally owns $y_1$ units of the initial product. Later generations own labor only.
+
+3. Firm $t$ uses the product and labor available in period $t$ to produce the product supplied in period $t+1$. Let $k^{(t)}$ and $x^{(t)}$ denote its product and labor inputs. Its Cobb--Douglas production function is
+
+$$
+y^{(t+1)}
+=
+\alpha
+\left(k^{(t)}\right)^{\beta_f}
+\left(x^{(t)}\right)^{1-\beta_f}
+$$
+The product input $k^{(t)}$ can be interpreted as the capital used in period $t$.
+
+4. Let $\varGamma_l$ denote the population growth factor and $\varGamma_p$ the steady-state growth factor of dated product prices. The total labor supply available to a firm in a stationary demographic configuration is
+
+$$
+l
+=
+\omega_1
++
+\frac{\omega_2}{\varGamma_l}
++
+\frac{\omega_3}{\varGamma_l^2}
+$$
+
+For a consumer born in period $t$, lifetime labor income measured relative to the labor price in period $t$ is
+
+$$
+w
+=
+\omega_1
++
+\omega_2\varGamma_p
++
+\omega_3\varGamma_p^2
+$$
+
+The steady-state equilibrium therefore satisfies
+
+$$
+\frac{
+\left(1-\beta_f\varGamma_p\varGamma_l\right)l
+}{
+(1-\beta_f)\varGamma_p\varGamma_l
+}
+=
+w
+\left(
+\beta_1
++
+\frac{\beta_2}{\varGamma_p\varGamma_l}
++
+\frac{\beta_3}
+{\varGamma_p^2\varGamma_l^2}
+\right)
+$$
+
+which determines the possible steady-state values of $\varGamma_p$.
+
+5. Given any positive solution $\varGamma_p$ of the steady-state equation, steady-state output is
+
+$$
+y
+=
+\alpha^{\frac{1}{1-\beta_f}}
+\left(
+\beta_f\varGamma_p
+\right)^{\frac{\beta_f}{1-\beta_f}}
+l
+$$
+
+A useful property of the steady-state equation is that
+
+$$
+\varGamma_{p,h}
+=
+\frac{1}{\varGamma_l}
+$$
+
+is always a solution. Under this value, $w=l$ and the expenditure-share term on the right-hand side sums to one. The corresponding steady-state output is
+
+$$
+y_h
+=
+\alpha^{\frac{1}{1-\beta_f}}
+\left(
+\frac{\beta_f}{\varGamma_l}
+\right)^{\frac{\beta_f}{1-\beta_f}}
+l
+$$
+
+Under $\omega_1>0$, $\beta_3>0$, and $0<\beta_f<1$, the steady-state equation generically has at least one additional positive solution besides $\varGamma_{p,h}=1/\varGamma_l$. Hence, except for knife-edge parameter values at which positive roots coincide, the model has multiple positive steady-state equilibria.
+
+## Numerical Example
+
+For the numerical example, let
+
+$$
+n_g=50,
+\qquad
+\varGamma_l=1,
+\qquad
+\alpha=2,
+\qquad
+\beta_f=0.2
+$$
+
+$$
+(\beta_1,\beta_2,\beta_3)
+=
+(0.1,0.1,0.8),
+\qquad
+(\omega_1,\omega_2,\omega_3)
+=
+(50,50,0)
+$$
+
+and let the first generation own $y_1=8$ units of the initial product.
+
+For these parameters, $l=100$, and the steady-state equation can be reduced to
+
+$$
+(\varGamma_p-1)
+\left(
+\varGamma_p^2+8\varGamma_p-8
+\right)
+=
+0
+$$
+
+It therefore has two positive solutions. The first is the general steady-state solution
+
+$$
+\varGamma_{p,h}=1
+$$
+
+with corresponding output
+
+$$
+y_h
+\approx159.1
+$$
+
+The second positive solution is
+
+$$
+\varGamma_{p,l}
+=
+-4+2\sqrt6
+\approx0.8990
+$$
+
+with corresponding output
+
+$$
+y_l
+\approx154.9
+$$
+
+Thus, for the numerical parameterization, the model has two positive steady-state equilibria. The computed finite-horizon path converges in its interior to the lower-output steady state associated with $\varGamma_{p,l}$.
+
+The GEMB implementation is given in @lst-gemb_OLGProductionTimeline_nct2_nat2.
+
+The model contains 50 consumer generations and 51 firms. Although the beginning and end of the finite timeline are affected by the initial and terminal boundary conditions, the middle of the computed path converges essentially exactly to the lower-output analytical steady state.
+
+
+::: {#lst-gemb_OLGProductionTimeline_nct2_nat2}
+
+```{.julia include="../../code/gemb_OLGProductionTimeline_nct2_nat2_v5.jl"}
+```
+
+A $2\times2$ Production OLG Timeline Model
+
+:::

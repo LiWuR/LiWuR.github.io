@@ -8,7 +8,7 @@ This collection presents further applied economic models. Most of them are formu
 
 ## Introduction to Structural Equilibrium Models
 
-The **strict-sense structural equilibrium model** extends the input and output coefficient matrices of the von Neumann equilibrium model to unit demand and unit supply matrices that may depend on prices, utility levels, and activity levels. After incorporating any discount factor into the unit supply matrix, it can be written as
+The **strict-sense structural equilibrium model** extends the input and output coefficient matrices of the von Neumann equilibrium model to unit demand and unit supply matrices that may depend on prices, utility levels, and activity levels [@liwu2019e, chapter 3]. After incorporating any discount factor into the unit supply matrix, it can be written as
 
 $$
 \begin{aligned}
@@ -21,7 +21,7 @@ $$
 \end{aligned}
 $$
 
-where the first condition represents unit revenue-expenditure balance and the second represents supply-demand balance.
+where $\mathbf p\geq\mathbf 0$ is the price vector and $\mathbf z\geq\mathbf 0$ is the activity-level vector. The first condition represents unit revenue-expenditure balance, and the second represents supply-demand balance (i.e., market clearing).
 
 The **mixed-form wide-sense structural equilibrium model** is written directly in terms of the demand and supply matrices of economic agents:
 

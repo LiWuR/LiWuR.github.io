@@ -1,0 +1,538 @@
+<!-- liwu2 -->
+---
+title: "Production Externality"
+---
+
+## Internalized Production Externality and Degree-One Homogenization
+
+This example, adapted from the numerical example in @wiesmeth2012 [p. 64], illustrates how a production externality can be represented through a negatively priced commodity and how a non-degree-one production function can be transformed into a degree-one homogeneous production function by introducing a scale claim.
+
+Assume the following:
+
+1. There are five commodities: product 1, product 2, pollution, labor, and a scale claim; and there are two firms and one consumer. Product 2 is the numeraire.
+2. Firm 1 uses labor to produce product 1. One unit of labor produces $\alpha_1$ units of product 1 and simultaneously generates $\alpha_1$ units of pollution.
+3. Firm 2 uses pollution and labor to produce product 2. Let $x_3$ and $x_4$ denote its pollution and labor inputs. Its production function is
+
+$$
+f(x_3,x_4)
+=
+\frac{\alpha_2x_4}{1+\theta x_3},
+\qquad
+\alpha_2,\theta>0
+$$
+
+4. Firm 2 follows the marginal pricing rule [see @bonnisseau2007marginal].
+5. The consumer has Cobb--Douglas preferences
+
+$$
+u(x_1,x_2)
+=
+x_1^\beta x_2^{1-\beta},
+\qquad
+0<\beta<1
+$$
+
+and is endowed with $\omega$ units of labor and one unit of the scale claim.
+
+The production function of firm 2 is not homogeneous of degree one. Introduce a scale-claim input $c_s>0$ and define
+
+$$
+g(x_3,x_4,c_s)
+:=
+c_s
+f\left(
+\frac{x_3}{c_s},
+\frac{x_4}{c_s}
+\right)
+=
+\frac{\alpha_2c_sx_4}
+{c_s+\theta x_3}
+$$
+
+The function $g$ is homogeneous of degree one and satisfies
+
+$$
+g(x_3,x_4,1)=f(x_3,x_4)
+$$
+
+Let the price vector be
+
+$$
+\mathbf p
+=
+(p_1,1,p_3,p_4,p_5)^\top
+$$
+
+where $p_3<0$ is the price of pollution.
+
+Let $y_2$ denote the output of firm 2. Under the marginal pricing rule,
+
+$$
+p_3
+=
+-\frac{\theta\alpha_2c_sx_4}
+{(c_s+\theta x_3)^2},
+\qquad
+p_4
+=
+\frac{\alpha_2c_s}
+{c_s+\theta x_3},
+\qquad
+p_5
+=
+\frac{\theta\alpha_2x_3x_4}
+{(c_s+\theta x_3)^2}
+$$
+
+Together with
+
+$$
+y_2
+=
+\frac{\alpha_2c_sx_4}
+{c_s+\theta x_3}
+$$
+
+these conditions give firm 2's conditional demands:
+
+$$
+x_3
+=
+-\frac{\alpha_2-p_4}
+{\alpha_2p_3}y_2,
+\qquad
+x_4
+=
+\frac{y_2}{p_4},
+\qquad
+c_s
+=
+-\frac{\theta p_4}
+{\alpha_2p_3}y_2
+$$
+
+Thus, after degree-one homogenization, firm 2's demand bundle has the form
+
+$$
+\mathbf d_2(\mathbf p,y_2)
+=
+y_2\mathbf a_2(\mathbf p)
+$$
+
+where the unit demand bundle is determined by commodity prices.
+
+Let $\ell_1$ denote the labor input of firm 1 and let $w$ denote consumer income. With rows representing product 1, product 2, pollution, labor, and the scale claim, and columns representing firm 1, firm 2, and the consumer, respectively, the demand matrix is
+
+$$
+\mathbf D(\mathbf p,\ell_1,y_2,w)
+=
+\begin{bmatrix}
+0
+&
+0
+&
+\dfrac{\beta w}{p_1}
+\\
+0
+&
+0
+&
+(1-\beta)w
+\\
+0
+&
+-\dfrac{\alpha_2-p_4}{\alpha_2p_3}y_2
+&
+0
+\\
+\ell_1
+&
+\dfrac{y_2}{p_4}
+&
+0
+\\
+0
+&
+-\dfrac{\theta p_4}{\alpha_2p_3}y_2
+&
+0
+\end{bmatrix}
+$$
+
+and the supply matrix is
+
+$$
+\mathbf S(\ell_1,y_2)
+=
+\begin{bmatrix}
+\alpha_1\ell_1 & 0 & 0\\
+0 & y_2 & 0\\
+\alpha_1\ell_1 & 0 & 0\\
+0 & 0 & \omega\\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+The equilibrium can therefore be written directly as the equality-form wide-sense structural equilibrium model
+
+$$
+\mathbf p^\top
+\mathbf D(\mathbf p,\ell_1,y_2,w)
+=
+\mathbf p^\top
+\mathbf S(\ell_1,y_2)
+$$
+$$
+\mathbf D(\mathbf p,\ell_1,y_2,w)\mathbf 1
+=
+\mathbf S(\ell_1,y_2)\mathbf 1
+$$
+
+
+
+Define
+
+$$
+\xi
+:=
+\theta\alpha_1\omega
+$$
+
+and
+
+$$
+\lambda
+:=
+\frac{
+\xi(2\beta-1)-1+
+\sqrt{
+[1-\xi(2\beta-1)]^2+4\beta^2\xi
+}
+}{
+2\beta\xi
+}
+$$
+
+The equilibrium labor allocation is
+
+$$
+\mathbf l^*
+=
+\left(
+\lambda\omega,
+(1-\lambda)\omega
+\right)^\top
+$$
+
+The equilibrium price vector is
+
+$$
+\mathbf p^*
+=
+\left(
+\frac{\alpha_2(1+\xi)}
+{\alpha_1(1+\xi\lambda)^2},
+1,
+-\frac{\theta\alpha_2(1-\lambda)\omega}
+{(1+\xi\lambda)^2},
+\frac{\alpha_2}
+{1+\xi\lambda},
+\frac{\theta\alpha_1\alpha_2\lambda(1-\lambda)\omega^2}
+{(1+\xi\lambda)^2}
+\right)^\top
+$$
+
+and the consumer's equilibrium income is
+
+$$
+w^*
+=
+\frac{\alpha_2(1-\lambda)\omega}
+{(1-\beta)(1+\xi\lambda)}
+$$
+
+
+For
+
+$$
+\alpha_1=2.5,
+\qquad
+\alpha_2=50,
+\qquad
+\theta=1,
+\qquad
+\omega=10,
+\qquad
+\beta=0.5
+$$
+
+which correspond to the parameter values in @wiesmeth2012 [p. 64], the equilibrium labor allocation is
+
+$$
+\mathbf l^*
+=
+\left(
+\frac{2(\sqrt{26}-1)}5,
+\frac{2(26-\sqrt{26})}5
+\right)^\top
+\approx
+(1.6396,8.3604)^\top
+$$
+
+The equilibrium price vector is
+
+$$
+\mathbf p^*
+\approx
+(20.0000,\ 1.0000,\ -16.0777,\ 9.8058,\ 65.9027)^\top
+$$
+
+and the consumer's income is
+
+$$
+w^*
+\approx163.9608
+$$
+
+The corresponding pollution input and scale-claim input of firm 2 are
+
+$$
+x_3^*
+=
+\alpha_1\ell_1^*
+\approx4.0990,
+\qquad
+c_s^*=1
+$$
+
+The equilibrium output of firm 2 is
+
+$$
+y_2^*
+=
+\frac{50\times8.3604}
+{1+4.0990}
+\approx81.9804
+$$
+
+The numerical equilibrium can be computed directly with the GEMB high-level framework. Firm 1 is represented as a joint-production activity, while firm 2 is represented by the degree-one homogeneous production function $g(x_3,x_4,c_s)$ together with production stationarity conditions. The pollution price is allowed to be negative, whereas the consumer supplies one unit of the scale claim. The computed equilibrium reproduces the analytical solution above.
+
+::: {#lst-gemb_productionExternality_degreeOneHomogenization_nc5_na3}
+
+```{.julia include="../../code/gemb_productionExternality_degreeOneHomogenization_nc5_na3_v1.jl"}
+```
+
+A $5\times3$ Production-Externality Equilibrium Model with Degree-One Homogenization
+
+:::
+
+
+## Uninternalized Production Externality
+
+Now consider the case in which the production externality is not internalized. Firm 1 generates pollution as a by-product of producing product 1, and the pollution lowers the productivity of firm 2. Since pollution is not priced or traded in this case, it need not be included explicitly as a commodity. Its effect can instead be represented directly through the dependence of firm 2's production technology on the activity level of firm 1.
+
+Assume the following:
+
+1. There are three commodities: product 1, product 2, and labor; and there are two firms and one consumer. Product 2 is the numeraire.
+2. Firm 1 produces product 1. One unit of labor produces $\alpha_1$ units of product 1 and simultaneously generates $\alpha_1$ units of pollution. If its labor input is $\ell_1$, its output of product 1 and the associated pollution are therefore both $\alpha_1\ell_1$.
+3. Firm 2 produces product 2 using labor. Its productivity is negatively affected by the pollution generated by firm 1. If its labor input is $\ell_2$, its output is
+
+$$
+y_2
+=
+\frac{\alpha_2\ell_2}
+{1+\theta\alpha_1\ell_1}
+$$
+
+4. The pollution generated by firm 1 is an external effect on firm 2 and carries no price.
+5. The consumer has Cobb--Douglas preferences
+
+$$
+u(x_1,x_2)
+=
+x_1^\beta x_2^{1-\beta},
+\qquad
+0<\beta<1
+$$
+
+and is endowed with $\omega$ units of labor.
+
+Retaining the commodity indices from the previous formulation, let the reduced price vector be
+
+$$
+\mathbf p
+=
+(p_1,1,p_4)^\top
+$$
+
+and let $\mathbf l=(\ell_1,\ell_2)^\top$. The demand and supply matrices can be written as
+
+$$
+\mathbf D(\mathbf p,\mathbf l,w)
+=
+\begin{bmatrix}
+0&0&\frac{\beta w}{p_1}\\
+0&0&(1-\beta)w\\
+\ell_1&\ell_2&0
+\end{bmatrix}
+$$
+
+and
+
+$$
+\mathbf S(\mathbf l)
+=
+\begin{bmatrix}
+\alpha_1\ell_1&0&0\\
+0&\frac{\alpha_2\ell_2}{1+\theta\alpha_1\ell_1}&0\\
+0&0&\omega
+\end{bmatrix}
+$$
+
+The production externality therefore enters the equilibrium system through the supply of product 2. Firm 2 takes the activity of firm 1, and hence the resulting pollution level, as given. Because pollution is not a traded commodity, no pollution expenditure appears in the revenue-expenditure balance condition of either firm.
+
+Solving the equality-form wide-sense structural equilibrium model gives
+
+$$
+\mathbf l^*
+=
+\left(
+\beta\omega,
+(1-\beta)\omega
+\right)^\top
+$$
+
+and
+
+$$
+\mathbf p^*
+=
+\left(
+\frac{\alpha_2}
+{\alpha_1(1+\theta\alpha_1\beta\omega)},
+1,
+\frac{\alpha_2}
+{1+\theta\alpha_1\beta\omega}
+\right)^\top
+$$
+
+The equilibrium income of the consumer is
+
+$$
+w^*
+=
+\frac{\alpha_2\omega}
+{1+\theta\alpha_1\beta\omega}
+$$
+
+For comparison with the previous formulation, one may append a zero pollution price, $p_3=0$. The corresponding price vector is therefore
+
+$$
+\left(
+\frac{\alpha_2}
+{\alpha_1(1+\theta\alpha_1\beta\omega)},
+1,
+0,
+\frac{\alpha_2}
+{1+\theta\alpha_1\beta\omega}
+\right)^\top
+$$
+
+For
+
+$$
+\alpha_1=2.5,
+\qquad
+\alpha_2=50,
+\qquad
+\theta=1,
+\qquad
+\omega=10,
+\qquad
+\beta=0.5
+$$
+
+the equilibrium is [see @wiesmeth2012, p. 65]
+
+$$
+\mathbf l^*
+=
+(5,5)^\top
+$$
+
+and the reduced equilibrium price vector is
+
+$$
+\mathbf p^*
+=
+\left(
+\frac{40}{27},
+1,
+\frac{100}{27}
+\right)^\top
+\approx
+(1.4815,1,3.7037)^\top
+$$
+
+The consumer's equilibrium income is
+
+$$
+w^*
+=
+\frac{1000}{27}
+\approx37.0370
+$$
+
+Firm 1 produces
+
+$$
+y_1^*
+=
+\alpha_1\ell_1^*
+=
+12.5
+$$
+
+while firm 2 produces
+
+$$
+y_2^*
+=
+\frac{50\times5}{1+2.5\times5}
+=
+\frac{500}{27}
+\approx18.5185
+$$
+
+The corresponding consumer demands are
+
+$$
+x_1^*
+=
+12.5,
+\qquad
+x_2^*
+=
+\frac{500}{27}
+$$
+
+so both product markets clear.
+
+In the GEMB implementation, the pollution commodity is omitted altogether. Firm 2 instead observes the activity level of firm 1, and its labor requirement is specified as
+
+$$
+\ell_2
+=
+\frac{1+\theta\alpha_1\ell_1}{\alpha_2}y_2
+$$
+
+Thus, the externality affects firm 2's production technology without being represented as a priced transaction. The numerical implementation in @lst-gemb_productionExternality_nc3_na3 reproduces the analytical equilibrium above.
+
+::: {#lst-gemb_productionExternality_nc3_na3}
+
+```{.julia include="../../code/gemb_productionExternality_nc3_na3_v1.jl"}
+```
+
+A $3\times3$ Equilibrium Model with an Uninternalized Production Externality
+
+:::

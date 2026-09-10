@@ -1,0 +1,368 @@
+<!-- liwu3 -->
+---
+title: "Excess Burden of a Commodity Tax under Quasilinear Utility Functions"
+---
+
+## The $4 \times 4$ Model
+This example is essentially a pure exchange economy, with a tax intermediary added to implement the commodity tax.
+
+Assume the following:
+
+1. The economy contains four commodities: corn, iron, taxed iron, and tax certificates; and four economic agents: consumer 1, consumer 2, a firm, and the government. Corn is taken as the numeraire commodity.
+2. Consumer 1 has the utility function
+
+   $$
+   u_1(x_1,x_3)
+   =
+   x_1+\beta_1\left(\alpha_1x_3-\frac12x_3^2\right)
+   $$
+
+   where $x_1$ denotes corn, $x_3$ denotes taxed iron, and $\alpha_1,\beta_1>0$. Consumer 1 is endowed with $\omega_1$ units of corn.
+3. Consumer 2 has the utility function
+
+   $$
+   u_2(x_1,x_2)
+   =
+   x_1+\beta_2\left(\alpha_2x_2-\frac12x_2^2\right)
+   $$
+
+   where $x_1$ denotes corn, $x_2$ denotes iron, and $\alpha_2,\beta_2>0$. Consumer 2 is endowed with $\omega_2$ units of iron. Consumer 1 wishes to purchase iron supplied by consumer 2, and the government imposes a commodity tax on iron.
+4. The firm acts as a tax agency. It uses iron and tax certificates as inputs to produce taxed iron. Under the tax system, consumer 1 must purchase taxed iron from the firm, while consumer 2 must sell iron through the firm.
+5. The government is endowed with one unit of the tax certificate and has the utility function $u_G=x_1$.
+
+## Equilibrium
+
+Suppose the parameter values ensure interior solutions in both the taxed and no-tax equilibria, with positive consumption of corn and iron-related commodities for both consumers and positive equilibrium prices for $\tau>0$. Consumer 1's demand for taxed iron is
+
+$$
+x_3(p_3)
+=
+\alpha_1-\frac{p_3}{\beta_1}
+$$
+
+and consumer 2's demand for iron is
+
+$$
+x_2(p_2)
+=
+\alpha_2-\frac{p_2}{\beta_2}
+$$
+
+Let the price vector be
+
+$$
+\mathbf p:=(1,p_2,p_3,p_4)^\top
+$$
+
+where $p_2$ is the price of iron, $p_3$ is the price of taxed iron, and $p_4$ is the price of the tax certificate. Let $y$ denote the firm's activity level, which is also its output of taxed iron; let $\mathbf w=(w_1,w_2)^\top$ denote the vector of consumer incomes; let $u$ denote the government's utility level; and let $\tau>0$ denote the ad valorem commodity tax rate.
+
+Consumer 1 purchases $x_3$ units of taxed iron, so its demand for corn is $w_1-p_3x_3$. Consumer 2 consumes $x_2$ units of iron and sells the remaining iron, so its demand for corn is $w_2-p_2x_2$.
+
+To produce one unit of taxed iron, the firm uses one unit of iron and tax certificates with a total value equal to $\tau p_2$. Therefore, producing $y$ units of taxed iron requires
+
+$$
+\frac{yp_2\tau}{p_4}
+$$
+
+units of tax certificates.
+
+The government sells its endowment of tax certificates and spends the resulting income entirely on corn.
+
+The demand matrix is therefore
+
+$$
+\mathbf D(\mathbf p,u,\mathbf w,y)
+:=
+\begin{bmatrix}
+w_1-p_3x_3 & w_2-p_2x_2 & 0 & u\\
+0 & x_2 & y & 0\\
+x_3 & 0 & 0 & 0\\
+0 & 0 & \frac{yp_2\tau}{p_4} & 0
+\end{bmatrix}
+$$
+
+and the supply matrix is
+
+$$
+\mathbf S(y)
+:=
+\begin{bmatrix}
+\omega_1 & 0 & 0 & 0\\
+0 & \omega_2 & 0 & 0\\
+0 & 0 & y & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+Solving the equality-form wide-sense structural equilibrium model gives
+
+$$
+p_2^*
+=
+\frac{
+\beta_1\beta_2(\alpha_1+\alpha_2-\omega_2)
+}{
+\beta_1+(1+\tau)\beta_2
+}
+$$
+
+$$
+p_3^*
+=
+(1+\tau)p_2^*
+$$
+
+and
+
+$$
+p_4^*
+=
+y^*p_2^*\tau
+$$
+
+The equilibrium quantity of taxed iron is
+
+$$
+y^*
+=
+\alpha_1-\frac{p_3^*}{\beta_1}
+$$
+
+with
+
+$$
+x_3^*=y^*
+$$
+
+and
+
+$$
+x_2^*
+=
+\alpha_2-\frac{p_2^*}{\beta_2}
+$$
+
+The equilibrium consumer incomes and government utility level are
+
+$$
+w_1^*=\omega_1
+$$
+
+$$
+w_2^*=p_2^*\omega_2
+$$
+
+and
+
+$$
+u^*=p_4^*
+$$
+
+respectively.
+
+The commodity tax generates a wedge between the buyer's price and the seller's price:
+
+$$
+p_3^*-p_2^*
+=
+\tau p_2^*
+$$
+
+Consider the parameter values
+
+$$
+\beta_1=\beta_2=0.05,\qquad
+\alpha_1=120,\qquad
+\alpha_2=100
+$$
+
+$$
+\omega_1=1000,\qquad
+\omega_2=100,\qquad
+\tau=1
+$$
+
+The analytical solution is
+
+$$
+p_2^*=2,\qquad
+p_3^*=4,\qquad
+p_4^*=80
+$$
+
+and
+
+$$
+y^*=40
+$$
+
+Hence the equilibrium price vector is
+
+$$
+\mathbf p^*
+=
+(1,2,4,80)^\top
+$$
+
+Consumer 1 consumes 840 units of corn and 40 units of taxed iron. Consumer 2 consumes 80 units of corn and 60 units of iron. The government consumes 80 units of corn.
+
+## Excess Burden of the Commodity Tax
+
+The equilibrium utilities of the two consumers under the commodity tax rate $\tau$ are
+
+$$
+u_1^*(\tau)
+=
+\omega_1-p_3^*x_3^*
++
+\beta_1
+\left(
+\alpha_1x_3^*
+-\frac12(x_3^*)^2
+\right)
+$$
+
+and
+
+$$
+u_2^*(\tau)
+=
+p_2^*(\omega_2-x_2^*)
++
+\beta_2
+\left(
+\alpha_2x_2^*
+-\frac12(x_2^*)^2
+\right)
+$$
+
+The government's equilibrium utility is
+
+$$
+u_G^*(\tau)
+=
+u^*
+=
+p_4^*
+=
+y^*p_2^*\tau
+$$
+
+Since the three utility functions are normalized in units of corn, define the utilitarian social welfare measure under the commodity tax rate $\tau$ as
+
+$$
+W(\tau)
+:=
+u_1^*(\tau)
++
+u_2^*(\tau)
++
+u_G^*(\tau)
+$$
+
+Let $W(0)$ denote social welfare in the no-tax equilibrium. The excess burden of the commodity tax is
+
+$$
+W(0)-W(\tau)
+$$
+
+which can be calculated as
+
+$$
+W(0)-W(\tau)
+=
+\frac{
+\beta_1^2\beta_2^2\tau^2
+(\alpha_1+\alpha_2-\omega_2)^2
+}{
+2(\beta_1+\beta_2)
+\left[\beta_1+\beta_2(1+\tau)\right]^2
+}
+$$
+
+Using the equilibrium price $p_2^*$, this can be written more simply as
+
+$$
+W(0)-W(\tau)
+=
+\frac{(\tau p_2^*)^2}
+{2(\beta_1+\beta_2)}
+$$
+
+The reduction in the equilibrium quantity of traded iron relative to the no-tax equilibrium is
+
+$$
+y^*(0)-y^*(\tau)
+=
+\frac{\tau p_2^*}{\beta_1+\beta_2}
+$$
+
+while the commodity-tax wedge is
+
+$$
+p_3^*-p_2^*
+=
+\tau p_2^*
+$$
+
+Hence the excess burden can also be expressed as
+
+$$
+W(0)-W(\tau)
+=
+\frac12
+(p_3^*-p_2^*)
+\left[y^*(0)-y^*(\tau)\right]
+$$
+
+which is the area of the excess-burden triangle generated by the commodity tax.
+
+For the numerical parameter values above, the no-tax equilibrium quantity is
+
+$$
+y^*(0)=60
+$$
+
+while the equilibrium quantity under $\tau=1$ is
+
+$$
+y^*(1)=40
+$$
+
+The commodity-tax wedge is
+
+$$
+p_3^*-p_2^*=2
+$$
+
+and therefore the excess burden is
+
+$$
+\frac12(60-40)(4-2)=20
+$$
+
+Equivalently,
+
+$$
+W(0)=1430,\qquad
+W(1)=1410
+$$
+
+so that
+
+$$
+W(0)-W(1)=20
+$$
+
+When $\tau=0$, the tax certificate has no economic role and its equilibrium price is zero, while the term $\frac{yp_2\tau}{p_4}$ in the demand matrix becomes indeterminate. The no-tax equilibrium should therefore be represented without the tax-certificate commodity, or equivalently interpreted through the limit as $\tau\to0^+$ when welfare is considered.
+
+The corresponding GEMB implementation is given in @lst-gemb_commodityTax_quasilinearUtility_nc4_na4.
+
+::: {#lst-gemb_commodityTax_quasilinearUtility_nc4_na4}
+
+```{.julia include="../../code/gemb_commodityTax_quasilinearUtility_nc4_na4_v1.jl"}
+```
+
+A $4\times4$ General Equilibrium Model with a Commodity Tax and Quasilinear Utility Functions
+
+:::

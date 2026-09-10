@@ -1,0 +1,510 @@
+<!-- liwu2 -->
+---
+title: "Intertemporal Equilibrium with Knowledge Production"
+---
+
+## Finite-Horizon Equilibrium with Linear Additive R&D
+
+### Technology-Accumulation Intertemporal Equilibrium Model
+
+The basic mechanism of the model is closely related to the R&D-based growth literature. @romer1990endogenous treats technological change as the outcome of intentional R&D investment and emphasizes the allocation of productive resources to research, while @jones1995rd considers a more general knowledge-production process in which the creation of new knowledge may depend on both R&D inputs and the existing stock of knowledge. The linear additive R&D specification adopted here can be viewed as a simple special case in which the increment in the production-efficiency parameter is proportional to current R&D labor and independent of the existing level of technology.
+
+Assume the following:
+
+1. The economy has $n_p$ periods. A firm operating in period $t$ starts production at the beginning of the period and obtains its product at the end of period $t$, or equivalently at the beginning of period $t+1$. Hence there are $n_p-1$ interperiod production activities. In general, an $n_p$-period model may contain $n_p$ dated products, but in the present example the initial-period product supply and consumption are omitted. The product commodities are therefore $product^{(2)},\ldots,product^{(n_p)}$.
+
+2. The economy contains four types of dated commodities: products, labor, technology knowledge (i.e., production-efficiency parameters), and scale claims. Product firms operate in periods $t=1,\ldots,n_p-1$, R&D firms operate in periods $t=1,\ldots,n_p-2$, and there is one intertemporal consumer. Commodities dated at different periods are treated as different commodities.
+
+3. The product firm operating in period $t$ uses the production-efficiency parameter $\alpha^{(t)}$ and production labor $x^{(t)}$ to produce the product available in period $t+1$ according to $c^{(t+1)}=\alpha^{(t)}x^{(t)}$. To represent this technology as a degree-one homogeneous production function, a scale claim $c_s^{(t)}$ is introduced, giving
+
+$$
+g\left(\alpha^{(t)},x^{(t)},c_s^{(t)}\right)
+=
+\frac{\alpha^{(t)}x^{(t)}}{c_s^{(t)}}
+$$
+
+The product firm follows the marginal pricing principle.
+
+4. The R&D firm operating in period $t$ uses R&D labor $\ell^{(t)}$ to increase production efficiency from period $t+1$ onward. With R&D-efficiency parameter $\bar\alpha>0$, one unit of R&D labor generates $\bar\alpha$ units of each future production-efficiency parameter commodity (i.e., technology knowledge) within the production horizon. Hence $\alpha^{(t+1)}=\alpha^{(t)}+\bar\alpha\ell^{(t)}$ for $t=1,\ldots,n_p-2$, or equivalently
+
+$$
+\alpha^{(t)}
+=
+\alpha^{(1)}
++
+\bar\alpha
+\sum_{s=1}^{t-1}\ell^{(s)},
+\qquad
+t=2,\ldots,n_p-1
+$$
+
+5. The consumer is endowed with $\omega>0$ units of labor and one unit of the scale claim in each production period, together with $\alpha^{(1)}$ units of each dated production-efficiency parameter commodity. Labor-market balance is $x^{(t)}+\ell^{(t)}=\omega$ for $t=1,\ldots,n_p-2$, while $x^{(n_p-1)}=\omega$ because R&D in the last production period cannot affect production within the horizon.
+
+6. The consumer consumes $c^{(2)},\ldots,c^{(n_p)}$ and has intertemporal utility
+
+$$
+u
+=
+\sum_{t=2}^{n_p}\rho^t\ln c^{(t)},
+\qquad
+0<\rho<1
+$$
+
+For the infinite-horizon version of the model, the critical production-efficiency level for R&D is
+
+$$
+\alpha^*
+=
+\frac{\rho\bar\alpha\omega}{1-\rho}
+$$ {#eq-alphaAsterisk-IntertemporalNSE}
+
+R&D is undertaken when $\alpha^{(t)}<\alpha^*$ and ceases once the production-efficiency parameter reaches the critical level. In particular, if $\alpha^{(1)}\geq\alpha^*$, there is no incentive to undertake R&D.
+
+The finite horizon generates a terminal effect. R&D undertaken late in the horizon affects fewer future production periods, so the incentive to undertake R&D declines near the terminal period and eventually disappears.
+
+For $n_p=9$, $\rho=0.8$, $\alpha^{(1)}=0.01$, $\bar\alpha=0.0001$, and $\omega=100$, the equilibrium R&D-labor path is approximately $(43.02,33.09,23.10,10.99,0,0,0)$. The corresponding productivity increments $\bar\alpha\ell^{(t)}$ are approximately $(0.004302,0.003309,0.002310,0.001099,0,0,0)$. The resulting productivity path is
+
+$$
+\left(
+\alpha^{(2)},\ldots,\alpha^{(8)}
+\right)
+=
+\left(
+0.01430,\,
+0.01761,\,
+0.01992,\,
+0.02102,\,
+0.02102,\,
+0.02102,\,
+0.02102
+\right)
+$$
+
+Thus positive R&D occurs only in the first four R&D periods.
+
+::: {#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3}
+
+```{.julia include="../../code/gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3_v8.jl"}
+```
+
+A $4\times3$ Technology-Accumulation Intertemporal Equilibrium Model with Additive R\&D
+
+:::
+
+### Technology-Trade General Equilibrium Model
+
+The same economy can also be represented as a general equilibrium model in which production-efficiency parameters are treated as tradable parameter commodities. The period convention is the same as in the technology-accumulation intertemporal equilibrium model: $n_p$ denotes the number of periods, production occurs in periods $1,\ldots,n_p-1$, and the product produced in period $t$ becomes available in period $t+1$.
+
+Since $c^{(t+1)}=\alpha^{(t)}x^{(t)}$, the intertemporal utility can be written as
+
+$$
+u
+=
+\sum_{t=1}^{n_p-1}
+\rho^{t+1}
+\left(
+\ln\alpha^{(t)}
++
+\ln x^{(t)}
+\right)
+$$
+
+Because $\alpha^{(1)}$ is given and $x^{(n_p-1)}=\omega$, their contributions to utility are constant and can be omitted. The resulting reduced-form utility is
+
+$$
+U
+=
+\sum_{t=2}^{n_p-1}
+\rho^{t+1}\ln\alpha^{(t)}
++
+\sum_{t=1}^{n_p-2}
+\rho^{t+1}\ln x^{(t)}
+$$
+
+The dated product commodities and the corresponding production firms can therefore be eliminated from the reduced-form model. The reduced economy contains $n_p-2$ dated technology commodities, $technology^{(2)},\ldots,technology^{(n_p-1)}$, and $n_p-2$ dated labor commodities, $labor^{(1)},\ldots,labor^{(n_p-2)}$. The consumer is endowed with $\alpha^{(1)}$ units of each technology knowledge and $\omega$ units of each labor commodity.
+
+Let $\ell^{(t)}$ denote the activity level of the R&D firm operating in period $t$. The activity level directly measures the amount of labor allocated to R&D in that period. One unit of R&D activity requires one unit of period-$t$ labor and jointly produces $\bar\alpha$ units of each future technology knowledge dated from period $t+1$ through period $n_p-1$.
+
+The two equilibrium models use different commodity and agent structures but generate the same R&D-labor allocation, production-labor allocation, and productivity path. The final-product quantities in the technology-accumulation intertemporal equilibrium model can be recovered from $c^{(t+1)}=\alpha^{(t)}x^{(t)}$.
+
+
+::: {#lst-gemb_intertemporalTechnologyTrade_additiveResearch_nct2_nat2}
+
+```{.julia include="../../code/gemb_intertemporalTechnologyTrade_additiveResearch_nct2_nat2_v5.jl"}
+```
+
+A $2\times2$ Technology-Trade General Equilibrium Model with Additive R\&D
+
+:::
+
+
+## Finite-Horizon Equilibrium with Linear Multiplicative R&D
+### Linear Multiplicative R&D
+We now modify the model from the previous section by replacing its R&D function.
+
+Consider the multiplicative technology-accumulation equation
+
+$$
+\alpha^{(t+1)}
+=
+\alpha^{(t)}
+\left(
+1+\bar\alpha\ell^{(t)}
+\right)
+$$
+
+where $\ell^{(t)}$ denotes R&D labor in period $t$. Production in period $t$ generates the product available in period $t+1$, so production takes place in periods $t=1,\ldots,n_p-1$, while useful R&D activities take place only in periods $t=1,\ldots,n_p-2$. The production relation is
+
+$$
+c^{(t+1)}
+=
+\alpha^{(t)}x^{(t)}
+$$
+
+with $x^{(t)}=\omega-\ell^{(t)}$ for $t=1,\ldots,n_p-2$ and $x^{(n_p-1)}=\omega$.
+
+### Analytical Solution
+
+For the infinite-horizon model, positive R&D occurs when
+
+$$
+\rho(1+\bar\alpha\omega)>1
+$$
+
+When this condition holds, the optimal R&D labor input is
+
+$$
+\ell^*
+=
+\rho\omega
+-
+\frac{1-\rho}{\bar\alpha}
+$$
+
+The corresponding productivity path is
+
+$$
+\alpha^{(t)}
+=
+\alpha^{(1)}
+\left[
+\rho(1+\bar\alpha\omega)
+\right]^{t-1},
+\qquad
+t=1,2,\ldots
+$$
+
+
+For the finite-horizon model, define
+
+$$
+q^{(t)}
+=
+\sum_{k=0}^{n_p-t-1}\rho^k
+=
+\frac{1-\rho^{n_p-t}}{1-\rho},
+\qquad
+t=1,\ldots,n_p-2
+$$
+
+The optimal R&D labor input is
+
+$$
+\ell^{*(t)}
+=
+\begin{cases}
+0,
+&
+\displaystyle
+q^{(t)}
+\leq
+1+\frac{1}{\bar\alpha\omega}
+\\[1em]
+\displaystyle
+\omega
+-
+\frac{1}{q^{(t)}}
+\left(
+\omega+\frac{1}{\bar\alpha}
+\right),
+&
+\displaystyle
+q^{(t)}
+>
+1+\frac{1}{\bar\alpha\omega}
+\end{cases}
+$$
+
+Thus R&D eventually disappears as the terminal period approaches. When the long-run R&D condition holds, define
+
+$$
+k^*
+=
+\left\lfloor
+\frac{
+\ln\left(
+\rho-\frac{1-\rho}{\bar\alpha\omega}
+\right)
+}{
+\ln\rho
+}
+\right\rfloor
+$$
+
+Provided that $n_p\geq k^*+2$, the last period with positive R&D is $n_p-k^*-1$. During periods with positive R&D, productivity evolves according to
+
+$$
+\alpha^{(t+1)}
+=
+\alpha^{(t)}
+\rho(1+\bar\alpha\omega)
+\frac{q^{(t+1)}}{q^{(t)}}
+$$
+
+and remains constant thereafter.
+
+<!-- liwu1 -->
+### GEMB Implementation of the Multiplicative R&D Model
+
+The GEMB implementation contains six types of dated commodities: product, labor, technology stock, technology service, product scale claim, and research scale claim. There are three types of economic agents: production firms, R&D firms, and a representative consumer. In addition, a terminal technology agent is introduced as a technical device in the final production period.
+
+Several commodity types are introduced specifically for implementing the model. In particular, the technology stock and the technology service used in current production are represented separately. The technology stock available at the beginning of period $t$ has two roles. It provides the technology service used by the period-$t$ production firm, and it also serves as the technological base from which the next-period technology stock is generated. Separating these two roles makes it possible to represent explicitly both the current productive use of technology and its intertemporal accumulation.
+
+Two different scale-claim commodities are also introduced. The product scale claim, denoted by $c_p^{(t)}$, is associated with the production technology, while the research scale claim, denoted by $c_r^{(t)}$, is associated with the R&D technology. One unit of each corresponding scale claim is supplied in each relevant period, so market clearing gives $c_p^{(t)}=1$ and $c_r^{(t)}=1$. These commodities allow the two technologies to be represented in degree-one homogeneous form.
+
+The period-$t$ production firm uses technology service, labor, and the product scale claim to produce the product available in period $t+1$. Its homogenized production function is
+
+$$
+g(a,x,c_p)
+=
+\frac{ax}{c_p}
+$$
+
+where $a$ is the technology service and $x$ is production labor. When $c_p=1$, this reduces to the original production relation
+
+$$
+c^{(t+1)}
+=
+\alpha^{(t)}x^{(t)}
+$$
+
+The production firm can therefore be represented directly by a standard production-function specification with marginal-pricing conditions.
+
+The R&D firm requires a different treatment. Let $a$, $\ell$, and $c_r$ denote its inputs of current technology stock, R&D labor, and research scale claim. The firm supplies $a$ units of current technology service and produces the next-period technology stock according to
+
+$$
+a'
+=
+a
+\left(
+1+\bar\alpha\frac{\ell}{c_r}
+\right)
+$$
+
+This technology is homogeneous of degree one in $(a,\ell,c_r)$. When $c_r=1$, it becomes
+
+$$
+\alpha^{(t+1)}
+=
+\alpha^{(t)}
+\left(
+1+\bar\alpha\ell^{(t)}
+\right)
+$$
+
+and hence
+
+$$
+\alpha^{(t+1)}-\alpha^{(t)}
+=
+\bar\alpha\alpha^{(t)}\ell^{(t)}
+$$
+
+The productivity of R&D labor depends on the current technology stock, so one unit of R&D labor does not generate a fixed amount of future technology. The R&D firm cannot therefore be represented directly by an activity-demand specification.
+
+The R&D firm also cannot be represented directly by the standard production-function specification. Although this specification allows joint outputs, their quantities are proportional to a common activity level through fixed output coefficients.
+
+The R&D firm is consequently implemented as an explicit net-supply agent. Over current technology stock, labor, research scale claim, current technology service, and next-period technology stock, its net-supply vector is
+
+$$
+\bar{\mathbf s}
+=
+\left(
+-a,\,
+-\ell,\,
+-c_r,\,
+a,\,
+a\left(1+\bar\alpha\frac{\ell}{c_r}\right)
+\right)^\top
+$$
+
+The first three components are demands for current technology stock, labor, and the research scale claim, while the last two components are supplies of current technology service and next-period technology stock. The current technology stock is thus used both to provide current productive services and as the base for future technology accumulation.
+
+Let $p_a^{(t)}$, $w^{(t)}$, $p_r^{(t)}$, $p_v^{(t)}$, and $p_a^{(t+1)}$ denote the prices of current technology stock, labor, research scale claim, current technology service, and next-period technology stock, respectively. The corresponding explicit marginal-pricing conditions are
+
+$$
+w^{(t)}
+=
+p_a^{(t+1)}
+\bar\alpha
+\frac{a}{c_r}
+$$
+
+$$
+p_a^{(t)}
+=
+p_v^{(t)}
++
+p_a^{(t+1)}
+\left(
+1+\bar\alpha\frac{\ell}{c_r}
+\right)
+$$
+
+and
+
+$$
+p_r^{(t)}
+=
+-
+p_a^{(t+1)}
+\bar\alpha
+\frac{a\ell}{c_r^2}
+$$
+
+Although the R&D firm is associated with five commodities, only three marginal-pricing conditions are required because its independent decision variables are the three inputs $a$, $\ell$, and $c_r$; the two outputs are determined by these inputs through the R&D technology.
+
+The first condition equates the wage to the marginal value generated by an additional unit of R&D labor. The second decomposes the value of the current technology stock into the value of its current technology service and its contribution to the next-period technology stock. The third determines the price of the research scale claim associated with the degree-one homogenization. In the implementation, $\ell$ is also used as the activity level of the R&D firm, so the reported R&D activity levels directly represent equilibrium R&D labor inputs.
+
+The representative consumer supplies the dated labor endowments, the initial technology stock, and the scale-claim commodities, and demands the dated products. Since the consumer side is unchanged from the underlying intertemporal model, no additional behavioral specification is required for the multiplicative R&D mechanism.
+
+Finally, there is no useful R&D activity in period $n_p-1$, because technology generated in that period would become available only as $\alpha^{(n_p)}$ and could not be used by any production activity within the finite horizon. A terminal technology agent is therefore introduced to convert the remaining technology stock into the technology service required by the final production firm. This terminal agent is a computational transfer device rather than an additional behavioral type of economic agent.
+
+
+### Numerical Equilibrium
+
+The GEMB implementation described above can be illustrated with $n_p=20$, $\rho=0.7$, $\alpha^{(1)}=1$, $\bar\alpha=0.005$, and $\omega=100$. For these parameters,
+
+$$
+\bar\alpha\omega=0.5>\frac{1}{\rho}-1
+$$
+
+so the corresponding infinite-horizon model has positive R&D. For the finite-horizon model, the analytical solution gives $k^*=6$, implying that the last period with positive R&D is
+
+$$
+n_p-k^*-1=13
+$$
+
+Thus R&D is positive in periods $1,\ldots,13$ and zero thereafter. Productivity increases through $\alpha^{(14)}$ and then remains constant.
+
+The numerical equilibrium obtained with GEMB reproduces these analytical results. In particular, the equilibrium R&D labor inputs coincide with the finite-horizon solution, and the resulting productivity path follows the corresponding technology-accumulation path. This provides a numerical verification of both the analytical solution and the GEMB representation of the multiplicative R&D technology.
+
+
+::: {#lst-gemb_intertemporalTechnologyAccumulation_multiplicativeResearch_nct6_nat3}
+
+```{.julia include="../../code/gemb_intertemporalTechnologyAccumulation_multiplicativeResearch_nct6_nat3_v9.jl"}
+```
+
+A $6\times3$ Technology-Accumulation Intertemporal Equilibrium Model with Linear Multiplicative R\&D
+
+:::
+
+<!-- julia> println(alpha_path) -->
+<!-- [1.049486464342745, 1.1011904840739999, 1.1550945530488763, 1.2111160978580848, 1.2690721284861362, 1.3286260735131636, 1.3892078850929026, 1.4498940412036692, 1.5092273860480347, 1.5649467195267097, 1.6135810017674552, 1.6498404712524433, 1.665703123909988, 1.665703123909988, 1.665703123909988, 1.665703123909988, 1.665703123909988, 1.665703123909988] -->
+
+
+<!-- liwu1 -->
+## Exponential Multiplicative R&D
+
+Consider an alternative multiplicative R&D specification,
+
+$$
+\alpha^{(t+1)}
+=
+\alpha^{(t)}
+e^{\bar\alpha\ell^{(t)}}
+$$
+
+where $\ell^{(t)}$ denotes R&D labor in period $t$. As before, production in period $t$ generates the product available in period $t+1$, so useful R&D activities occur only in periods $t=1,\ldots,n_p-2$.
+
+For the infinite-horizon model, positive R&D occurs when
+
+$$
+\bar\alpha\omega
+>
+\frac{1}{\rho}-1
+$$
+
+and the corresponding R&D labor input is
+
+$$
+\ell^*
+=
+\omega
+-
+\frac{1-\rho}{\rho\bar\alpha}
+$$
+
+When R&D is positive, productivity follows
+
+$$
+\alpha^{(t)}
+=
+\alpha^{(1)}
+\left(
+e^{\bar\alpha\omega-\frac{1-\rho}{\rho}}
+\right)^{t-1},
+\qquad
+t=1,2,\ldots
+$$
+
+For the finite-horizon model, the optimal R&D labor input is
+
+$$
+\ell^{*(t)}
+=
+\begin{cases}
+0,
+&
+\displaystyle
+\bar\alpha\omega
+\leq
+\frac{1-\rho}
+{\rho\left(1-\rho^{n_p-t-1}\right)}
+\\[1em]
+\displaystyle
+\omega
+-
+\frac{1-\rho}
+{\rho\bar\alpha\left(1-\rho^{n_p-t-1}\right)},
+&
+\displaystyle
+\bar\alpha\omega
+>
+\frac{1-\rho}
+{\rho\left(1-\rho^{n_p-t-1}\right)}
+\end{cases},
+\qquad
+t=1,\ldots,n_p-2
+$$
+
+When the long-run R&D condition holds, define
+
+$$
+k^*
+=
+\left\lfloor
+\frac{
+\ln\left(
+1-\frac{1-\rho}{\rho\bar\alpha\omega}
+\right)
+}{
+\ln\rho
+}
+\right\rfloor
++1
+$$
+
+Provided that $n_p\geq k^*+2$, the last period with positive R&D is $n_p-k^*-1$. The resulting productivity level $\alpha^{(n_p-k^*)}$ is then maintained throughout the remaining periods.
+
+

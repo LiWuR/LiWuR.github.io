@@ -24,18 +24,25 @@ website:
 
         - section: "Static Pure Exchange Equilibrium Models"
           contents:
-            # - models/PureExch/index.qmd
              - models/PureExch/MonopolisticSupply.qmd
+             - models/PureExch/CommodityTaxUnderQuasilinearUtilityFunctions.qmd
 
-        - section: "Static Production Equilibrium Models"
+        - section: "Static Production Equilibrium Models: Basic Models"
           contents:
-            # - models/Prod/model1.qmd
-            # - models/Prod/model2.qmd
+            - models/ProdBasic/GeneralEquilibriumAndLinearProgramming.qmd
+            - models/ProdBasic/MinimumWageAndEndogenousLaborSupply.qmd
+        - section: "Static Production Equilibrium Models: Extended Models"
+          contents:
+            - models/ProdExtended/ProductionExternalityAndDegreeOneHomogenization.qmd
+        
+        - section: "Intertemporal Equilibrium Models: Basic Models"
+          contents:
+            - models/IntertemporalBasic/CanonicalDynamicMacroeconomicEquilibrium.qmd
+            - models/IntertemporalBasic/ProductionOLGEquilibriumInTimelineForm.qmd
 
-        - section: "Intertemporal Equilibrium Models"
+        - section: "Intertemporal Equilibrium Models: Extended Models"
           contents:
-            # - models/Intertemporal/model1.qmd
-            # - models/Intertemporal/model2.qmd
+            - models/IntertemporalExtended/KnowledgeProduction.qmd
 
 
 format:

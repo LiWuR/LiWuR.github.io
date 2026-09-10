@@ -63,7 +63,7 @@ function monopoly_objective(q)
     return -equilibrium.u1
 end
 
-# 避免 q = 0 导致内层均衡退化
+# Prevent inner equilibrium breakdown at q = 0
 q_lower = 0.01 * s1
 
 optimization = optimize(
