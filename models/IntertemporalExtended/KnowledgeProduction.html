@@ -329,6 +329,18 @@ window.Quarto = {
  <span class="menu-text">Intertemporal Equilibrium with Knowledge Production</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalExtended/EndogenousInterestRates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intertemporal Equilibrium with Production and Endogenous Interest Rates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalExtended/EndogenousInterestRatesAndCapitalAccumulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Endogenous Interest Rates and Capital Accumulation</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -659,7 +671,7 @@ Listing&nbsp;1: A <span class="math inline">\(4\times3\)</span> Technology-Accum
 <span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-205"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-205" aria-hidden="true" tabindex="-1"></a>result.solved <span class="op">||</span> <span class="fu">error</span>(<span class="st">"Equilibrium solve failed."</span>)</span>
 <span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-206"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-206" aria-hidden="true" tabindex="-1"></a></span>
 <span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-207"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-207" aria-hidden="true" tabindex="-1"></a>stats <span class="op">=</span> <span class="fu">equilibrium_statistics</span>(model, result)</span>
-<span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-208"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-208" aria-hidden="true" tabindex="-1"></a><span class="fu">print_equilibrium_statistics</span>(model, result)</span>
+<span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-208"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-208" aria-hidden="true" tabindex="-1"></a><span class="fu">print_equilibrium_statistics</span>(model, result, show_matrices<span class="op">=</span><span class="cn">false</span>)</span>
 <span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-209"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-209" aria-hidden="true" tabindex="-1"></a></span>
 <span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-210"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-210" aria-hidden="true" tabindex="-1"></a>research_labor <span class="op">=</span></span>
 <span id="lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-211"><a href="#lst-gemb_intertemporalTechnologyAccumulation_additiveResearch_nct4_nat3-211" aria-hidden="true" tabindex="-1"></a>    stats.activity_levels[np<span class="op">:</span>(<span class="fl">2</span> <span class="op">*</span> np <span class="op">-</span> <span class="fl">3</span>)]</span>

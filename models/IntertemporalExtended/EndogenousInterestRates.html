@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Intertemporal Equilibrium with Production and Endogenous Interest Rates – Li Wu</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5XKP5QW2FE"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5XKP5QW2FE', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Li Wu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../models/index.html" aria-current="page"> 
+<span class="menu-text">Models</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../discussion.html"> 
+<span class="menu-text">Discussion</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../models/IntertemporalExtended/KnowledgeProduction.html">Intertemporal Equilibrium Models: Extended Models</a></li><li class="breadcrumb-item"><a href="../../models/IntertemporalExtended/EndogenousInterestRates.html">Intertemporal Equilibrium with Production and Endogenous Interest Rates</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Static Pure Exchange Equilibrium Models</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/PureExch/MonopolisticSupply.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monopolistic Supply</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/PureExch/CommodityTaxUnderQuasilinearUtilityFunctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Excess Burden of a Commodity Tax under Quasilinear Utility Functions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Static Production Equilibrium Models: Basic Models</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/ProdBasic/GeneralEquilibriumAndLinearProgramming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">General Equilibrium and Linear Programming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/ProdBasic/MinimumWageAndEndogenousLaborSupply.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Minimum-Wage and Endogenous Labor Supply</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Static Production Equilibrium Models: Extended Models</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/ProdExtended/ProductionExternalityAndDegreeOneHomogenization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Production Externality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Intertemporal Equilibrium Models: Basic Models</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalBasic/CanonicalDynamicMacroeconomicEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finite-Horizon Canonical Dynamic Macroeconomic Equilibrium</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalBasic/ProductionOLGEquilibriumInTimelineForm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Production OLG Equilibrium in Timeline Form</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Intertemporal Equilibrium Models: Extended Models</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalExtended/KnowledgeProduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intertemporal Equilibrium with Knowledge Production</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalExtended/EndogenousInterestRates.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Intertemporal Equilibrium with Production and Endogenous Interest Rates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalExtended/EndogenousInterestRatesAndCapitalAccumulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Endogenous Interest Rates and Capital Accumulation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-3times2-model" id="toc-the-3times2-model" class="nav-link active" data-scroll-target="#the-3times2-model">The <span class="math inline">\(3\times2\)</span> Model</a></li>
+  <li><a href="#analytical-solution-for-the-endogenous-interest-rates" id="toc-analytical-solution-for-the-endogenous-interest-rates" class="nav-link" data-scroll-target="#analytical-solution-for-the-endogenous-interest-rates">Analytical Solution for the Endogenous Interest Rates</a>
+  <ul class="collapse">
+  <li><a href="#common-nonterminal-interest-rate" id="toc-common-nonterminal-interest-rate" class="nav-link" data-scroll-target="#common-nonterminal-interest-rate">Common Nonterminal Interest Rate</a></li>
+  </ul></li>
+  <li><a href="#numerical-example" id="toc-numerical-example" class="nav-link" data-scroll-target="#numerical-example">Numerical Example</a></li>
+  <li><a href="#numerical-solution" id="toc-numerical-solution" class="nav-link" data-scroll-target="#numerical-solution">Numerical Solution</a></li>
+  <li><a href="#infinite-horizon-equilibrium" id="toc-infinite-horizon-equilibrium" class="nav-link" data-scroll-target="#infinite-horizon-equilibrium">Infinite-Horizon Equilibrium</a></li>
+  <li><a href="#steady-state-a-3times2-equality-form-wide-sense-structural-equilibrium-model" id="toc-steady-state-a-3times2-equality-form-wide-sense-structural-equilibrium-model" class="nav-link" data-scroll-target="#steady-state-a-3times2-equality-form-wide-sense-structural-equilibrium-model">Steady State: A <span class="math inline">\(3\times2\)</span> Equality-Form Wide-Sense Structural Equilibrium Model</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../models/IntertemporalExtended/KnowledgeProduction.html">Intertemporal Equilibrium Models: Extended Models</a></li><li class="breadcrumb-item"><a href="../../models/IntertemporalExtended/EndogenousInterestRates.html">Intertemporal Equilibrium with Production and Endogenous Interest Rates</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Intertemporal Equilibrium with Production and Endogenous Interest Rates</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-3times2-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-3times2-model">The <span class="math inline">\(3\times2\)</span> Model</h2>
+<p>In structural equilibrium models, money is usually treated as an ad valorem claim, and the interest rate is usually treated as an ad valorem claim rate <span class="citation" data-cites="liwu2019e">(<a href="#ref-liwu2019e" role="doc-biblioref">Li, 2019, chap. 7</a>)</span>. This example considers a finite-horizon intertemporal equilibrium with production and endogenous interest rates. There are three types of dated commodities—product, labor, and money—and two types of economic agents—firm and consumer.</p>
+<p>Assume the following:</p>
+<ol type="1">
+<li>The economy operates for <span class="math inline">\(n_p\geq3\)</span> periods, indexed by <span class="math inline">\(1,\ldots,n_p\)</span>. Production takes place in periods <span class="math inline">\(i=1,\ldots,n_p-1\)</span>. Production in period <span class="math inline">\(i\)</span> produces product <span class="math inline">\(i+1\)</span>, which is available in period <span class="math inline">\(i+1\)</span>. Accordingly, the dated products are product <span class="math inline">\(2,\ldots,n_p\)</span>, while the dated labor and money commodities are labor <span class="math inline">\(1,\ldots,n_p-1\)</span> and money <span class="math inline">\(1,\ldots,n_p-1\)</span>. There is no product 1 commodity in the model; the first product generated by production is product 2. Thus, there are <span class="math inline">\(3(n_p-1)\)</span> dated commodities. There is one firm activity in each of the first <span class="math inline">\(n_p-1\)</span> periods and one consumer. Product 2 is the numeraire.</li>
+<li>In production period <span class="math inline">\(i\)</span>, the firm uses labor <span class="math inline">\(l_i\)</span> to produce product <span class="math inline">\(i+1\)</span> according to</li>
+</ol>
+<p><span class="math display">\[
+y_i=\alpha_i l_i,
+\qquad
+\alpha_i&gt;0
+\]</span></p>
+<p>Let <span class="math inline">\(y_i\)</span> also denote the firm’s activity level, measured by output. Thus, producing <span class="math inline">\(y_i\)</span> units of product <span class="math inline">\(i+1\)</span> requires <span class="math inline">\(y_i/\alpha_i\)</span> units of labor <span class="math inline">\(i\)</span>. Before production, the firm presells product <span class="math inline">\(i+1\)</span> and uses money <span class="math inline">\(i\)</span> to purchase labor <span class="math inline">\(i\)</span>.</p>
+<ol start="3" type="1">
+<li>The consumer has the intertemporal Cobb–Douglas utility function</li>
+</ol>
+<p><span class="math display">\[
+u=\prod_{i=1}^{n_p-1}c_{i+1}^{\beta_i}
+\]</span></p>
+<p>where <span class="math inline">\(c_{i+1}\)</span> denotes consumption of product <span class="math inline">\(i+1\)</span>, produced in period <span class="math inline">\(i\)</span>. The expenditure shares are strictly decreasing over production periods,</p>
+<p><span class="math display">\[
+\beta_1&gt;\beta_2&gt;\cdots&gt;\beta_{n_p-1}&gt;0,
+\qquad
+\sum_{i=1}^{n_p-1}\beta_i=1
+\]</span></p>
+<p>The consumer is endowed with <span class="math inline">\(\omega_i&gt;0\)</span> units of labor <span class="math inline">\(i\)</span>, <span class="math inline">\(i=1,\ldots,n_p-1\)</span>. The decreasing-share assumption will ensure strictly positive equilibrium interest rates in all nonterminal production periods. 4. The consumer is endowed with one unit of money in each production period <span class="math inline">\(i=1,\ldots,n_p-1\)</span>. Let <span class="math inline">\(p_{m_i}\)</span> denote the price of money <span class="math inline">\(i\)</span>. We restrict attention to equilibria with strictly positive nonterminal interest rates,</p>
+<p><span class="math display">\[
+r_i&gt;0,
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>while the terminal condition is</p>
+<p><span class="math display">\[
+r_{n_p-1}=+\infty
+\]</span></p>
+<p>For the terminal production period, define the finite interest-inclusive product price</p>
+<p><span class="math display">\[
+\tilde p_{n_p}
+:=
+\lim_{r_{n_p-1}\rightarrow+\infty}
+(1+r_{n_p-1})p_{n_p}
+\]</span></p>
+<p>This variable allows the terminal demands to be written directly without introducing an infinite interest rate into the equilibrium system.</p>
+<p>For the four-period case, <span class="math inline">\(n_p=4\)</span>, there are three production periods. Let</p>
+<p><span class="math display">\[
+\mathbf p
+=
+\left(
+1,p_3,p_4,
+p_{l_1},p_{l_2},p_{l_3},
+p_{m_1},p_{m_2},p_{m_3}
+\right)^\top
+\]</span></p>
+<p>let <span class="math inline">\(\mathbf y=(y_1,y_2,y_3)^\top\)</span> denote firm activity levels, and let <span class="math inline">\(w\)</span> denote consumer income. The consumer’s income is the value of the labor and money endowments,</p>
+<p><span class="math display">\[
+w
+=
+\sum_{i=1}^3p_{l_i}\omega_i
++
+\sum_{i=1}^3p_{m_i}
+\]</span></p>
+<p>With rows representing product 2–4, labor 1–3, and money 1–3, and columns representing the three firms and the consumer, respectively, the demand matrix is</p>
+<p><span class="math display">\[
+\mathbf D(\mathbf p,\mathbf y,w,r_1,r_2,\tilde p_4)
+=
+\begin{bmatrix}
+0&amp;0&amp;0&amp;\dfrac{\beta_1w}{1+r_1}\\[6pt]
+0&amp;0&amp;0&amp;\dfrac{\beta_2w}{(1+r_2)p_3}\\[6pt]
+0&amp;0&amp;0&amp;\dfrac{\beta_3w}{\tilde p_4}\\[6pt]
+\dfrac{y_1}{\alpha_1}&amp;0&amp;0&amp;0\\[6pt]
+0&amp;\dfrac{y_2}{\alpha_2}&amp;0&amp;0\\[6pt]
+0&amp;0&amp;\dfrac{y_3}{\alpha_3}&amp;0\\[6pt]
+\dfrac{r_1p_{l_1}y_1}{\alpha_1p_{m_1}}&amp;0&amp;0&amp;
+\dfrac{\beta_1wr_1}{(1+r_1)p_{m_1}}\\[8pt]
+0&amp;\dfrac{r_2p_{l_2}y_2}{\alpha_2p_{m_2}}&amp;0&amp;
+\dfrac{\beta_2wr_2}{(1+r_2)p_{m_2}}\\[8pt]
+0&amp;0&amp;0&amp;\dfrac{\beta_3w}{p_{m_3}}
+\end{bmatrix}
+\]</span></p>
+<p>and the supply matrix is</p>
+<p><span class="math display">\[
+\mathbf S(\mathbf y)
+=
+\begin{bmatrix}
+y_1&amp;0&amp;0&amp;0\\
+0&amp;y_2&amp;0&amp;0\\
+0&amp;0&amp;y_3&amp;0\\
+0&amp;0&amp;0&amp;\omega_1\\
+0&amp;0&amp;0&amp;\omega_2\\
+0&amp;0&amp;0&amp;\omega_3\\
+0&amp;0&amp;0&amp;1\\
+0&amp;0&amp;0&amp;1\\
+0&amp;0&amp;0&amp;1
+\end{bmatrix}
+\]</span></p>
+<p>The third firm’s zero money demand is a terminal-limit result rather than an additional assumption. As the terminal interest rate tends to infinity, the terminal product price and the third-period labor price both tend to zero in a way that makes the firm’s money demand vanish. Under the same terminal-limit treatment, the consumer’s terminal-period product and money demands are written directly in terms of <span class="math inline">\(\tilde p_4\)</span> and <span class="math inline">\(p_{m_3}\)</span>.</p>
+<p>For each nonterminal production period, labor- and product-market clearing, together with the firm’s revenue-expenditure balance condition, determine the firm’s equilibrium money demand. Combining the firm’s and consumer’s money demands with money-market clearing gives</p>
+<p><span class="math display">\[
+p_{m_i}^*
+=
+\beta_iw^*
+\frac{
+r_i^*(r_i^*+2)
+}{
+(1+r_i^*)^2
+},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>Under the terminal condition, the terminal firm’s money demand vanishes, while the consumer holds the entire unit of terminal money. Hence,</p>
+<p><span class="math display">\[
+p_{m_{n_p-1}}^*
+=
+\beta_{n_p-1}w^*
+\]</span></p>
+<p>These money-price relations provide the basis for deriving the backward recursion for the endogenous equilibrium interest rates.</p>
+</section>
+<section id="analytical-solution-for-the-endogenous-interest-rates" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-solution-for-the-endogenous-interest-rates">Analytical Solution for the Endogenous Interest Rates</h2>
+<p>The endogenous interest rates are determined by the equilibrium values of dated money. Define the tail value of money prices by</p>
+<p><span class="math display">\[
+v_i
+:=
+\sum_{j=i}^{n_p-1}p_{m_j}^*
+\]</span></p>
+<p>For each nonterminal period, the ad valorem claim-rate relation is</p>
+<p><span class="math display">\[
+r_i^*
+=
+\frac{p_{m_i}^*}{v_{i+1}},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>Since</p>
+<p><span class="math display">\[
+v_i=p_{m_i}^*+v_{i+1}
+\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[
+1+r_i^*
+=
+\frac{v_i}{v_{i+1}}
+\]</span></p>
+<p>Normalize the tail value by consumer income:</p>
+<p><span class="math display">\[
+g_i
+:=
+\frac{v_i}{w^*}
+\]</span></p>
+<p>The terminal value is</p>
+<p><span class="math display">\[
+g_{n_p-1}=\beta_{n_p-1}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+1+r_i^*
+=
+\frac{g_i}{g_{i+1}}
+\]</span></p>
+<p>Using</p>
+<p><span class="math display">\[
+\frac{p_{m_i}^*}{w^*}
+=
+r_i^*g_{i+1}
+\]</span></p>
+<p>together with the money-market expression gives</p>
+<p><span class="math display">\[
+g_i^2-\beta_i g_i-\beta_i g_{i+1}=0
+\]</span></p>
+<p>Thus, the positive root yields the backward recursion</p>
+<p><span class="math display">\[
+g_i
+=
+\frac{
+\beta_i+
+\sqrt{
+\beta_i^2+4\beta_i g_{i+1}
+}
+}{2},
+\qquad
+i=n_p-2,\ldots,1
+\]</span></p>
+<p>with</p>
+<p><span class="math display">\[
+g_{n_p-1}=\beta_{n_p-1}
+\]</span></p>
+<p>Once the sequence <span class="math inline">\(g_i\)</span> is obtained, the nonterminal equilibrium interest rates follow from</p>
+<p><span class="math display">\[
+r_i^*
+=
+\frac{g_i}{g_{i+1}}-1,
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>The decreasing-share assumption guarantees that these interest rates are strictly positive. To see this, note first that</p>
+<p><span class="math display">\[
+g_{n_p-1}=\beta_{n_p-1}&lt;2\beta_{n_p-1}
+\]</span></p>
+<p>Suppose <span class="math inline">\(g_{i+1}&lt;2\beta_{i+1}\)</span>. Since <span class="math inline">\(\beta_i&gt;\beta_{i+1}\)</span>,</p>
+<p><span class="math display">\[
+g_{i+1}&lt;2\beta_i
+\]</span></p>
+<p>Using</p>
+<p><span class="math display">\[
+g_i^2-\beta_i g_i-\beta_i g_{i+1}=0
+\]</span></p>
+<p>and evaluating the left-hand side at <span class="math inline">\(g_{i+1}\)</span> and <span class="math inline">\(2\beta_i\)</span> shows that the positive root satisfies</p>
+<p><span class="math display">\[
+g_{i+1}&lt;g_i&lt;2\beta_i
+\]</span></p>
+<p>This establishes the induction step. Proceeding backward therefore gives</p>
+<p><span class="math display">\[
+g_1&gt;g_2&gt;\cdots&gt;g_{n_p-1}&gt;0
+\]</span></p>
+<p>and hence</p>
+<p><span class="math display">\[
+r_i^*&gt;0,
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>Thus, for any finite <span class="math inline">\(n_p\)</span>, the backward recursion directly determines the strictly positive nonterminal equilibrium interest rates under the maintained assumption <span class="math inline">\(\beta_1&gt;\beta_2&gt;\cdots&gt;\beta_{n_p-1}&gt;0\)</span>. The productivity parameters <span class="math inline">\(\alpha_i\)</span> and labor endowments <span class="math inline">\(\omega_i\)</span> affect equilibrium quantities and prices but do not enter the interest-rate recursion.</p>
+<section id="common-nonterminal-interest-rate" class="level3">
+<h3 class="anchored" data-anchor-id="common-nonterminal-interest-rate">Common Nonterminal Interest Rate</h3>
+<p>A useful special case imposes a common nonterminal equilibrium interest rate,</p>
+<p><span class="math display">\[
+r_i^*=r&gt;0,
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+g_i=(1+r)g_{i+1}
+\]</span></p>
+<p>and the share parameters satisfy</p>
+<p><span class="math display">\[
+\beta_i
+=
+\beta_{n_p-1}
+\frac{
+(1+r)^{n_p-i}
+}{
+r+2
+},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>Together with <span class="math inline">\(\sum_{i=1}^{n_p-1}\beta_i=1\)</span>, this determines the complete sequence of shares. Under the maintained decreasing-share assumption, the common-rate specification must also satisfy</p>
+<p><span class="math display">\[
+\beta_{n_p-2}&gt;\beta_{n_p-1}
+\]</span></p>
+<p>which, using the expression above, is equivalent to</p>
+<p><span class="math display">\[
+\frac{(1+r)^2}{r+2}&gt;1
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+r&gt;\frac{\sqrt5-1}{2}
+\]</span></p>
+<p>For earlier periods, <span class="math inline">\(\beta_i/\beta_{i+1}=1+r&gt;1\)</span>, so this terminal-adjacent condition is sufficient for the entire sequence to be strictly decreasing. In particular, when <span class="math inline">\(r=1\)</span>,</p>
+<p><span class="math display">\[
+\beta_i
+=
+\frac{
+2^{n_p-i}
+}{
+2^{n_p}-1
+},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\beta_{n_p-1}
+=
+\frac{3}{2^{n_p}-1}
+\]</span></p>
+<p>which gives</p>
+<p><span class="math display">\[
+r_1^*=\cdots=r_{n_p-2}^*=1
+\]</span></p>
+</section>
+</section>
+<section id="numerical-example" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-example">Numerical Example</h2>
+<p>Consider the four-period case, <span class="math inline">\(n_p=4\)</span>, with three production periods and</p>
+<p><span class="math display">\[
+\beta_1=\frac8{15},
+\qquad
+\beta_2=\frac4{15},
+\qquad
+\beta_3=\frac15
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\alpha_1=\alpha_2=\alpha_3=1,
+\qquad
+\omega_1=\omega_2=\omega_3=100
+\]</span></p>
+<p>The recursive solution gives</p>
+<p><span class="math display">\[
+r_1^*=r_2^*=1,
+\qquad
+r_3=+\infty
+\]</span></p>
+<p>Consumer income is</p>
+<p><span class="math display">\[
+w^*=375
+\]</span></p>
+<p>The terminal interest-inclusive product price is</p>
+<p><span class="math display">\[
+\tilde p_4^*
+=
+\frac{\beta_3w^*}{\alpha_3\omega_3}
+=
+\frac34
+\]</span></p>
+<p>and the equilibrium commodity price vector, interpreted in the limiting sense for the terminal product and labor prices, is</p>
+<p><span class="math display">\[
+\mathbf p^*
+=
+\left(
+1,\frac12,0,
+\frac12,\frac14,0,
+150,75,75
+\right)^\top
+\]</span></p>
+<p>Indeed,</p>
+<p><span class="math display">\[
+w^*
+=
+\frac12(100)
++
+\frac14(100)
++
+150+75+75
+=
+375
+\]</span></p>
+<p>The equilibrium output and consumption quantities are</p>
+<p><span class="math display">\[
+y_i^*=c_{i+1}^*=100,
+\qquad
+i=1,2,3
+\]</span></p>
+<p>The firms’ money holdings are</p>
+<p><span class="math display">\[
+(h_1^{f*},h_2^{f*},h_3^{f*})
+=
+\left(
+\frac13,\frac13,0
+\right)
+\]</span></p>
+<p>and the consumer’s money holdings are</p>
+<p><span class="math display">\[
+(h_1^{c*},h_2^{c*},h_3^{c*})
+=
+\left(
+\frac23,\frac23,1
+\right)
+\]</span></p>
+<p>Hence, every dated money market clears.</p>
+<p>The equilibrium demand and supply matrices are</p>
+<p><span class="math display">\[
+\mathbf D^*
+=
+\begin{bmatrix}
+0&amp;0&amp;0&amp;100\\
+0&amp;0&amp;0&amp;100\\
+0&amp;0&amp;0&amp;100\\
+100&amp;0&amp;0&amp;0\\
+0&amp;100&amp;0&amp;0\\
+0&amp;0&amp;100&amp;0\\
+\frac13&amp;0&amp;0&amp;\frac23\\
+0&amp;\frac13&amp;0&amp;\frac23\\
+0&amp;0&amp;0&amp;1
+\end{bmatrix}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\mathbf S^*
+=
+\begin{bmatrix}
+100&amp;0&amp;0&amp;0\\
+0&amp;100&amp;0&amp;0\\
+0&amp;0&amp;100&amp;0\\
+0&amp;0&amp;0&amp;100\\
+0&amp;0&amp;0&amp;100\\
+0&amp;0&amp;0&amp;100\\
+0&amp;0&amp;0&amp;1\\
+0&amp;0&amp;0&amp;1\\
+0&amp;0&amp;0&amp;1
+\end{bmatrix}
+\]</span></p>
+</section>
+<section id="numerical-solution" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-solution">Numerical Solution</h2>
+<p>The model can be solved using the GEMB framework for an arbitrary total number of periods <span class="math inline">\(n_p\)</span>. The variables <span class="math inline">\(r_1,\ldots,r_{n_p-2}\)</span> are determined jointly with commodity prices and agent activity levels. The terminal infinite interest rate is not introduced directly. Instead, the program uses the finite terminal interest-inclusive product price</p>
+<p><span class="math display">\[
+\tilde p_{n_p}
+=
+\lim_{r_{n_p-1}\rightarrow+\infty}
+(1+r_{n_p-1})p_{n_p}
+\]</span></p>
+<p>A <code>ConditionAgentSpec</code> introduces <span class="math inline">\(r_1,\ldots,r_{n_p-2}\)</span> and <span class="math inline">\(\tilde p_{n_p}\)</span> as endogenous variables. The interest-rate relation is</p>
+<p><span class="math display">\[
+r_i
+=
+\frac{
+p_{m_i}
+}{
+\displaystyle\sum_{j=i+1}^{n_p-1}p_{m_j}
+},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>For numerical implementation, it can equivalently be written without division as</p>
+<p><span class="math display">\[
+r_i
+\sum_{j=i+1}^{n_p-1}p_{m_j}
+-p_{m_i}
+=0,
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>For a nonterminal firm, an activity level <span class="math inline">\(y_i\)</span> implies labor demand <span class="math inline">\(y_i/\alpha_i\)</span> and money holdings</p>
+<p><span class="math display">\[
+h_i^f
+=
+\frac{
+r_i p_{l_i}y_i
+}{
+\alpha_i p_{m_i}
+},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>The terminal firm is represented by the limiting form associated with <span class="math inline">\(r_{n_p-1}\rightarrow+\infty\)</span>, so its money holdings approach zero.</p>
+<p>Given income <span class="math inline">\(w\)</span>, the consumer’s nonterminal product demand and money holdings are</p>
+<p><span class="math display">\[
+c_{i+1}
+=
+\frac{
+\beta_iw
+}{
+(1+r_i)p_{i+1}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+h_i^c
+=
+\frac{
+r_i\beta_iw
+}{
+(1+r_i)p_{m_i}
+},
+\qquad
+i=1,\ldots,n_p-2
+\]</span></p>
+<p>The terminal demands are represented by the finite limiting expressions</p>
+<p><span class="math display">\[
+c_{n_p}
+=
+\frac{
+\beta_{n_p-1}w
+}{
+\tilde p_{n_p}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+h_{n_p-1}^c
+=
+\frac{
+\beta_{n_p-1}w
+}{
+p_{m_{n_p-1}}
+}
+\]</span></p>
+<p>The program can generate the common-rate share parameterization above for arbitrary total period count <span class="math inline">\(n_p\)</span> and solve the resulting equilibrium system numerically. Under the maintained decreasing-share assumption, a common rate should satisfy <span class="math inline">\(r&gt;(\sqrt5-1)/2\)</span>; the numerical example uses <span class="math inline">\(r=1\)</span>.</p>
+<div id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1: A <span class="math inline">\(3\times2\)</span> Intertemporal Equilibrium Model with Production and Endogenous Interest Rates
+</figcaption>
+<div aria-describedby="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-1"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">GeneralEquilibriumModeling.GEM</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-2"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">GeneralEquilibriumModeling.GEMB</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-3"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-4"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-5"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-5" aria-hidden="true" tabindex="-1"></a>n_p <span class="op">=</span> <span class="fl">4</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-6"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-6" aria-hidden="true" tabindex="-1"></a>n_prod <span class="op">=</span> n_p <span class="op">-</span> <span class="fl">1</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-7"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-8"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Common-rate parameterization with r = 1</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-9"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># beta_i = 2^(n_p-i)/(2^n_p-1), i = 1,...,n_p-2</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-10"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># beta_(n_p-1) = 3/(2^n_p-1)</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-11"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-11" aria-hidden="true" tabindex="-1"></a>denominator <span class="op">=</span> <span class="fl">2.0</span><span class="op">^</span>n_p <span class="op">-</span> <span class="fl">1.0</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-12"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-12" aria-hidden="true" tabindex="-1"></a>beta <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-13"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-13" aria-hidden="true" tabindex="-1"></a>    i <span class="op">&lt;</span> n_prod ?</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-14"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.0</span><span class="op">^</span>(n_p <span class="op">-</span> i) <span class="op">/</span> denominator <span class="op">:</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-15"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fl">3.0</span> <span class="op">/</span> denominator</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-16"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-16" aria-hidden="true" tabindex="-1"></a>    for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n_prod</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-17"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-18"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-19"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-19" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fu">ones</span>(n_prod)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-20"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-20" aria-hidden="true" tabindex="-1"></a>labor_endowment <span class="op">=</span> <span class="fu">fill</span>(<span class="fl">100.0</span>, n_prod)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-21"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-21" aria-hidden="true" tabindex="-1"></a>money_endowment <span class="op">=</span> <span class="fu">ones</span>(n_prod)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-22"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-23"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-23" aria-hidden="true" tabindex="-1"></a>terminal_product <span class="op">=</span> <span class="fu">Symbol</span>(<span class="st">"product_</span><span class="sc">$</span>n_p<span class="st">"</span>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-24"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-24" aria-hidden="true" tabindex="-1"></a>terminal_labor <span class="op">=</span> <span class="fu">Symbol</span>(<span class="st">"labor_</span><span class="sc">$</span>n_prod<span class="st">"</span>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-25"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-26"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Dated products are product 2,...,product n_p.</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-27"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Nonterminal product prices are strictly positive; the terminal product</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-28"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># price is allowed to approach zero under the terminal condition.</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-29"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-29" aria-hidden="true" tabindex="-1"></a>product <span class="op">=</span> <span class="fu">CommoditySpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-30"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span>product;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-31"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-31" aria-hidden="true" tabindex="-1"></a>    axes<span class="op">=</span>(period<span class="op">=</span><span class="fl">2</span><span class="op">:</span>(n_p <span class="op">-</span> <span class="fl">1</span>),),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-32"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-32" aria-hidden="true" tabindex="-1"></a>    price_lower_bound<span class="op">=</span><span class="fl">1.0e-10</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-33"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-33" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-34"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-35"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Labor and money are dated by production period 1,...,n_p-1.</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-36"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-36" aria-hidden="true" tabindex="-1"></a>labor <span class="op">=</span> <span class="fu">CommoditySpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-37"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span>labor;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-38"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-38" aria-hidden="true" tabindex="-1"></a>    axes<span class="op">=</span>(period<span class="op">=</span><span class="fl">1</span><span class="op">:</span>(n_prod <span class="op">-</span> <span class="fl">1</span>),),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-39"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-39" aria-hidden="true" tabindex="-1"></a>    price_lower_bound<span class="op">=</span><span class="fl">1.0e-10</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-40"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-41"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-42"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-42" aria-hidden="true" tabindex="-1"></a>money <span class="op">=</span> <span class="fu">CommoditySpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-43"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span>money;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-44"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-44" aria-hidden="true" tabindex="-1"></a>    axes<span class="op">=</span>(period<span class="op">=</span><span class="fl">1</span><span class="op">:</span>n_prod,),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-45"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-45" aria-hidden="true" tabindex="-1"></a>    price_lower_bound<span class="op">=</span><span class="fl">1.0e-10</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-46"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-46" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-47"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-48"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-48" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> <span class="fu">GEMBModel</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-49"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-49" aria-hidden="true" tabindex="-1"></a>    [product, terminal_product, labor, terminal_labor, money];</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-50"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-50" aria-hidden="true" tabindex="-1"></a>    numeraire<span class="op">=</span><span class="fu">CommodityRef</span>(<span class="op">:</span>product; period<span class="op">=</span><span class="fl">2</span>),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-51"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-51" aria-hidden="true" tabindex="-1"></a>    numeraire_value<span class="op">=</span><span class="fl">1.0</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-52"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-52" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-53"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-54"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Endogenous nonterminal interest rates and terminal interest-inclusive price</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-55"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-55" aria-hidden="true" tabindex="-1"></a>rate_count <span class="op">=</span> n_prod <span class="op">-</span> <span class="fl">1</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-56"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-56" aria-hidden="true" tabindex="-1"></a>rate_names <span class="op">=</span> [<span class="fu">Symbol</span>(<span class="st">"r</span><span class="sc">$</span>i<span class="st">"</span>) for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-57"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-57" aria-hidden="true" tabindex="-1"></a>variable_names <span class="op">=</span> [rate_names; <span class="op">:</span>terminal_interest_inclusive_price]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-58"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-59"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-59" aria-hidden="true" tabindex="-1"></a>interest_rate_spec <span class="op">=</span> <span class="fu">ConditionAgentSpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-60"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-60" aria-hidden="true" tabindex="-1"></a>    (variables, observed_values) <span class="op">-&gt;</span> <span class="cf">begin</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-61"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-61" aria-hidden="true" tabindex="-1"></a>        rates <span class="op">=</span> variables[<span class="fl">1</span><span class="op">:</span>rate_count]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-62"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-62" aria-hidden="true" tabindex="-1"></a>        terminal_price <span class="op">=</span> variables[n_prod]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-63"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-63" aria-hidden="true" tabindex="-1"></a>        p_money <span class="op">=</span> observed_values</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-64"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-65"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-65" aria-hidden="true" tabindex="-1"></a>        conditions <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-66"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-66" aria-hidden="true" tabindex="-1"></a>            rates[i] <span class="op">-</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-67"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-67" aria-hidden="true" tabindex="-1"></a>            p_money[i] <span class="op">/</span> <span class="fu">sum</span>(p_money[(i <span class="op">+</span> <span class="fl">1</span>)<span class="op">:</span>n_prod])</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-68"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-68" aria-hidden="true" tabindex="-1"></a>            for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-69"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-69" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-70"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-71"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-71" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-72"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-72" aria-hidden="true" tabindex="-1"></a>            conditions,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-73"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-73" aria-hidden="true" tabindex="-1"></a>            terminal_price <span class="op">-</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-74"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-74" aria-hidden="true" tabindex="-1"></a>            p_money[n_prod] <span class="op">/</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-75"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-75" aria-hidden="true" tabindex="-1"></a>            (</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-76"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-76" aria-hidden="true" tabindex="-1"></a>                alpha[n_prod] <span class="op">*</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-77"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-77" aria-hidden="true" tabindex="-1"></a>                labor_endowment[n_prod]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-78"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-78" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-79"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-79" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-80"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-81"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-81" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> conditions</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-82"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-83"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-83" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-84"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-85"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-85" aria-hidden="true" tabindex="-1"></a><span class="fu">add_agent!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-86"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-86" aria-hidden="true" tabindex="-1"></a>    model,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-87"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-87" aria-hidden="true" tabindex="-1"></a>    interest_rate_spec;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-88"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-88" aria-hidden="true" tabindex="-1"></a>    variable_names<span class="op">=</span>variable_names,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-89"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-89" aria-hidden="true" tabindex="-1"></a>    variable_start<span class="op">=</span><span class="fu">fill</span>(<span class="fl">0.1</span>, n_prod),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-90"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-90" aria-hidden="true" tabindex="-1"></a>    variable_lower_bounds<span class="op">=</span>[</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-91"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-91" aria-hidden="true" tabindex="-1"></a>        <span class="fu">zeros</span>(rate_count);</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-92"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-92" aria-hidden="true" tabindex="-1"></a>        <span class="fl">1.0e-10</span>;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-93"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-93" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-94"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-94" aria-hidden="true" tabindex="-1"></a>    variable_upper_bounds<span class="op">=</span><span class="cn">Inf</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-95"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-95" aria-hidden="true" tabindex="-1"></a>    observed_variables<span class="op">=</span>[</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-96"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-96" aria-hidden="true" tabindex="-1"></a>        <span class="fu">PriceVariableRef</span>(<span class="fu">Symbol</span>(<span class="st">"money_</span><span class="sc">$</span>i<span class="st">"</span>))</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-97"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-97" aria-hidden="true" tabindex="-1"></a>        for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n_prod</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-98"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-98" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-99"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-99" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=:</span>interestRateDeterminer,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-100"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-100" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-101"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-102"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-102" aria-hidden="true" tabindex="-1"></a>rate_refs <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-103"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-103" aria-hidden="true" tabindex="-1"></a>    <span class="fu">agent_variable_ref</span>(<span class="op">:</span>interestRateDeterminer, rate_names[i])</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-104"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-104" aria-hidden="true" tabindex="-1"></a>    for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-105"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-105" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-106"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-107"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-107" aria-hidden="true" tabindex="-1"></a>terminal_price_ref <span class="op">=</span> <span class="fu">agent_variable_ref</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-108"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-108" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span>interestRateDeterminer,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-109"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-109" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span>terminal_interest_inclusive_price,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-110"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-110" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-111"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-112"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Firms</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-113"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-113" aria-hidden="true" tabindex="-1"></a><span class="co"># Activity is measured by output y_i. Producing y_i units of product i+1</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-114"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-114" aria-hidden="true" tabindex="-1"></a><span class="co"># requires y_i/alpha_i units of labor i.</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-115"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-115" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">make_firm_spec</span>(alpha_i)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-116"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">ActivityDemandSpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-117"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-117" aria-hidden="true" tabindex="-1"></a>        (activity, prices, observed_values) <span class="op">-&gt;</span> <span class="cf">begin</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-118"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-118" aria-hidden="true" tabindex="-1"></a>            p_labor, p_money <span class="op">=</span> prices</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-119"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-119" aria-hidden="true" tabindex="-1"></a>            r <span class="op">=</span> observed_values[<span class="fl">1</span>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-120"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-121"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-121" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-122"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-122" aria-hidden="true" tabindex="-1"></a>                activity <span class="op">/</span> alpha_i,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-123"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-123" aria-hidden="true" tabindex="-1"></a>                activity <span class="op">*</span> p_labor <span class="op">*</span> r <span class="op">/</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-124"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-124" aria-hidden="true" tabindex="-1"></a>                (alpha_i <span class="op">*</span> p_money),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-125"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-125" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-126"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-126" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-127"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-127" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-128"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-128" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-129"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-130"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-130" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-131"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-131" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_agent!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-132"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-132" aria-hidden="true" tabindex="-1"></a>        model,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-133"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-133" aria-hidden="true" tabindex="-1"></a>        <span class="fu">make_firm_spec</span>(alpha[i]);</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-134"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-134" aria-hidden="true" tabindex="-1"></a>        outputs<span class="op">=</span><span class="fu">CommodityRef</span>(<span class="op">:</span>product; period<span class="op">=</span>i <span class="op">+</span> <span class="fl">1</span>),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-135"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-135" aria-hidden="true" tabindex="-1"></a>        output_coefficients<span class="op">=</span><span class="fl">1.0</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-136"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-136" aria-hidden="true" tabindex="-1"></a>        demands<span class="op">=</span>[</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-137"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-137" aria-hidden="true" tabindex="-1"></a>            <span class="fu">CommodityRef</span>(<span class="op">:</span>labor; period<span class="op">=</span>i),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-138"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-138" aria-hidden="true" tabindex="-1"></a>            <span class="fu">CommodityRef</span>(<span class="op">:</span>money; period<span class="op">=</span>i),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-139"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-139" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-140"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-140" aria-hidden="true" tabindex="-1"></a>        observed_variables<span class="op">=</span>[rate_refs[i]],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-141"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-141" aria-hidden="true" tabindex="-1"></a>        activity_start<span class="op">=</span><span class="fl">50.0</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-142"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-142" aria-hidden="true" tabindex="-1"></a>        name<span class="op">=</span><span class="fu">Symbol</span>(<span class="st">"firm</span><span class="sc">$</span>i<span class="st">"</span>),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-143"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-143" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-144"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-144" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-145"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-146"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-146" aria-hidden="true" tabindex="-1"></a><span class="co"># Terminal production period n_p-1: r_(n_p-1) -&gt; +Inf.</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-147"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-147" aria-hidden="true" tabindex="-1"></a><span class="co"># The terminal firm's money demand therefore approaches zero.</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-148"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-148" aria-hidden="true" tabindex="-1"></a>terminal_alpha <span class="op">=</span> alpha[n_prod]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-149"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-149" aria-hidden="true" tabindex="-1"></a>terminal_firm_spec <span class="op">=</span> <span class="fu">ActivityDemandSpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-150"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-150" aria-hidden="true" tabindex="-1"></a>    (activity, prices, observed_values) <span class="op">-&gt;</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-151"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-151" aria-hidden="true" tabindex="-1"></a>        activity <span class="op">/</span> terminal_alpha,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-152"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-152" aria-hidden="true" tabindex="-1"></a>        <span class="fu">zero</span>(activity),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-153"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-153" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-154"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-154" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-155"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-156"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-156" aria-hidden="true" tabindex="-1"></a><span class="fu">add_agent!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-157"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-157" aria-hidden="true" tabindex="-1"></a>    model,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-158"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-158" aria-hidden="true" tabindex="-1"></a>    terminal_firm_spec;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-159"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-159" aria-hidden="true" tabindex="-1"></a>    outputs<span class="op">=</span>terminal_product,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-160"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-160" aria-hidden="true" tabindex="-1"></a>    output_coefficients<span class="op">=</span><span class="fl">1.0</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-161"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-161" aria-hidden="true" tabindex="-1"></a>    demands<span class="op">=</span>[</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-162"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-162" aria-hidden="true" tabindex="-1"></a>        terminal_labor,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-163"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-163" aria-hidden="true" tabindex="-1"></a>        <span class="fu">CommodityRef</span>(<span class="op">:</span>money; period<span class="op">=</span>n_prod),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-164"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-164" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-165"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-165" aria-hidden="true" tabindex="-1"></a>    activity_start<span class="op">=</span><span class="fl">50.0</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-166"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-166" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="fu">Symbol</span>(<span class="st">"firm</span><span class="sc">$</span>n_prod<span class="st">"</span>),</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-167"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-167" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-168"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-169"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-169" aria-hidden="true" tabindex="-1"></a><span class="co"># Consumer</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-170"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-170" aria-hidden="true" tabindex="-1"></a>product_refs <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-171"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-171" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">CommodityRef</span>(<span class="op">:</span>product; period<span class="op">=</span>i <span class="op">+</span> <span class="fl">1</span>) for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count];</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-172"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-172" aria-hidden="true" tabindex="-1"></a>    terminal_product;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-173"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-173" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-174"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-175"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-175" aria-hidden="true" tabindex="-1"></a>labor_refs <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-176"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-176" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">CommodityRef</span>(<span class="op">:</span>labor; period<span class="op">=</span>i) for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count];</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-177"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-177" aria-hidden="true" tabindex="-1"></a>    terminal_labor;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-178"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-178" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-179"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-180"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-180" aria-hidden="true" tabindex="-1"></a>money_refs <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-181"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-181" aria-hidden="true" tabindex="-1"></a>    <span class="fu">CommodityRef</span>(<span class="op">:</span>money; period<span class="op">=</span>i)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-182"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-182" aria-hidden="true" tabindex="-1"></a>    for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n_prod</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-183"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-183" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-184"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-185"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-185" aria-hidden="true" tabindex="-1"></a>consumer_spec <span class="op">=</span> <span class="fu">MarshallDemandConsumerSpec</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-186"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-186" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> (income, prices, observed_values)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-187"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-187" aria-hidden="true" tabindex="-1"></a>        rates <span class="op">=</span> observed_values[<span class="fl">1</span><span class="op">:</span>rate_count]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-188"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-188" aria-hidden="true" tabindex="-1"></a>        terminal_price <span class="op">=</span> observed_values[n_prod]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-189"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-190"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-190" aria-hidden="true" tabindex="-1"></a>        p_product <span class="op">=</span> prices[<span class="fl">1</span><span class="op">:</span>n_prod]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-191"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-191" aria-hidden="true" tabindex="-1"></a>        p_money <span class="op">=</span> prices[(n_prod <span class="op">+</span> <span class="fl">1</span>)<span class="op">:</span>(<span class="fl">2</span> <span class="op">*</span> n_prod)]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-192"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-193"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-193" aria-hidden="true" tabindex="-1"></a>        product_demand <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-194"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-194" aria-hidden="true" tabindex="-1"></a>            beta[i] <span class="op">*</span> income <span class="op">/</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-195"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-195" aria-hidden="true" tabindex="-1"></a>            ((<span class="fl">1.0</span> <span class="op">+</span> rates[i]) <span class="op">*</span> p_product[i])</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-196"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-196" aria-hidden="true" tabindex="-1"></a>            for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-197"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-197" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-198"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-199"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-199" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-200"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-200" aria-hidden="true" tabindex="-1"></a>            product_demand,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-201"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-201" aria-hidden="true" tabindex="-1"></a>            beta[n_prod] <span class="op">*</span> income <span class="op">/</span> terminal_price,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-202"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-202" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-203"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-204"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-204" aria-hidden="true" tabindex="-1"></a>        money_demand <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-205"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-205" aria-hidden="true" tabindex="-1"></a>            rates[i] <span class="op">*</span> beta[i] <span class="op">*</span> income <span class="op">/</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-206"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-206" aria-hidden="true" tabindex="-1"></a>            ((<span class="fl">1.0</span> <span class="op">+</span> rates[i]) <span class="op">*</span> p_money[i])</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-207"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-207" aria-hidden="true" tabindex="-1"></a>            for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-208"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-208" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-209"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-210"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-210" aria-hidden="true" tabindex="-1"></a>        <span class="fu">push!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-211"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-211" aria-hidden="true" tabindex="-1"></a>            money_demand,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-212"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-212" aria-hidden="true" tabindex="-1"></a>            beta[n_prod] <span class="op">*</span> income <span class="op">/</span> p_money[n_prod],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-213"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-213" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-214"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-215"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-215" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> [product_demand; money_demand]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-216"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-216" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-217"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-217" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-218"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-219"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-219" aria-hidden="true" tabindex="-1"></a><span class="fu">add_agent!</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-220"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-220" aria-hidden="true" tabindex="-1"></a>    model,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-221"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-221" aria-hidden="true" tabindex="-1"></a>    consumer_spec;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-222"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-222" aria-hidden="true" tabindex="-1"></a>    demands<span class="op">=</span>[product_refs; money_refs],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-223"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-223" aria-hidden="true" tabindex="-1"></a>    endowments<span class="op">=</span>[labor_refs; money_refs],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-224"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-224" aria-hidden="true" tabindex="-1"></a>    endowment_quantities<span class="op">=</span>[labor_endowment; money_endowment],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-225"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-225" aria-hidden="true" tabindex="-1"></a>    observed_variables<span class="op">=</span>[rate_refs; terminal_price_ref],</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-226"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-226" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=:</span>consumer,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-227"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-227" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-228"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-229"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-229" aria-hidden="true" tabindex="-1"></a><span class="co"># Starting values</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-230"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-230" aria-hidden="true" tabindex="-1"></a>product_start <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-231"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-231" aria-hidden="true" tabindex="-1"></a>    [<span class="fl">0.6</span><span class="op">^</span>(i <span class="op">-</span> <span class="fl">1</span>) for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count];</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-232"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-232" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.01</span>;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-233"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-233" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-234"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-235"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-235" aria-hidden="true" tabindex="-1"></a>labor_start <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-236"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-236" aria-hidden="true" tabindex="-1"></a>    [<span class="fl">0.4</span> <span class="op">*</span> <span class="fl">0.6</span><span class="op">^</span>(i <span class="op">-</span> <span class="fl">1</span>) for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count];</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-237"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-237" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.01</span>;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-238"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-238" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-239"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-240"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-240" aria-hidden="true" tabindex="-1"></a>money_start <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-241"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-241" aria-hidden="true" tabindex="-1"></a>    <span class="fl">100.0</span> <span class="op">*</span> <span class="fl">0.6</span><span class="op">^</span>(i <span class="op">-</span> <span class="fl">1</span>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-242"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-242" aria-hidden="true" tabindex="-1"></a>    for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n_prod</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-243"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-243" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-244"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-245"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-245" aria-hidden="true" tabindex="-1"></a>p0 <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-246"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-246" aria-hidden="true" tabindex="-1"></a>    product_start;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-247"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-247" aria-hidden="true" tabindex="-1"></a>    labor_start;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-248"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-248" aria-hidden="true" tabindex="-1"></a>    money_start;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-249"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-249" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-250"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-251"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-251" aria-hidden="true" tabindex="-1"></a>p0[<span class="fl">1</span>] <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-252"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-253"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-253" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-254"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-254" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="fu">solve</span>(</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-255"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-255" aria-hidden="true" tabindex="-1"></a>    model;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-256"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-256" aria-hidden="true" tabindex="-1"></a>    p0<span class="op">=</span>p0,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-257"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-257" aria-hidden="true" tabindex="-1"></a>    residual_tol<span class="op">=</span><span class="fl">1.0e-8</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-258"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-258" aria-hidden="true" tabindex="-1"></a>    silent<span class="op">=</span><span class="cn">true</span>,</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-259"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-259" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-260"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-261"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-261" aria-hidden="true" tabindex="-1"></a><span class="co"># Results</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-262"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-262" aria-hidden="true" tabindex="-1"></a>interest_variables <span class="op">=</span> result.agent_variable_values[<span class="fl">1</span>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-263"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-263" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> interest_variables[<span class="fl">1</span><span class="op">:</span>rate_count]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-264"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-264" aria-hidden="true" tabindex="-1"></a>terminal_interest_inclusive_price <span class="op">=</span> interest_variables[n_prod]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-265"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-266"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-266" aria-hidden="true" tabindex="-1"></a>firm_activities <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-267"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-267" aria-hidden="true" tabindex="-1"></a>    result.agent_variable_values[i][<span class="fl">1</span>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-268"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-268" aria-hidden="true" tabindex="-1"></a>    for i <span class="kw">in</span> <span class="fl">2</span><span class="op">:</span>(n_prod <span class="op">+</span> <span class="fl">1</span>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-269"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-269" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-270"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-271"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-271" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> result.prices</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-272"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-273"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-273" aria-hidden="true" tabindex="-1"></a>labor_range <span class="op">=</span> (n_prod <span class="op">+</span> <span class="fl">1</span>)<span class="op">:</span>(<span class="fl">2</span> <span class="op">*</span> n_prod)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-274"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-274" aria-hidden="true" tabindex="-1"></a>money_range <span class="op">=</span> (<span class="fl">2</span> <span class="op">*</span> n_prod <span class="op">+</span> <span class="fl">1</span>)<span class="op">:</span>(<span class="fl">3</span> <span class="op">*</span> n_prod)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-275"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-276"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-276" aria-hidden="true" tabindex="-1"></a>consumer_income <span class="op">=</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-277"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-277" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>(p[labor_range] <span class="op">.*</span> labor_endowment) <span class="op">+</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-278"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-278" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>(p[money_range] <span class="op">.*</span> money_endowment)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-279"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-280"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-280" aria-hidden="true" tabindex="-1"></a>product_consumption <span class="op">=</span> [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-281"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-281" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-282"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-282" aria-hidden="true" tabindex="-1"></a>        beta[i] <span class="op">*</span> consumer_income <span class="op">/</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-283"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-283" aria-hidden="true" tabindex="-1"></a>        ((<span class="fl">1.0</span> <span class="op">+</span> rates[i]) <span class="op">*</span> p[i])</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-284"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-284" aria-hidden="true" tabindex="-1"></a>        for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>rate_count</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-285"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-285" aria-hidden="true" tabindex="-1"></a>    ];</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-286"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-286" aria-hidden="true" tabindex="-1"></a>    beta[n_prod] <span class="op">*</span> consumer_income <span class="op">/</span></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-287"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-287" aria-hidden="true" tabindex="-1"></a>    terminal_interest_inclusive_price;</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-288"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-288" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-289"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-290"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-290" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>()</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-291"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-291" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"========== GEMB parameterized endogenous-interest equilibrium =========="</span>)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-292"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-292" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Total periods:                      "</span>, n_p)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-293"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-293" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Production periods:                 "</span>, n_prod)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-294"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-294" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Solved:                             "</span>, result.solved)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-295"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-295" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Beta:                               "</span>, beta)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-296"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-296" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Interest rates:                     "</span>, rates)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-297"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-297" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Terminal interest-inclusive price:  "</span>, terminal_interest_inclusive_price)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-298"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-298" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Equilibrium prices:                 "</span>, p)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-299"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-299" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Firm activities (outputs):          "</span>, firm_activities)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-300"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-300" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Product consumption:                "</span>, product_consumption)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-301"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-301" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Max natural residual:               "</span>, result.max_natural_residual)</span>
+<span id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-302"><a href="#lst-gemb_intertemporalEquilibrium_endogenousInterestRateProduction_nct3_nat2-302" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"========================================================================"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
+</section>
+<section id="infinite-horizon-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="infinite-horizon-equilibrium">Infinite-Horizon Equilibrium</h2>
+<p>Consider an infinite-horizon version of the model, with production periods indexed by <span class="math inline">\(i=1,2,\ldots\)</span>. Production in period <span class="math inline">\(i\)</span> uses labor <span class="math inline">\(i\)</span> to produce product <span class="math inline">\(i+1\)</span>. There is no terminal production period and hence no terminal infinite-interest-rate condition.</p>
+<p>Assume the following:</p>
+<ol type="1">
+<li>The consumer has geometric expenditure shares</li>
+</ol>
+<p><span class="math display">\[
+\beta_i=(1-\rho)\rho^{i-1},
+\qquad
+0&lt;\rho&lt;1,
+\qquad
+i=1,2,\ldots
+\]</span></p>
+<p>so that</p>
+<p><span class="math display">\[
+\sum_{i=1}^{\infty}\beta_i=1
+\]</span></p>
+<ol start="2" type="1">
+<li>Productivity and labor endowment are constant over time:</li>
+</ol>
+<p><span class="math display">\[
+\alpha_i=\alpha&gt;0,
+\qquad
+\omega_i=\omega&gt;0
+\]</span></p>
+<ol start="3" type="1">
+<li>The consumer is endowed with one unit of money in each production period. Product 2 is the numeraire.</li>
+</ol>
+<p>We seek an equilibrium with finite consumer income <span class="math inline">\(w^*&gt;0\)</span> and summable dated-money prices. Define</p>
+<p><span class="math display">\[
+v_i=\sum_{j=i}^{\infty}p_{m_j}^*,
+\qquad
+g_i=\frac{v_i}{w^*}
+\]</span></p>
+<p>The ad valorem claim-rate relation implies</p>
+<p><span class="math display">\[
+r_i^*=\frac{p_{m_i}^*}{v_{i+1}},
+\qquad
+1+r_i^*=\frac{g_i}{g_{i+1}}
+\]</span></p>
+<p>As in the finite-horizon model, money-market clearing gives</p>
+<p><span class="math display">\[
+\frac{p_{m_i}^*}{w^*}
+=
+\beta_i
+\frac{r_i^*(r_i^*+2)}{(1+r_i^*)^2}
+\]</span></p>
+<p>For strictly positive interest rates, these relations yield</p>
+<p><span class="math display">\[
+g_i^2-\beta_i g_i-\beta_i g_{i+1}=0
+\]</span></p>
+<p>Since <span class="math inline">\(\beta_{i+1}=\rho\beta_i\)</span>, a proportional solution <span class="math inline">\(g_i=C\beta_i\)</span> satisfies</p>
+<p><span class="math display">\[
+C=1+\rho
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+g_i=(1+\rho)\beta_i
+\]</span></p>
+<p>and the equilibrium interest rate is constant:</p>
+<p><span class="math display">\[
+r_i^*=\frac1\rho-1&gt;0,
+\qquad
+i=1,2,\ldots
+\]</span></p>
+<p>Equivalently, writing <span class="math inline">\(r=1/\rho-1\)</span>, the expenditure shares are</p>
+<p><span class="math display">\[
+\beta_i=\frac{r}{(1+r)^i}
+\]</span></p>
+<p>The corresponding dated-money prices satisfy</p>
+<p><span class="math display">\[
+p_{m_i}^*
+=
+w^*(g_i-g_{i+1})
+=
+w^*(1-\rho^2)\beta_i
+\]</span></p>
+<p>These prices are positive and summable. Moreover,</p>
+<p><span class="math display">\[
+\sum_{j=i}^{\infty}p_{m_j}^*
+=
+w^*(1+\rho)\beta_i
+=
+w^*g_i
+\]</span></p>
+<p>so the proposed sequence is consistent with the definition of the tail value, and <span class="math inline">\(v_i\rightarrow0\)</span> as <span class="math inline">\(i\rightarrow\infty\)</span>.</p>
+<p>Labor- and product-market clearing give constant equilibrium output and consumption:</p>
+<p><span class="math display">\[
+y_i^*=c_{i+1}^*=\alpha\omega
+\]</span></p>
+<p>Taking product 2 as the numeraire yields</p>
+<p><span class="math display">\[
+w^*=\frac{\alpha\omega}{\rho(1-\rho)}
+\]</span></p>
+<p>The equilibrium commodity prices are</p>
+<p><span class="math display">\[
+p_{i+1}^*=\rho^{i-1},
+\qquad
+p_{l_i}^*=\alpha\rho^i,
+\qquad
+p_{m_i}^*
+=
+\frac{1-\rho^2}{\rho}\alpha\omega\rho^{i-1}
+\]</span></p>
+<p>They satisfy the consumer-income identity</p>
+<p><span class="math display">\[
+\sum_{i=1}^{\infty}p_{l_i}^*\omega
++
+\sum_{i=1}^{\infty}p_{m_i}^*
+=
+\frac{\alpha\omega}{\rho(1-\rho)}
+=
+w^*
+\]</span></p>
+<p>The equilibrium money holdings are also constant over time:</p>
+<p><span class="math display">\[
+h_i^{f*}=\frac{\rho}{1+\rho},
+\qquad
+h_i^{c*}=\frac1{1+\rho}
+\]</span></p>
+<p>Thus, every dated money market clears. The infinite-horizon equilibrium has constant output, consumption, and money holdings, a constant interest rate determined by <span class="math inline">\(\rho\)</span>, and geometrically declining dated-commodity prices.</p>
+</section>
+<section id="steady-state-a-3times2-equality-form-wide-sense-structural-equilibrium-model" class="level2">
+<h2 class="anchored" data-anchor-id="steady-state-a-3times2-equality-form-wide-sense-structural-equilibrium-model">Steady State: A <span class="math inline">\(3\times2\)</span> Equality-Form Wide-Sense Structural Equilibrium Model</h2>
+<p>The infinite-horizon steady state can be represented by a finite-dimensional equality-form wide-sense structural equilibrium model.</p>
+<p>Assume the following:</p>
+<ol type="1">
+<li>There are three commodity types: product, labor, and money; and two economic-agent types: firm and consumer. Product is the numeraire.</li>
+<li>The consumer supplies <span class="math inline">\(\omega&gt;0\)</span> units of labor and one unit of money, and consumes only product.</li>
+<li>The firm uses labor to produce product according to</li>
+</ol>
+<p><span class="math display">\[
+y=\alpha l,
+\qquad
+\alpha&gt;0
+\]</span></p>
+<ol start="4" type="1">
+<li>Let <span class="math inline">\(\rho\in(0,1)\)</span> denote the intertemporal discount factor. The steady-state interest rate is</li>
+</ol>
+<p><span class="math display">\[
+r=\frac1{\rho}-1
+\]</span></p>
+<p>Let</p>
+<p><span class="math display">\[
+\mathbf p=(1,p_l,p_m)^\top
+\]</span></p>
+<p>where <span class="math inline">\(p_l\)</span> and <span class="math inline">\(p_m\)</span> are the prices of labor and money, respectively. The prices of money represent the interest on a unit of money. For a given output level <span class="math inline">\(y\)</span>, labor demand is</p>
+<p><span class="math display">\[
+l=\frac{y}{\alpha}
+\]</span></p>
+<p>Money is required for labor purchases by the firm and product purchases by the consumer. Accordingly, the demand and supply matrices are</p>
+<p><span class="math display">\[
+\mathbf D(\mathbf p,y,c)
+=
+\begin{bmatrix}
+0
+&amp;
+c
+\\[6pt]
+\displaystyle\frac{y}{\alpha}
+&amp;
+0
+\\[10pt]
+\displaystyle\frac{rp_l}{p_m}\frac{y}{\alpha}
+&amp;
+\displaystyle\frac{rc}{p_m}
+\end{bmatrix}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\mathbf S(y)
+=
+\begin{bmatrix}
+y&amp;0\\
+0&amp;\omega\\
+0&amp;1
+\end{bmatrix}
+\]</span></p>
+<p>where the first and second columns correspond to the firm and consumer, respectively.</p>
+<p>The steady-state equality-form wide-sense structural equilibrium model is</p>
+<p><span class="math display">\[
+\mathbf p^\top\mathbf D(\mathbf p,y,c)
+=
+\mathbf p^\top\mathbf S(y)
+\]</span></p>
+<p><span class="math display">\[
+\mathbf D(\mathbf p,y,c)\mathbf 1
+=
+\mathbf S(y)\mathbf 1
+\]</span></p>
+<p>Solving the model gives</p>
+<p><span class="math display">\[
+l^*=\omega,
+\qquad
+y^*=c^*=\alpha\omega
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+p_l^*
+=
+\rho\alpha
+\]</span></p>
+<p><span class="math display">\[
+p_m^*
+=
+\frac{1-\rho^2}{\rho}\alpha\omega
+\]</span></p>
+<p>The corresponding equilibrium money holdings are</p>
+<p><span class="math display">\[
+h^{f*}
+=
+\frac{\rho}{1+\rho},
+\qquad
+h^{c*}
+=
+\frac1{1+\rho}
+\]</span></p>
+<p>so that</p>
+<p><span class="math display">\[
+h^{f*}+h^{c*}=1
+\]</span></p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-liwu2019e" class="csl-entry" role="listitem">
+Li, W. (2019) <em>General equilibrium and structural dynamics: Perspectives of new structural economics</em>. Beijing: Economic Science Press.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/LiWuR\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

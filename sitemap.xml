@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://LiWuR.github.io/models/IntertemporalExtended/EndogenousInterestRatesAndCapitalAccumulation.html</loc>
+    <lastmod>2026-09-13T03:46:26.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://LiWuR.github.io/models/IntertemporalExtended/KnowledgeProduction.html</loc>
     <lastmod>2026-09-10T03:55:34.000Z</lastmod>
   </url>
@@ -43,5 +47,9 @@
   <url>
     <loc>https://LiWuR.github.io/models/IntertemporalBasic/ProductionOLGEquilibriumInTimelineForm.html</loc>
     <lastmod>2026-09-10T03:06:26.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LiWuR.github.io/models/IntertemporalExtended/EndogenousInterestRates.html</loc>
+    <lastmod>2026-09-13T04:23:54.000Z</lastmod>
   </url>
 </urlset>
