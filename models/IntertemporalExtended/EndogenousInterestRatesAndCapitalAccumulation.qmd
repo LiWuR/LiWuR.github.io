@@ -1,0 +1,1581 @@
+---
+title: "Endogenous Interest Rates and Capital Accumulation"
+---
+## The $3\times2$ Model
+
+This example extends the preceding intertemporal equilibrium model by introducing endogenous capital accumulation and Cobb--Douglas production. Product retained by the firm in one period becomes capital in the next period and is completely exhausted in production. Initial capital, however, is owned by the consumer and must be purchased by the firm. Thus, the purchase of initial capital requires money, whereas subsequent capital accumulation is an internal transfer within the intertemporal firm and does not require a monetary transaction.
+
+The model contains three types of dated commodities, namely product, labor, and money, and two types of economic agents, namely a firm and a consumer.
+
+Assume the following:
+
+1. The economy operates for $n_p\geq3$ periods. Production takes place in periods $i=1,\ldots,n_p-1$, so there are $n_p-1$ production activities.
+2. The consumer initially owns $\bar k>0$ units of product 1, which are purchased by the firm and used as capital in period 1. The consumer also supplies $\omega_i>0$ units of labor in production period $i$, $i=1,\ldots,n_p-1$.
+3. Production in period $i$ is described by the constant-returns-to-scale Cobb--Douglas production function
+
+$$
+y_i
+=
+\alpha_i k_i^\theta l_i^{1-\theta},
+\qquad
+i=1,\ldots,n_p-1,
+\qquad
+\alpha_i>0,
+\qquad
+0<\theta<1
+$$
+
+where $k_i$ and $l_i$ denote capital and labor inputs. Period-$i$ production yields product $i+1$. Capital is completely exhausted in production.
+
+4. The initial capital stock satisfies
+
+$$
+k_1=\bar k
+$$
+
+For $i=1,\ldots,n_p-2$, period-$i$ output is divided between consumption in period $i+1$ and capital carried internally into the next production period:
+
+$$
+y_i=c_{i+1}+k_{i+1}
+$$
+
+In the terminal production period,
+
+$$
+y_{n_p-1}=c_{n_p}
+$$
+
+5. The purchase of initial capital and labor in period 1 requires money. From period 2 onward, capital is carried internally by the firm and therefore does not require a monetary transaction. The purchase of labor continues to require money in every production period.
+6. The consumer has Cobb--Douglas preferences over dated consumption and terminal money holdings:
+
+$$
+u
+=
+\left(
+\prod_{t=2}^{n_p}c_t^{\beta_t}
+\right)
+h_{n_p}^{\beta_m}
+$$
+
+where
+
+$$
+\beta_2>\beta_3>\cdots>\beta_{n_p}>\beta_m>0,
+\qquad
+\sum_{t=2}^{n_p}\beta_t+\beta_m=1
+$$
+
+7. The consumer is endowed with one unit of each dated money commodity, from money 1 through money $n_p$. Let $p_{m_i}$ denote the price of money in period $i$. Money $n_p$ is terminal money. The interest rate in production period $i$ is
+
+$$
+r_i
+=
+\frac{
+p_{m_i}
+}{
+\displaystyle\sum_{j=i+1}^{n_p}p_{m_j}
+},
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+A positive terminal money value therefore keeps all production-period interest rates finite.
+
+Let $p_t$ denote the price of product $t$, $t=1,\ldots,n_p$, and let $p_{l_i}$ denote the price of labor in production period $i$.
+
+## Analytical Solution
+### Production and Monetary Transactions
+
+Under Cobb--Douglas production, the production stationarity conditions imply the value-share relations
+
+$$
+(1+r_1)p_1k_1=\theta p_2y_1,
+\qquad
+(1+r_1)p_{l_1}l_1=(1-\theta)p_2y_1
+$$
+
+in period 1. Since both initial capital and labor are purchased from the consumer, the firm's money holdings satisfy
+
+$$
+p_{m_1}h_1^f
+=
+\frac{r_1}{1+r_1}p_2y_1
+$$
+
+From period 2 onward, capital is carried internally from the firm's previous-period output rather than purchased through a market transaction. The corresponding value-share relations are
+
+$$
+p_i k_i=\theta p_{i+1}y_i,
+\qquad
+(1+r_i)p_{l_i}l_i=(1-\theta)p_{i+1}y_i,
+\qquad
+i=2,\ldots,n_p-1
+$$
+
+Only labor purchases require money in these periods, so
+
+$$
+p_{m_i}h_i^f
+=
+\frac{r_i}{1+r_i}(1-\theta)p_{i+1}y_i,
+\qquad
+i=2,\ldots,n_p-1
+$$
+
+Thus, the first production period differs from subsequent periods because the initial capital stock is purchased from the consumer, whereas later capital is accumulated and carried internally by the firm.
+
+### Consumer Demand and Money-Market Clearing
+
+Let $w$ denote consumer income, equal to the value of the initial capital, labor, and money endowments:
+
+$$
+w=p_1\bar k+\sum_{i=1}^{n_p-1}p_{l_i}\omega_i+\sum_{i=1}^{n_p}p_{m_i}
+$$
+
+For production period $i$, the consumer's demand for product $i+1$ and the associated money holdings are
+
+$$
+c_{i+1}
+=
+\frac{\beta_{i+1}w}{(1+r_i)p_{i+1}},
+\qquad
+p_{m_i}h_i^c
+=
+\frac{r_i\beta_{i+1}w}{1+r_i},
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+Terminal money holdings satisfy
+
+$$
+h_{n_p}
+=
+\frac{\beta_m w}{p_{m_{n_p}}}
+$$
+
+and, since the terminal money supply is one,
+
+$$
+p_{m_{n_p}}
+=
+\beta_m w
+$$
+
+Money-market clearing therefore gives
+
+$$
+p_{m_1}
+=
+\frac{r_1}{1+r_1}
+\left(
+p_2y_1+\beta_2w
+\right)
+$$
+
+for period 1, and
+
+$$
+p_{m_i}
+=
+\frac{r_i}{1+r_i}
+\left[
+(1-\theta)p_{i+1}y_i+\beta_{i+1}w
+\right],
+\qquad
+i=2,\ldots,n_p-1
+$$
+
+for subsequent production periods. The difference again reflects that only the initial capital purchase requires money.
+
+### Recursive Analytical Solution for the Interest Rates
+
+Define the tail value of money prices by
+
+$$
+v_i
+:=
+\sum_{j=i}^{n_p}p_{m_j}
+$$
+
+and normalize it by consumer income:
+
+$$
+g_i
+:=
+\frac{v_i}{w}
+$$
+
+The terminal condition is
+
+$$
+g_{n_p}=\beta_m
+$$
+
+From the definition of the interest rate,
+
+$$
+p_{m_i}
+=
+r_iv_{i+1}
+$$
+
+and
+
+$$
+v_i
+=
+(1+r_i)v_{i+1}
+$$
+
+Hence,
+
+$$
+1+r_i
+=
+\frac{g_i}{g_{i+1}}
+$$
+
+and the equilibrium interest rates are
+
+$$
+r_i^*
+=
+\frac{g_i}{g_{i+1}}-1,
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+Moreover,
+
+$$
+\frac{p_{m_i}}{w}
+=
+g_i-g_{i+1}
+$$
+
+and
+
+$$
+\frac{r_i}{1+r_i}
+=
+\frac{g_i-g_{i+1}}{g_i}
+$$
+
+For the strictly positive interest-rate solution, whose positivity is established below, $g_i-g_{i+1}>0$. Cancelling this factor in the period-1 money-market condition gives
+
+$$
+\frac{p_2y_1}{w}
+=
+g_1-\beta_2
+$$
+
+For periods $i=2,\ldots,n_p-1$, money-market clearing gives
+
+$$
+\frac{p_{i+1}y_i}{w}
+=
+\frac{
+g_i-\beta_{i+1}
+}{
+1-\theta
+}
+$$
+
+These relations allow the interest-rate system to be solved independently of the levels of output and prices.
+
+In the terminal production period,
+
+$$
+y_{n_p-1}=c_{n_p}
+$$
+
+and therefore
+
+$$
+\frac{
+g_{n_p-1}-\beta_{n_p}
+}{
+1-\theta
+}
+=
+\beta_{n_p}
+\frac{
+g_{n_p}
+}{
+g_{n_p-1}
+}
+$$
+
+Thus,
+
+$$
+g_{n_p-1}^2
+-
+\beta_{n_p}g_{n_p-1}
+-
+(1-\theta)\beta_{n_p}g_{n_p}
+=
+0
+$$
+
+and the positive solution is
+
+$$
+g_{n_p-1}
+=
+\frac{
+\beta_{n_p}
++
+\sqrt{
+\beta_{n_p}^2
++
+4(1-\theta)\beta_{n_p}g_{n_p}
+}
+}{
+2
+}
+$$
+
+For a nonterminal production period $i$, the value of the product internally retained as next-period capital is determined by the capital value-share relation for period $i+1$:
+
+$$
+p_{i+1}k_{i+1}
+=
+\theta p_{i+2}y_{i+1}
+$$
+
+Hence,
+
+$$
+\frac{
+p_{i+1}k_{i+1}
+}{
+w
+}
+=
+\frac{
+\theta
+}{
+1-\theta
+}
+\left(
+g_{i+1}-\beta_{i+2}
+\right)
+$$
+
+For periods $i=2,\ldots,n_p-2$, product allocation requires
+
+$$
+p_{i+1}y_i
+=
+p_{i+1}c_{i+1}+p_{i+1}k_{i+1}
+$$
+
+Using the preceding relations gives
+
+$$
+\frac{
+g_i-\beta_{i+1}
+}{
+1-\theta
+}
+=
+\beta_{i+1}
+\frac{
+g_{i+1}
+}{
+g_i
+}
++
+\frac{
+\theta
+}{
+1-\theta
+}
+\left(
+g_{i+1}-\beta_{i+2}
+\right)
+$$
+
+Define
+
+$$
+d_i
+:=
+\theta
+\left(
+g_{i+1}-\beta_{i+2}
+\right),
+\qquad
+i=2,\ldots,n_p-2
+$$
+
+Then
+
+$$
+g_i^2
+-
+(\beta_{i+1}+d_i)g_i
+-
+(1-\theta)\beta_{i+1}g_{i+1}
+=
+0
+$$
+
+and therefore
+
+$$
+g_i
+=
+\frac{
+\beta_{i+1}+d_i
++
+\sqrt{
+(\beta_{i+1}+d_i)^2
++
+4(1-\theta)\beta_{i+1}g_{i+1}
+}
+}{
+2
+}
+$$
+
+The first production period differs because the purchase of initial capital requires money. Product-market clearing still gives
+
+$$
+p_2y_1
+=
+p_2c_2+p_2k_2
+$$
+
+but
+
+$$
+\frac{p_2y_1}{w}
+=
+g_1-\beta_2
+$$
+
+rather than the corresponding expression divided by $1-\theta$. Define
+
+$$
+d_1
+:=
+\frac{
+\theta
+}{
+1-\theta
+}
+\left(
+g_2-\beta_3
+\right)
+$$
+
+Then
+
+$$
+g_1^2
+-
+(\beta_2+d_1)g_1
+-
+\beta_2g_2
+=
+0
+$$
+
+and
+
+$$
+g_1
+=
+\frac{
+\beta_2+d_1
++
+\sqrt{
+(\beta_2+d_1)^2
++
+4\beta_2g_2
+}
+}{
+2
+}
+$$
+
+The complete analytical solution can therefore be obtained by backward recursion. Starting from
+
+$$
+g_{n_p}=\beta_m
+$$
+
+one first obtains $g_{n_p-1}$, then successively computes
+
+$$
+g_{n_p-2},
+\ldots,
+g_2
+$$
+
+using the common intermediate-period recursion, and finally computes $g_1$ using the first-period formula.
+
+The equilibrium interest rates then follow from
+
+$$
+r_i^*
+=
+\frac{g_i}{g_{i+1}}-1,
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+The decreasing-share assumption guarantees that all the resulting interest rates are strictly positive. At the terminal step, $g_{n_p}=\beta_m<\beta_{n_p}$, and the terminal quadratic gives
+
+$$
+\max\{g_{n_p},\beta_{n_p}\}<g_{n_p-1}<2\beta_{n_p}
+$$
+
+For an intermediate period, define
+
+$$
+P_i(x)=x^2-[\beta_{i+1}+\theta(g_{i+1}-\beta_{i+2})]x-(1-\theta)\beta_{i+1}g_{i+1}
+$$
+
+Suppose $\beta_{i+2}<g_{i+1}<2\beta_{i+2}$. Since $\beta_{i+1}>\beta_{i+2}$, direct substitution gives $P_i(g_{i+1})<0$, $P_i(\beta_{i+1})<0$, and $P_i(2\beta_{i+1})>0$. Its positive root therefore satisfies
+
+$$
+\max\{g_{i+1},\beta_{i+1}\}<g_i<2\beta_{i+1}
+$$
+
+This proves the intermediate steps by backward induction. For period 1, the coefficient $d_1$ and the magnitude of the constant term in its quadratic are strictly larger than those obtained by applying the intermediate-period formula at $i=1$. Its positive root is consequently larger as well, so $g_1>g_2$. Thus,
+
+$$
+g_1>g_2>\cdots>g_{n_p}>0
+$$
+
+and $r_i^*>0$ for every production period. This also validates the cancellation used to obtain the recursion.
+
+Thus, despite the distinction between externally purchased initial capital and internally accumulated subsequent capital, the model retains an analytical backward-recursive solution.
+
+An important feature of the solution is that
+
+$$
+r_i^*
+=
+r_i^*
+\left(
+\boldsymbol\beta,
+\beta_m,
+\theta
+\right)
+$$
+
+The productivity parameters $\alpha_i$, the labor endowments $\omega_i$, and the initial capital endowment $\bar k$ do not enter the normalized interest-rate recursion directly. They determine the equilibrium quantities and price levels once the interest rates have been obtained.
+
+### Capital and Output Paths
+
+After solving for the $g_i$, the capital path can also be obtained recursively. Labor-market clearing gives
+
+$$
+l_i^*=\omega_i,
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+and production is
+
+$$
+y_i^*
+=
+\alpha_i
+(k_i^*)^\theta
+\omega_i^{1-\theta}
+$$
+
+For the first production period, the share of output retained as capital is
+
+$$
+s_1^*
+=
+\frac{
+\theta
+\left(
+g_2-\beta_3
+\right)
+}{
+(1-\theta)
+\left(
+g_1-\beta_2
+\right)
+}
+$$
+
+For periods $i=2,\ldots,n_p-2$,
+
+$$
+s_i^*
+=
+\frac{
+\theta
+\left(
+g_{i+1}-\beta_{i+2}
+\right)
+}{
+g_i-\beta_{i+1}
+}
+$$
+
+Therefore,
+
+$$
+k_{i+1}^*
+=
+s_i^*y_i^*,
+\qquad
+i=1,\ldots,n_p-2
+$$
+
+Starting from
+
+$$
+k_1^*=\bar k
+$$
+
+the entire sequence of capital, output, and consumption can be determined recursively.
+
+### Vanishing Terminal Money Value
+
+The role of terminal money can be examined by letting
+
+$$
+\beta_m\rightarrow0^+
+$$
+
+while maintaining the relative proportions of the consumption shares. More precisely, write $\beta_t=(1-\varepsilon)b_t$, where $\varepsilon=\beta_m$, $b_2>\cdots>b_{n_p}>0$, and $\sum_{t=2}^{n_p}b_t=1$. The maintained decreasing-share assumption holds for all sufficiently small $\varepsilon>0$.
+
+Since
+
+$$
+g_{n_p}=\beta_m
+$$
+
+the terminal recursion implies
+
+$$
+g_{n_p-1}
+\rightarrow
+\beta_{n_p}
+$$
+
+More precisely, if $\beta_m=\varepsilon$, then
+
+$$
+g_{n_p-1}
+=
+\beta_{n_p}
++
+(1-\theta)\varepsilon
++
+O(\varepsilon^2)
+$$
+
+The terminal production-period interest rate therefore satisfies
+
+$$
+r_{n_p-1}^*
+=
+\frac{
+g_{n_p-1}
+}{
+\beta_m
+}
+-1
+\rightarrow+\infty
+$$
+
+At the same time, the value of capital carried into the terminal production period is
+
+$$
+\frac{
+p_{n_p-1}k_{n_p-1}
+}{
+w
+}
+=
+\frac{
+\theta
+}{
+1-\theta
+}
+\left(
+g_{n_p-1}-\beta_{n_p}
+\right)
+$$
+
+and therefore
+
+$$
+\frac{
+p_{n_p-1}k_{n_p-1}
+}{
+w
+}
+\rightarrow0
+$$
+
+To obtain the corresponding quantity limit, use the investment-share recursion. For $n_p\geq4$,
+
+$$
+s_{n_p-2}^*=
+\frac{\theta(g_{n_p-1}-\beta_{n_p})}
+{g_{n_p-2}-\beta_{n_p-1}}
+\rightarrow0
+$$
+
+The numerator tends to zero, whereas the denominator has a strictly positive limit: the preceding quadratic retains a strictly negative constant term in the limit. For $n_p=3$, the first-period investment-share formula gives the same conclusion. Earlier output remains bounded because the horizon and production parameters are fixed and each investment share lies between zero and one. Hence,
+
+$$
+k_{n_p-1}^*=s_{n_p-2}^*y_{n_p-2}^*\rightarrow0
+$$
+
+and the terminal production function implies
+
+$$
+y_{n_p-1}^*\rightarrow0
+$$
+
+Since all terminal output is consumed,
+
+$$
+c_{n_p}^*\rightarrow0
+$$
+
+Meanwhile,
+
+$$
+\frac{\partial y_{n_p-1}}{\partial k_{n_p-1}}
+=
+\theta\alpha_{n_p-1}
+k_{n_p-1}^{\theta-1}
+\omega_{n_p-1}^{1-\theta}
+\rightarrow+\infty
+$$
+
+Thus, as the terminal money value approaches zero,
+
+$$
+r_{n_p-1}^*\rightarrow+\infty,
+\qquad
+k_{n_p-1}^*\rightarrow0,
+\qquad
+y_{n_p-1}^*\rightarrow0,
+\qquad
+c_{n_p}^*\rightarrow0
+$$
+
+This is a terminal effect rather than a collapse of the entire economy. Production, consumption, and capital accumulation in earlier periods can remain positive and well defined. The vanishing terminal money value eliminates investment into the final production period, causing economic activity only in that final production period to approach zero.
+
+### Numerical Example
+
+Consider a four-period economy with
+
+$$
+n_p=4
+$$
+
+and therefore three production periods. Let the capital share be
+
+$$
+\theta=\frac12
+$$
+
+The production functions are
+
+$$
+y_i=k_i^{1/2}l_i^{1/2},
+\qquad
+i=1,2,3
+$$
+
+so that
+
+$$
+\alpha_1=\alpha_2=\alpha_3=1
+$$
+
+The consumer initially owns
+
+$$
+\bar k=62
+$$
+
+units of product 1 and supplies labor endowments
+
+$$
+(\omega_1,\omega_2,\omega_3)
+=
+(62,32,20)
+$$
+
+The supply of each dated money commodity, from money 1 through money 4, is one unit.
+
+Let the Cobb--Douglas shares for consumption and terminal money holdings be
+
+$$
+(\beta_2,\beta_3,\beta_4,\beta_m)
+=
+\frac1{775}
+(352,228,120,75)
+$$
+
+so that
+
+$$
+\beta_2+\beta_3+\beta_4+\beta_m=1
+$$
+
+where $\beta_m$ is the share for terminal money holdings. Product 2 is the numeraire.
+
+Using the backward recursion, the normalized tail values of money prices are
+
+$$
+(g_1,g_2,g_3,g_4)
+=
+\left(
+\frac{24}{31},
+\frac{12}{31},
+\frac6{31},
+\frac3{31}
+\right)
+$$
+
+Therefore,
+
+$$
+r_i^*
+=
+\frac{g_i}{g_{i+1}}-1
+$$
+
+gives
+
+$$
+r_1^*=r_2^*=r_3^*=1
+$$
+
+The consumer's equilibrium income is
+
+$$
+w^*
+=
+\frac{775}{4}
+=
+193.75
+$$
+
+The equilibrium capital stocks are
+
+$$
+(k_1^*,k_2^*,k_3^*)
+=
+(62,18,5)
+$$
+
+and the corresponding outputs are
+
+$$
+(y_1^*,y_2^*,y_3^*)
+=
+(62,24,10)
+$$
+
+Hence, product consumption is
+
+$$
+(c_2^*,c_3^*,c_4^*)
+=
+(44,19,10)
+$$
+
+Indeed,
+
+$$
+62=44+18
+$$
+
+and
+
+$$
+24=19+5
+$$
+
+while terminal consumption equals the terminal output of 10 units.
+
+The investment shares are therefore
+
+$$
+s_1^*
+=
+\frac{18}{62}
+=
+\frac9{31}
+$$
+
+and
+
+$$
+s_2^*
+=
+\frac5{24}
+$$
+
+The equilibrium product prices are
+
+$$
+(p_1^*,p_2^*,p_3^*,p_4^*)
+=
+\left(
+\frac14,
+1,
+\frac32,
+\frac32
+\right)
+$$
+
+and the labor prices are
+
+$$
+(p_{l_1}^*,p_{l_2}^*,p_{l_3}^*)
+=
+\left(
+\frac14,
+\frac9{32},
+\frac3{16}
+\right)
+$$
+
+The equilibrium money prices are
+
+$$
+(p_{m_1}^*,p_{m_2}^*,p_{m_3}^*,p_{m_4}^*)
+=
+\left(
+75,
+\frac{75}{2},
+\frac{75}{4},
+\frac{75}{4}
+\right)
+$$
+
+These prices are consistent with the tail money values
+
+$$
+v_i^*
+=
+\sum_{j=i}^4p_{m_j}^*
+$$
+
+and
+
+$$
+g_i
+=
+\frac{v_i^*}{w^*}
+$$
+
+For example,
+
+$$
+v_1^*=150,
+\qquad
+v_2^*=75,
+\qquad
+v_3^*=\frac{75}{2},
+\qquad
+v_4^*=\frac{75}{4}
+$$
+
+so that
+
+$$
+\frac{v_1^*}{v_2^*}
+=
+\frac{v_2^*}{v_3^*}
+=
+\frac{v_3^*}{v_4^*}
+=
+2
+$$
+
+which again implies
+
+$$
+r_1^*=r_2^*=r_3^*=1
+$$
+
+The first-period firm purchases both initial capital and labor from the consumer. Its expenditure is
+
+$$
+p_1^*k_1^*
++
+p_{l_1}^*l_1^*
+=
+\frac14(62)+\frac14(62)
+=
+31
+$$
+
+Since $r_1^*=1$, its period-1 money holdings are
+
+$$
+h_1^{f*}
+=
+\frac{31}{75}
+$$
+
+The consumer's period-1 money holdings are
+
+$$
+h_1^{c*}
+=
+\frac{44}{75}
+$$
+
+and therefore
+
+$$
+h_1^{f*}+h_1^{c*}=1
+$$
+
+From period 2 onward, capital is carried internally by the firm and does not require a monetary transaction. Only labor purchases generate the firm's money demand. The firm and consumer money holdings are
+
+$$
+(h_2^{f*},h_2^{c*})
+=
+\left(
+\frac6{25},
+\frac{19}{25}
+\right)
+$$
+
+and
+
+$$
+(h_3^{f*},h_3^{c*})
+=
+\left(
+\frac15,
+\frac45
+\right)
+$$
+
+so that each production-period money market clears:
+
+$$
+h_i^{f*}+h_i^{c*}=1,
+\qquad
+i=1,2,3
+$$
+
+Finally, the consumer holds the entire unit of terminal money:
+
+$$
+h_4^*=1
+$$
+
+Thus, this numerical example gives a particularly simple equilibrium in which all three endogenous interest rates equal one, while capital accumulation, production, consumption, and sequential monetary transactions remain nontrivial.
+
+
+::: {#lst-gemb_intertemporalEquilibrium_endogenousInterestRateCapitalAccumulation_nct3_nat2}
+
+```{.julia include="../../code/gemb_intertemporalEquilibrium_endogenousInterestRateCapitalAccumulation_nct3_nat2_v4.jl"}
+```
+
+A $3\times2$ Intertemporal Equilibrium Model with Endogenous Interest Rates and Capital Accumulation
+
+:::
+
+## Infinite-Horizon Equilibrium
+
+Consider an infinite-horizon version of the model, with production periods $i=1,2,\ldots$. There is no terminal money commodity in utility and no terminal production condition. The consumer owns the initial capital stock and one unit of each dated money commodity, and supplies labor in each production period.
+
+Let $0<\rho<1$ and consider the geometric consumption shares
+
+$$
+\beta_t=(1-\rho)\rho^{t-2},
+\qquad t=2,3,\ldots,
+\qquad \sum_{t=2}^{\infty}\beta_t=1
+$$
+
+We construct an infinite-horizon equilibrium with finite income $w>0$ and summable positive dated-money prices. Define
+
+$$
+v_i=\sum_{j=i}^{\infty}p_{m_j},
+\qquad g_i=\frac{v_i}{w}
+$$
+
+The claim-rate relation remains $1+r_i=g_i/g_{i+1}$. The construction below directly solves the infinite-horizon equations; it does not rely on a finite-horizon truncation with a terminal money preference weight.
+
+For production periods $i\geq2$, the production, product-allocation, and money-market equations give
+
+$$
+d_i
+=
+\theta
+\left(
+g_{i+1}-\beta_{i+2}
+\right)
+$$
+
+and
+
+$$
+g_i^2
+-
+(\beta_{i+1}+d_i)g_i
+-
+(1-\theta)\beta_{i+1}g_{i+1}
+=
+0
+$$
+
+Equivalently, the positive-root recursion is
+
+$$
+g_i
+=
+\frac{
+\beta_{i+1}
++
+\theta(g_{i+1}-\beta_{i+2})
++
+\sqrt{
+[\beta_{i+1}+\theta(g_{i+1}-\beta_{i+2})]^2
++
+4(1-\theta)\beta_{i+1}g_{i+1}
+}
+}{
+2
+}
+$$
+
+Because the preference weights are geometric, consider a stationary proportional solution of the form
+
+$$
+g_i=C\beta_{i+1},
+\qquad
+i\geq2
+$$
+
+Since
+
+$$
+\beta_{i+2}=\rho\beta_{i+1}
+$$
+
+we have
+
+$$
+g_{i+1}-\beta_{i+2}
+=
+\rho\beta_{i+1}(C-1)
+$$
+
+Substituting these expressions into the recursive equation gives
+
+$$
+C
+=
+\frac{
+1+\rho-2\theta\rho
+}{
+1-\theta\rho
+}
+$$
+
+The equilibrium interest rate therefore satisfies
+
+$$
+1+r_i^*
+=
+\frac{g_i}{g_{i+1}}
+=
+\frac1{\rho}
+$$
+
+and hence
+
+$$
+r_i^*
+=
+\frac1{\rho}-1,
+\qquad
+i\geq2
+$$
+
+Thus, away from the initial period, the infinite-horizon economy admits a constant equilibrium interest rate determined by the intertemporal discount factor.
+
+Here $C-1=\rho(1-\theta)/(1-\theta\rho)>0$. The implied money prices are
+
+$$
+p_{m_i}=w(g_i-g_{i+1})=wC(1-\rho)\beta_{i+1},
+\qquad i\geq2
+$$
+
+They are positive and summable, and satisfy
+
+$$
+\sum_{j=i}^{\infty}p_{m_j}=wC\beta_{i+1}=wg_i,
+\qquad i\geq2
+$$
+
+Thus the tail-value definition is satisfied and $v_i\rightarrow0$ as $i\rightarrow\infty$.
+
+For the initial period, set $g_2=C\beta_3$ and use the first-period formula
+
+$$
+d_1=\frac{\theta}{1-\theta}(g_2-\beta_3),
+\qquad
+ g_1=\frac{\beta_2+d_1+\sqrt{(\beta_2+d_1)^2+4\beta_2g_2}}{2}
+$$
+
+Since $1<C<2$ and $\beta_2>\beta_3$, the same root comparison as in the finite-horizon model gives $g_1>g_2$. Consequently, $r_1^*=g_1/g_2-1>0$ and $p_{m_1}=w(g_1-g_2)>0$. The first-period investment share remains the one given in the capital-path subsection; the constant investment share derived below applies from period 2 onward.
+
+The investment share also becomes constant. For $i\geq2$,
+
+$$
+s_i^*
+=
+\frac{
+\theta(g_{i+1}-\beta_{i+2})
+}{
+g_i-\beta_{i+1}
+}
+$$
+
+Using $g_i=C\beta_{i+1}$ and $\beta_{i+2}=\rho\beta_{i+1}$ gives
+
+$$
+s_i^*
+=
+\theta\rho
+$$
+
+Hence, capital accumulation satisfies
+
+$$
+k_{i+1}^*
+=
+\theta\rho y_i^*
+$$
+
+With the Cobb--Douglas production function
+
+$$
+y_i^*
+=
+\alpha_i
+(k_i^*)^\theta
+\omega_i^{1-\theta}
+$$
+
+the capital dynamics become
+
+$$
+k_{i+1}^*
+=
+\theta\rho\alpha_i
+(k_i^*)^\theta
+\omega_i^{1-\theta}
+$$
+
+If productivity and labor endowment are constant over time,
+
+$$
+\alpha_i=\alpha
+$$
+
+and
+
+$$
+\omega_i=\omega
+$$
+
+the economy admits a steady state satisfying
+
+$$
+k^*
+=
+\theta\rho\alpha
+(k^*)^\theta
+\omega^{1-\theta}
+$$
+
+Therefore,
+
+$$
+k^*
+=
+\left(
+\theta\rho\alpha
+\omega^{1-\theta}
+\right)^{\frac{1}{1-\theta}}
+$$
+
+Steady-state output is
+
+$$
+y^*
+=
+\alpha
+(k^*)^\theta
+\omega^{1-\theta}
+$$
+
+and steady-state consumption is
+
+$$
+c^*
+=
+(1-\theta\rho)y^*
+$$
+
+The corresponding steady-state interest rate and investment rate are
+
+$$
+r^*
+=
+\frac1{\rho}-1
+$$
+
+and
+
+$$
+s^*
+=
+\theta\rho
+$$
+
+respectively.
+
+The first production period remains structurally different because the initial capital stock is owned by the consumer and must be purchased using money. Consequently, $r_1^*$ need not equal the stationary interest rate. It represents an initial transition condition, whereas from period 2 onward capital is accumulated internally by the firm and the stationary recursion applies.
+
+
+## Steady State: A $4\times2$ Equality-Form Wide-Sense Structural Equilibrium Model
+
+The steady state can be represented by a finite-dimensional equality-form wide-sense structural equilibrium model.
+
+Assume the following:
+
+1. There are four commodity types: product, labor, money, and an equity claim; and two economic-agent types: firm and consumer. Product is the numeraire. The equity claim represents the return on internally accumulated capital.
+2. The consumer supplies $\omega>0$ units of labor, one unit of money, and one unit of the equity claim, and consumes only product.
+3. The production function is
+
+$$
+y=\alpha k^\theta l^{1-\theta},
+\qquad
+\alpha>0,
+\qquad
+0<\theta<1
+$$
+
+4. Let $\rho\in(0,1)$ denote the exogenous intertemporal discount factor. The steady-state money interest rate and equity return rate are exogenously given by
+
+$$
+r_m=r_e=\frac1{\rho}-1
+$$
+
+Let
+
+$$
+\mathbf p=(1,p_l,p_m,p_e)^\top
+$$
+
+where $p_l$, $p_m$, and $p_e$ are the prices of labor, money, and the equity claim, respectively. The prices of money and equity represent the interest on a unit of money and the dividend on a unit of equity, respectively.
+Because $r_m=r_e$, the common factor $1+r_m=1+r_e$ does not affect the firm's optimal capital-labor ratio. For a given output level $y$, its capital and labor demands are therefore
+
+$$
+k
+=
+\frac{y}{\alpha}
+\left(
+\frac{\theta p_l}{1-\theta}
+\right)^{1-\theta}
+$$
+
+and
+
+$$
+l
+=
+\frac{y}{\alpha}
+\left(
+\frac{1-\theta}{\theta p_l}
+\right)^\theta
+$$
+
+Capital is carried internally and therefore does not require money. Labor purchases require money, while the return on internally accumulated capital is transferred through the equity claim. Accordingly, the demand and supply matrices are
+
+$$
+\mathbf D(\mathbf p,y,c)
+=
+\begin{bmatrix}
+\displaystyle
+\frac{y}{\alpha}
+\left(
+\frac{\theta p_l}{1-\theta}
+\right)^{1-\theta}
+&
+c
+\\[10pt]
+\displaystyle
+\frac{y}{\alpha}
+\left(
+\frac{1-\theta}{\theta p_l}
+\right)^\theta
+&
+0
+\\[10pt]
+\displaystyle
+\frac{r_mp_l}{p_m}
+\frac{y}{\alpha}
+\left(
+\frac{1-\theta}{\theta p_l}
+\right)^\theta
+&
+\displaystyle
+\frac{r_mc}{p_m}
+\\[12pt]
+\displaystyle
+\frac{r_e}{p_e}
+\frac{y}{\alpha}
+\left(
+\frac{\theta p_l}{1-\theta}
+\right)^{1-\theta}
+&
+0
+\end{bmatrix}
+$$
+
+and
+
+$$
+\mathbf S(y)
+=
+\begin{bmatrix}
+y&0\\
+0&\omega\\
+0&1\\
+0&1
+\end{bmatrix}
+$$
+
+where the first and second columns correspond to the firm and consumer, respectively.
+
+The steady-state equality-form wide-sense structural equilibrium model is
+
+$$
+\mathbf p^\top\mathbf D(\mathbf p,y,c)
+=
+\mathbf p^\top\mathbf S(y)
+$$
+
+$$
+\mathbf D(\mathbf p,y,c)\mathbf 1
+=
+\mathbf S(y)\mathbf 1
+$$
+
+Solving the model gives
+
+$$
+k^*=\theta\rho y^*,
+\qquad
+l^*=\omega,
+\qquad
+c^*=(1-\theta\rho)y^*
+$$
+
+and
+
+$$
+y^*
+=
+\alpha^{\frac1{1-\theta}}
+(\theta\rho)^{\frac{\theta}{1-\theta}}
+\omega
+$$
+
+Hence,
+
+$$
+k^*
+=
+(\theta\rho\alpha)^{\frac1{1-\theta}}\omega
+$$
+
+and
+
+$$
+c^*
+=
+(1-\theta\rho)
+\alpha^{\frac1{1-\theta}}
+(\theta\rho)^{\frac{\theta}{1-\theta}}
+\omega
+$$
+
+The equilibrium prices are
+
+$$
+p_l^*
+=
+\rho(1-\theta)\frac{y^*}{\omega}
+$$
+
+$$
+p_e^*
+=
+r_e k^*
+=
+\theta(1-\rho)y^*
+$$
+
+and
+
+$$
+p_m^*
+=
+r_m
+\left(
+p_l^*\omega+c^*
+\right)
+=
+\frac{1-\rho}{\rho}
+\left(
+1+\rho-2\theta\rho
+\right)y^*
+$$
+
+The corresponding money holdings are
+
+$$
+h^{f*}
+=
+\frac{\rho(1-\theta)}
+{1+\rho-2\theta\rho},
+\qquad
+h^{c*}
+=
+\frac{1-\theta\rho}
+{1+\rho-2\theta\rho}
+$$
+
+and the equilibrium demand for the equity claim is
+
+$$
+e^*=1
+$$
+
+
+
+

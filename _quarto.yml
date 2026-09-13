@@ -43,6 +43,8 @@ website:
         - section: "Intertemporal Equilibrium Models: Extended Models"
           contents:
             - models/IntertemporalExtended/KnowledgeProduction.qmd
+            - models/IntertemporalExtended/EndogenousInterestRates.qmd
+            - models/IntertemporalExtended/EndogenousInterestRatesAndCapitalAccumulation.qmd
 
 
 format:

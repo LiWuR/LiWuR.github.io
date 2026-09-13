@@ -205,7 +205,7 @@ result = solve(
 result.solved || error("Equilibrium solve failed.")
 
 stats = equilibrium_statistics(model, result)
-print_equilibrium_statistics(model, result)
+print_equilibrium_statistics(model, result, show_matrices=false)
 
 research_labor =
     stats.activity_levels[np:(2 * np - 3)]

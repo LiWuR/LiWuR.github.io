@@ -378,21 +378,23 @@ window.Quarto = {
 <p><span class="math display">\[
 \mathbf p=(p_1,1)^\top
 \]</span></p></li>
-<li><p>Consumer 1 is endowed with <span class="math inline">\(s_1&gt;0\)</span> units of commodity 1, while consumer 2 is endowed with <span class="math inline">\(s_2&gt;0\)</span> units of commodity 2. The supply matrix is</p>
+<li><p>Consumer 1 is endowed with <span class="math inline">\(s_1&gt;0\)</span> units of commodity 1, while consumer 2 is endowed with <span class="math inline">\(s_2&gt;0\)</span> units of commodity 2. The endowment matrix is</p></li>
+</ol>
 <p><span class="math display">\[
 \mathbf S=
 \begin{bmatrix}
 s_1&amp;0\\
 0&amp;s_2
 \end{bmatrix}
-\]</span></p></li>
-<li><p>The two consumers have the same CES utility function</p>
+\]</span></p>
+<ol start="3" type="1">
+<li><p>The two consumers have the same reduced-form CES utility function</p>
 <p><span class="math display">\[
 u(x_1,x_2)
 =
 (x_1^{-1}+x_2^{-1})^{-1}
 \]</span></p></li>
-<li><p>In the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose the quantity of commodity 1 supplied to the market, whereas consumer 2 continues to supply its full endowment.</p></li>
+<li><p>In the competitive benchmark, both consumers supply their full endowments. In the monopoly case, consumer 1 may choose to supply only <span class="math inline">\(q\)</span> units of commodity 1, where <span class="math inline">\(0&lt;q\leq s_1\)</span>, while the remaining <span class="math inline">\(s_1-q\)</span> units are left idle. The production process and the consumption of final products are omitted in this simplified model. Accordingly, the CES utility function is a reduced-form representation of the utility generated through the omitted production and final-product consumption process, while the two commodities themselves represent production factors. Consumer 2 continues to supply its full endowment.</p></li>
 </ol>
 <p>For the above utility function, the demand matrix can be written as</p>
 <p><span class="math display">\[
@@ -437,11 +439,7 @@ u_2^*
 \frac{s_2^2(s_2-s_1)}{(s_1+s_2)^3}
 \]</span></p>
 <p>Hence <span class="math inline">\(u_1^*\)</span> increases with <span class="math inline">\(s_1\)</span> when <span class="math inline">\(s_1&lt;s_2\)</span>, decreases with <span class="math inline">\(s_1\)</span> when <span class="math inline">\(s_1&gt;s_2\)</span>, and reaches its maximum at <span class="math inline">\(s_1=s_2\)</span>.</p>
-<p>Suppose now that consumer 1 can choose its actual supply <span class="math inline">\(q\)</span>, where</p>
-<p><span class="math display">\[
-0&lt;q\leq s_1
-\]</span></p>
-<p>For any given <span class="math inline">\(q\)</span>, the resulting competitive equilibrium is obtained by replacing <span class="math inline">\(s_1\)</span> with <span class="math inline">\(q\)</span>. Thus,</p>
+<p>For any given supply level <span class="math inline">\(q\)</span> chosen by consumer 1, where <span class="math inline">\(0&lt;q\leq s_1\)</span>, the resulting competitive equilibrium is obtained by replacing <span class="math inline">\(s_1\)</span> with <span class="math inline">\(q\)</span>. Thus,</p>
 <p><span class="math display">\[
 p_1(q)
 =
@@ -741,7 +739,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/LiWuR\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
