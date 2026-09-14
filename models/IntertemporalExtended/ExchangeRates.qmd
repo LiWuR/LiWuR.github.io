@@ -1,0 +1,559 @@
+---
+title: "Intertemporal Equilibrium with Endogenous Interest and Exchange Rates"
+---
+## The $6\times4$ Model
+
+This example extends the endogenous-interest-rate framework to a two-country economy. International product purchases generate demand for the corresponding moneys, and the equilibrium prices of dated money services determine both interest rates and exchange rates. Positive preference weights on terminal money holdings keep all production-period interest rates finite.
+
+Assume the following:
+
+1. There are two countries, A and B. Each country has one representative firm and one representative consumer. There are six commodity types: product A, product B, labor A, labor B, money A, and money B.
+2. The economy operates for $n_p\geq3$ periods. Production takes place in periods $i=1,\ldots,n_p-1$. Production in period $i$ uses domestic labor and produces product dated $i+1$.
+3. Production in country $q\in\{A,B\}$ is linear:
+
+$$
+y_q^{(i)}=\alpha_q^{(i)} l_q^{(i)},
+\qquad
+\alpha_q^{(i)}>0
+$$
+
+4. Consumer $q$ owns $\omega_q^{(i)}>0$ units of domestic labor in each production period and the service endowments associated with a fixed domestic money stock $M_q>0$. Each unit of money provides one unit of service in every production period and one unit of terminal holding service.
+5. Domestic labor purchases require domestic money. Purchases of product A require money A, whereas purchases of product B require money B. Both consumers can purchase both products and use both moneys.
+6. Product A dated period 2 is the common numeraire:
+
+$$
+p_A^{(2)}=1
+$$
+
+All dated-commodity prices are expressed relative to this single numeraire. Throughout this section, $q\in\{A,B\}$ denotes a country, country indices are written as subscripts, and time indices are written as parenthesized superscripts.
+
+### Preferences and Consumer Demand
+
+Let $c_{q,j}^{(i+1)}$ denote consumer $j$'s consumption of country $q$'s product dated $i+1$, and let $h_{q,j}^{(n_p)}$ denote that consumer's terminal holdings of money $q$. Preferences are
+
+$$
+u_j=
+\prod_{q\in\{A,B\}}
+\left[
+\left(
+\prod_{i=1}^{n_p-1}
+(c_{q,j}^{(i+1)})^{\beta_q^{(i)}}
+\right)
+(h_{q,j}^{(n_p)})^{\beta_{m,q}}
+\right]^{\lambda_{qj}},
+\qquad
+j\in\{A,B\}
+$$
+
+where
+
+$$
+\lambda_{Aj}>0,
+\qquad
+\lambda_{Bj}>0,
+\qquad
+\lambda_{Aj}+\lambda_{Bj}=1
+$$
+
+and, for each country $q$,
+
+$$
+\beta_q^{(1)}>\beta_q^{(2)}>\cdots>
+\beta_q^{(n_p-1)}>\beta_{m,q}>0,
+\qquad
+\sum_{i=1}^{n_p-1}\beta_q^{(i)}+\beta_{m,q}=1
+$$
+
+The parameter $\lambda_{qj}$ is consumer $j$'s expenditure share allocated to country $q$'s consumption and terminal-money bundle. Both consumers have the same within-bundle temporal shares for a given country, but their country expenditure shares may differ.
+
+Let $p_q^{(t)}$, $p_{l,q}^{(i)}$, and $p_{m,q}^{(i)}$ denote the prices of country $q$'s dated product, labor, and money service, respectively. Consumer $j$'s income is
+
+$$
+w_j=
+\sum_{i=1}^{n_p-1}p_{l,j}^{(i)}\omega_j^{(i)}
++
+M_j\sum_{i=1}^{n_p}p_{m,j}^{(i)}
+$$
+
+Given the interest rates, product demand is
+
+$$
+c_{q,j}^{(i+1)}
+=
+\frac{\lambda_{qj}\beta_q^{(i)} w_j}
+{(1+r_q^{(i)})p_q^{(i+1)}},
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+The associated transaction demand for money services is
+
+$$
+h_{q,j}^{(i)}
+=
+\frac{\lambda_{qj}\beta_q^{(i)} w_jr_q^{(i)}}
+{(1+r_q^{(i)})p_{m,q}^{(i)}}
+$$
+
+Terminal money demand is
+
+$$
+h_{q,j}^{(n_p)}
+=
+\frac{\lambda_{qj}\beta_{m,q} w_j}
+{p_{m,q}^{(n_p)}}
+$$
+
+Define total expenditure allocated to country $q$'s bundle as
+
+$$
+W_q=\lambda_{qA}w_A+\lambda_{qB}w_B
+$$
+
+Aggregate demand for its product is therefore
+
+$$
+C_q^{(i+1)}
+=
+\sum_{j\in\{A,B\}}c_{q,j}^{(i+1)}
+=
+\frac{\beta_q^{(i)}W_q}
+{(1+r_q^{(i)})p_q^{(i+1)}}
+$$
+
+### Production and Market-Clearing Conditions
+
+An output level $y_q^{(i)}$ requires labor and money services in quantities
+
+$$
+l_q^{(i)}=\frac{y_q^{(i)}}{\alpha_q^{(i)}},
+\qquad
+h_{q,f}^{(i)}
+=
+\frac{r_q^{(i)}p_{l,q}^{(i)}y_q^{(i)}}
+{\alpha_q^{(i)}p_{m,q}^{(i)}}
+$$
+
+The firm's unit revenue-expenditure balance condition is
+
+$$
+p_q^{(i+1)}
+=
+(1+r_q^{(i)})\frac{p_{l,q}^{(i)}}{\alpha_q^{(i)}}
+$$
+
+Labor- and product-market clearing give
+
+$$
+y_q^{(i)*}
+=
+\alpha_q^{(i)}\omega_q^{(i)}
+=
+C_q^{(i+1)*}
+$$
+
+Consequently,
+
+$$
+p_q^{(i+1)*}
+=
+\frac{\beta_q^{(i)}W_q^*}
+{(1+r_q^{(i)*})\alpha_q^{(i)}\omega_q^{(i)}}
+$$
+
+and
+
+$$
+p_{l,q}^{(i)*}
+=
+\frac{\alpha_q^{(i)}p_q^{(i+1)*}}
+{1+r_q^{(i)*}}
+$$
+
+money-service market clearing requires
+
+$$
+h_{q,f}^{(i)}+h_{q,A}^{(i)}+h_{q,B}^{(i)}=M_q
+$$
+
+Substitution gives
+
+$$
+M_qp_{m,q}^{(i)*}
+=
+\beta_q^{(i)}W_q^*
+\frac{r_q^{(i)*}(r_q^{(i)*}+2)}
+{(1+r_q^{(i)*})^2},
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+Terminal money-market clearing gives
+
+$$
+M_qp_{m,q}^{(n_p)*}=\beta_{m,q}W_q^*
+$$
+
+Together with the interest-rate relations below, the agents' revenue-expenditure balance conditions and the commodity-market clearing conditions define the structural equilibrium model.
+
+### Money Values and Endogenous Interest Rates
+
+The production-period price $p_{m,q}^{(i)}$ represents the value of the service supplied by one unit of money $q$ during period $i$. It is distinct from the value of the money itself. The terminal price $p_{m,q}^{(n_p)}$ represents the value of its terminal holding service.
+
+Define the beginning-of-period value of one unit of money $q$ as
+
+$$
+v_q^{(i)}=\sum_{s=i}^{n_p}p_{m,q}^{(s)},
+\qquad
+i=1,\ldots,n_p
+$$
+
+Since these are dated-commodity prices under a common numeraire, no additional discount factors are applied to this sum.
+
+The production-period ad valorem claim rate is
+
+$$
+r_q^{(i)}=\frac{p_{m,q}^{(i)}}{v_q^{(i+1)}},
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+Thus,
+
+$$
+v_q^{(i)}=(1+r_q^{(i)})v_q^{(i+1)}
+$$
+
+Normalize the total money value by expenditure:
+
+$$
+g_q^{(i)}=\frac{M_qv_q^{(i)}}{W_q}
+$$
+
+Then
+
+$$
+g_q^{(n_p)}=\beta_{m,q},
+\qquad
+1+r_q^{(i)}=\frac{g_q^{(i)}}{g_q^{(i+1)}}
+$$
+
+For a strictly positive interest-rate solution, money-market clearing implies
+
+$$
+(g_q^{(i)})^2-\beta_q^{(i)}g_q^{(i)}-\beta_q^{(i)}g_q^{(i+1)}=0
+$$
+
+The positive root gives the backward recursion
+
+$$
+g_q^{(i)}=
+\frac{
+\beta_q^{(i)}+
+\sqrt{(\beta_q^{(i)})^2+4\beta_q^{(i)}g_q^{(i+1)}}
+}{2},
+\qquad
+i=n_p-1,\ldots,1
+$$
+
+Starting from $g_q^{(n_p)}=\beta_{m,q}$, this determines the equilibrium interest rates:
+
+$$
+r_q^{(i)*}=\frac{g_q^{(i)}}{g_q^{(i+1)}}-1
+$$
+
+The decreasing-share assumption guarantees positivity. At the terminal step, $\beta_{m,q}<\beta_q^{(n_p-1)}$ implies
+
+$$
+g_q^{(n_p)}<g_q^{(n_p-1)}<2\beta_q^{(n_p-1)}
+$$
+
+At each preceding step, $g_q^{(i+1)}<2\beta_q^{(i+1)}<2\beta_q^{(i)}$ implies
+
+$$
+g_q^{(i+1)}<g_q^{(i)}<2\beta_q^{(i)}
+$$
+
+Hence,
+
+$$
+g_q^{(1)}>g_q^{(2)}>\cdots>g_q^{(n_p)}>0
+$$
+
+and every production-period interest rate is finite and strictly positive.
+
+### Equilibrium Income and Exchange Rates
+
+For each production period, domestic labor income and domestic money-service income satisfy
+
+$$
+p_{l,q}^{(i)*}\omega_q^{(i)}+M_qp_{m,q}^{(i)*}
+=
+\beta_q^{(i)}W_q^*
+$$
+
+Adding terminal money income yields
+
+$$
+w_q^*=W_q^*
+$$
+
+The equilibrium income vector therefore satisfies
+
+$$
+\begin{bmatrix}
+w_A^*\\
+w_B^*
+\end{bmatrix}
+=
+\begin{bmatrix}
+\lambda_{AA}&\lambda_{AB}\\
+\lambda_{BA}&\lambda_{BB}
+\end{bmatrix}
+\begin{bmatrix}
+w_A^*\\
+w_B^*
+\end{bmatrix}
+$$
+
+Since each column of the expenditure-share matrix sums to one,
+
+$$
+\frac{w_A^*}{w_B^*}
+=
+\frac{\lambda_{AB}}{\lambda_{BA}}
+$$
+
+The numeraire condition determines the income scale:
+
+$$
+w_A^*
+=
+\frac{
+(1+r_A^{(1)*})\alpha_A^{(1)}\omega_A^{(1)}
+}{
+\beta_A^{(1)}
+}
+$$
+
+Let $e_{AB}^{(i)}$ denote the number of units of money B equivalent in value to one unit of money A at the beginning of period $i$. Then
+
+$$
+e_{AB}^{(i)*}=\frac{v_A^{(i)*}}{v_B^{(i)*}}
+$$
+
+Using $v_q^{(i)*}=w_q^*g_q^{(i)}/M_q$ gives
+
+$$
+e_{AB}^{(i)*}
+=
+\frac{M_B}{M_A}
+\frac{\lambda_{AB}}{\lambda_{BA}}
+\frac{g_A^{(i)}}{g_B^{(i)}},
+\qquad
+i=1,\ldots,n_p
+$$
+
+Thus, the exchange rate depends on relative money stocks, the equilibrium income ratio, and the normalized remaining values of the two moneys. It is generally different from the ratio of their current money-service prices.
+
+Moreover,
+
+$$
+\frac{e_{AB}^{(i+1)*}}{e_{AB}^{(i)*}}
+=
+\frac{1+r_B^{(i)*}}{1+r_A^{(i)*}},
+\qquad
+i=1,\ldots,n_p-1
+$$
+
+This relation follows directly from the money-value and claim-rate definitions. Interpreting these rates as returns on separately traded bonds would require an additional asset-market specification.
+
+## Numerical Example
+
+Consider three periods, with production in periods 1 and 2 and terminal money holdings in period 3. Let
+
+$$
+\alpha_A^{(i)}=\alpha_B^{(i)}=1,
+\qquad
+\omega_A^{(i)}=\omega_B^{(i)}=100,
+\qquad
+i=1,2
+$$
+
+and
+
+$$
+M_A=M_B=1
+$$
+
+The country expenditure-share matrix, with rows representing country bundles and columns representing consumers, is
+
+$$
+\begin{bmatrix}
+\lambda_{AA}&\lambda_{AB}\\
+\lambda_{BA}&\lambda_{BB}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac34&\frac14\\
+\frac14&\frac34
+\end{bmatrix}
+$$
+
+The temporal shares are
+
+$$
+(\beta_A^{(1)},\beta_A^{(2)},\beta_{m,A})
+=
+\left(\frac8{15},\frac4{15},\frac15\right)
+$$
+
+and
+
+$$
+(\beta_B^{(1)},\beta_B^{(2)},\beta_{m,B})
+=
+\left(\frac{27}{40},\frac9{40},\frac1{10}\right)
+$$
+
+Both share sequences satisfy the strict decreasing-share assumption.
+
+The backward recursion gives
+
+$$
+(g_A^{(1)},g_A^{(2)},g_A^{(3)})
+=
+\left(\frac45,\frac25,\frac15\right)
+$$
+
+and
+
+$$
+(g_B^{(1)},g_B^{(2)},g_B^{(3)})
+=
+\left(\frac9{10},\frac3{10},\frac1{10}\right)
+$$
+
+Consequently,
+
+$$
+r_A^{(1)*}=r_A^{(2)*}=1,
+\qquad
+r_B^{(1)*}=r_B^{(2)*}=2
+$$
+
+With $p_A^{(2)}=1$, equilibrium incomes are
+
+$$
+w_A^*=w_B^*=375
+$$
+
+The equilibrium prices are:
+
+| Commodity | Country A | Country B |
+|---|---:|---:|
+| Product dated 2 | $1$ | $\frac{27}{32}$ |
+| Product dated 3 | $\frac12$ | $\frac9{32}$ |
+| Labor dated 1 | $\frac12$ | $\frac9{32}$ |
+| Labor dated 2 | $\frac14$ | $\frac3{32}$ |
+| Money service dated 1 | $150$ | $225$ |
+| Money service dated 2 | $75$ | $75$ |
+| Terminal money holding service | $75$ | $\frac{75}{2}$ |
+
+Each country produces 100 units in each production period:
+
+$$
+y_A^{(1)*}=y_A^{(2)*}=y_B^{(1)*}=y_B^{(2)*}=100
+$$
+
+For each consumption period $t=2,3$, the consumption matrix is
+
+$$
+\begin{bmatrix}
+c_{A,A}^{(t)*}&c_{A,B}^{(t)*}\\
+c_{B,A}^{(t)*}&c_{B,B}^{(t)*}
+\end{bmatrix}
+=
+\begin{bmatrix}
+75&25\\
+25&75
+\end{bmatrix}
+$$
+
+Thus, each country consumes 75 units of its own product and imports 25 units of the other country's product.
+
+In each production period, the money-A service allocation is
+
+$$
+(h_{A,f}^{(i)*},h_{A,A}^{(i)*},h_{A,B}^{(i)*})
+=
+\left(\frac13,\frac12,\frac16\right)
+$$
+
+The money-B service allocation is
+
+$$
+(h_{B,f}^{(i)*},h_{B,A}^{(i)*},h_{B,B}^{(i)*})
+=
+\left(\frac14,\frac3{16},\frac9{16}\right)
+$$
+
+Each allocation sums to the corresponding money stock of one. Terminal money holdings are
+
+$$
+\begin{bmatrix}
+h_{A,A}^{(3)*}&h_{A,B}^{(3)*}\\
+h_{B,A}^{(3)*}&h_{B,B}^{(3)*}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac34&\frac14\\
+\frac14&\frac34
+\end{bmatrix}
+$$
+
+The money-value paths are
+
+$$
+(v_A^{(1)*},v_A^{(2)*},v_A^{(3)*})
+=
+(300,150,75)
+$$
+
+and
+
+$$
+(v_B^{(1)*},v_B^{(2)*},v_B^{(3)*})
+=
+\left(\frac{675}{2},\frac{225}{2},\frac{75}{2}\right)
+$$
+
+Therefore, the equilibrium exchange-rate path is
+
+$$
+(e_{AB}^{(1)*},e_{AB}^{(2)*},e_{AB}^{(3)*})
+=
+\left(\frac89,\frac43,2\right)
+$$
+
+It satisfies
+
+$$
+\frac{e_{AB}^{(2)*}}{e_{AB}^{(1)*}}
+=
+\frac{e_{AB}^{(3)*}}{e_{AB}^{(2)*}}
+=
+\frac32
+=
+\frac{1+2}{1+1}
+$$
+
+
+::: {#lst-gemb_intertemporalEquilibrium_ExchangeRates_nct6_nat4}
+
+```{.julia include="../../code/gemb_intertemporalEquilibrium_ExchangeRates_nct6_nat4_v2.jl"}
+```
+
+A $6\times4$ Intertemporal Equilibrium Model with Endogenous Interest and Exchange Rates
+
+:::

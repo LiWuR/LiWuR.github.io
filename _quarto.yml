@@ -45,6 +45,7 @@ website:
             - models/IntertemporalExtended/KnowledgeProduction.qmd
             - models/IntertemporalExtended/EndogenousInterestRates.qmd
             - models/IntertemporalExtended/EndogenousInterestRatesAndCapitalAccumulation.qmd
+            - models/IntertemporalExtended/ExchangeRates.qmd
 
 
 format:

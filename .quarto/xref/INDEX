@@ -64,5 +64,11 @@
   },
   "models/IntertemporalExtended/EndogenousInterestRates_v3.qmd": {
     "EndogenousInterestRates_v3.html": "19231aa0"
+  },
+  "models/IntertemporalExtended/ExchangeRate.qmd": {
+    "ExchangeRate.html": "1ec709d0"
+  },
+  "models/IntertemporalExtended/ExchangeRates.qmd": {
+    "ExchangeRates.html": "f6757323"
   }
 }
