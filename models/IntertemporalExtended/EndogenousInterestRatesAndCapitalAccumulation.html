@@ -322,6 +322,12 @@ window.Quarto = {
  <span class="menu-text">Endogenous Interest Rates and Capital Accumulation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../models/IntertemporalExtended/ExchangeRates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intertemporal Equilibrium with Endogenous Interest and Exchange Rates</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -378,34 +384,34 @@ window.Quarto = {
 <p>Assume the following:</p>
 <ol type="1">
 <li>The economy operates for <span class="math inline">\(n_p\geq3\)</span> periods. Production takes place in periods <span class="math inline">\(i=1,\ldots,n_p-1\)</span>, so there are <span class="math inline">\(n_p-1\)</span> production activities.</li>
-<li>The consumer initially owns <span class="math inline">\(\bar k&gt;0\)</span> units of product 1, which are purchased by the firm and used as capital in period 1. The consumer also supplies <span class="math inline">\(\omega_i&gt;0\)</span> units of labor in production period <span class="math inline">\(i\)</span>, <span class="math inline">\(i=1,\ldots,n_p-1\)</span>.</li>
+<li>The consumer initially owns <span class="math inline">\(\bar k&gt;0\)</span> units of product 1, which are purchased by the firm and used as capital in period 1. The consumer also supplies <span class="math inline">\(\omega^{(i)}&gt;0\)</span> units of labor in production period <span class="math inline">\(i\)</span>, <span class="math inline">\(i=1,\ldots,n_p-1\)</span>.</li>
 <li>Production in period <span class="math inline">\(i\)</span> is described by the constant-returns-to-scale Cobb–Douglas production function</li>
 </ol>
 <p><span class="math display">\[
-y_i
+y^{(i)}
 =
-\alpha_i k_i^\theta l_i^{1-\theta},
+\alpha^{(i)} \left(k^{(i)}\right)^{\theta} \left(l^{(i)}\right)^{1-\theta},
 \qquad
 i=1,\ldots,n_p-1,
 \qquad
-\alpha_i&gt;0,
+\alpha^{(i)}&gt;0,
 \qquad
 0&lt;\theta&lt;1
 \]</span></p>
-<p>where <span class="math inline">\(k_i\)</span> and <span class="math inline">\(l_i\)</span> denote capital and labor inputs. Period-<span class="math inline">\(i\)</span> production yields product <span class="math inline">\(i+1\)</span>. Capital is completely exhausted in production.</p>
+<p>where <span class="math inline">\(k^{(i)}\)</span> and <span class="math inline">\(l^{(i)}\)</span> denote capital and labor inputs. Period-<span class="math inline">\(i\)</span> production yields product <span class="math inline">\(i+1\)</span>. Capital is completely exhausted in production.</p>
 <ol start="4" type="1">
 <li>The initial capital stock satisfies</li>
 </ol>
 <p><span class="math display">\[
-k_1=\bar k
+k^{(1)}=\bar k
 \]</span></p>
 <p>For <span class="math inline">\(i=1,\ldots,n_p-2\)</span>, period-<span class="math inline">\(i\)</span> output is divided between consumption in period <span class="math inline">\(i+1\)</span> and capital carried internally into the next production period:</p>
 <p><span class="math display">\[
-y_i=c_{i+1}+k_{i+1}
+y^{(i)}=c^{(i+1)}+k^{(i+1)}
 \]</span></p>
 <p>In the terminal production period,</p>
 <p><span class="math display">\[
-y_{n_p-1}=c_{n_p}
+y^{(n_p-1)}=c^{(n_p)}
 \]</span></p>
 <ol start="5" type="1">
 <li>The purchase of initial capital and labor in period 1 requires money. From period 2 onward, capital is carried internally by the firm and therefore does not require a monetary transaction. The purchase of labor continues to require money in every production period.</li>
@@ -415,32 +421,32 @@ y_{n_p-1}=c_{n_p}
 u
 =
 \left(
-\prod_{t=2}^{n_p}c_t^{\beta_t}
+\prod_{t=2}^{n_p}\left(c^{(t)}\right)^{\beta^{(t)}}
 \right)
-h_{n_p}^{\beta_m}
+\left(h^{(n_p)}\right)^{\beta_m}
 \]</span></p>
 <p>where</p>
 <p><span class="math display">\[
-\beta_2&gt;\beta_3&gt;\cdots&gt;\beta_{n_p}&gt;\beta_m&gt;0,
+\beta^{(2)}&gt;\beta^{(3)}&gt;\cdots&gt;\beta^{(n_p)}&gt;\beta_m&gt;0,
 \qquad
-\sum_{t=2}^{n_p}\beta_t+\beta_m=1
+\sum_{t=2}^{n_p}\beta^{(t)}+\beta_m=1
 \]</span></p>
 <ol start="7" type="1">
-<li>The consumer is endowed with one unit of each dated money commodity, from money 1 through money <span class="math inline">\(n_p\)</span>. Let <span class="math inline">\(p_{m_i}\)</span> denote the price of money in period <span class="math inline">\(i\)</span>. Money <span class="math inline">\(n_p\)</span> is terminal money. The interest rate in production period <span class="math inline">\(i\)</span> is</li>
+<li>The consumer is endowed with one unit of each dated money commodity, from money 1 through money <span class="math inline">\(n_p\)</span>. Let <span class="math inline">\(p_m^{(i)}\)</span> denote the price of money in period <span class="math inline">\(i\)</span>. Money <span class="math inline">\(n_p\)</span> is terminal money. The interest rate in production period <span class="math inline">\(i\)</span> is</li>
 </ol>
 <p><span class="math display">\[
-r_i
+r^{(i)}
 =
 \frac{
-p_{m_i}
+p_m^{(i)}
 }{
-\displaystyle\sum_{j=i+1}^{n_p}p_{m_j}
+\displaystyle\sum_{j=i+1}^{n_p}p_m^{(j)}
 },
 \qquad
 i=1,\ldots,n_p-1
 \]</span></p>
 <p>A positive terminal money value therefore keeps all production-period interest rates finite.</p>
-<p>Let <span class="math inline">\(p_t\)</span> denote the price of product <span class="math inline">\(t\)</span>, <span class="math inline">\(t=1,\ldots,n_p\)</span>, and let <span class="math inline">\(p_{l_i}\)</span> denote the price of labor in production period <span class="math inline">\(i\)</span>.</p>
+<p>Let <span class="math inline">\(p^{(t)}\)</span> denote the price of product <span class="math inline">\(t\)</span>, <span class="math inline">\(t=1,\ldots,n_p\)</span>, and let <span class="math inline">\(p_l^{(i)}\)</span> denote the price of labor in production period <span class="math inline">\(i\)</span>.</p>
 </section>
 <section id="analytical-solution" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-solution">Analytical Solution</h2>
@@ -448,29 +454,29 @@ i=1,\ldots,n_p-1
 <h3 class="anchored" data-anchor-id="production-and-monetary-transactions">Production and Monetary Transactions</h3>
 <p>Under Cobb–Douglas production, the production stationarity conditions imply the value-share relations</p>
 <p><span class="math display">\[
-(1+r_1)p_1k_1=\theta p_2y_1,
+(1+r^{(1)})p^{(1)}k^{(1)}=\theta p^{(2)}y^{(1)},
 \qquad
-(1+r_1)p_{l_1}l_1=(1-\theta)p_2y_1
+(1+r^{(1)})p_l^{(1)}l^{(1)}=(1-\theta)p^{(2)}y^{(1)}
 \]</span></p>
 <p>in period 1. Since both initial capital and labor are purchased from the consumer, the firm’s money holdings satisfy</p>
 <p><span class="math display">\[
-p_{m_1}h_1^f
+p_m^{(1)}h_f^{(1)}
 =
-\frac{r_1}{1+r_1}p_2y_1
+\frac{r^{(1)}}{1+r^{(1)}}p^{(2)}y^{(1)}
 \]</span></p>
 <p>From period 2 onward, capital is carried internally from the firm’s previous-period output rather than purchased through a market transaction. The corresponding value-share relations are</p>
 <p><span class="math display">\[
-p_i k_i=\theta p_{i+1}y_i,
+p^{(i)} k^{(i)}=\theta p^{(i+1)}y^{(i)},
 \qquad
-(1+r_i)p_{l_i}l_i=(1-\theta)p_{i+1}y_i,
+(1+r^{(i)})p_l^{(i)}l^{(i)}=(1-\theta)p^{(i+1)}y^{(i)},
 \qquad
 i=2,\ldots,n_p-1
 \]</span></p>
 <p>Only labor purchases require money in these periods, so</p>
 <p><span class="math display">\[
-p_{m_i}h_i^f
+p_m^{(i)}h_f^{(i)}
 =
-\frac{r_i}{1+r_i}(1-\theta)p_{i+1}y_i,
+\frac{r^{(i)}}{1+r^{(i)}}(1-\theta)p^{(i+1)}y^{(i)},
 \qquad
 i=2,\ldots,n_p-1
 \]</span></p>
@@ -480,48 +486,48 @@ i=2,\ldots,n_p-1
 <h3 class="anchored" data-anchor-id="consumer-demand-and-money-market-clearing">Consumer Demand and Money-Market Clearing</h3>
 <p>Let <span class="math inline">\(w\)</span> denote consumer income, equal to the value of the initial capital, labor, and money endowments:</p>
 <p><span class="math display">\[
-w=p_1\bar k+\sum_{i=1}^{n_p-1}p_{l_i}\omega_i+\sum_{i=1}^{n_p}p_{m_i}
+w=p^{(1)}\bar k+\sum_{i=1}^{n_p-1}p_l^{(i)}\omega^{(i)}+\sum_{i=1}^{n_p}p_m^{(i)}
 \]</span></p>
 <p>For production period <span class="math inline">\(i\)</span>, the consumer’s demand for product <span class="math inline">\(i+1\)</span> and the associated money holdings are</p>
 <p><span class="math display">\[
-c_{i+1}
+c^{(i+1)}
 =
-\frac{\beta_{i+1}w}{(1+r_i)p_{i+1}},
+\frac{\beta^{(i+1)}w}{(1+r^{(i)})p^{(i+1)}},
 \qquad
-p_{m_i}h_i^c
+p_m^{(i)}h_c^{(i)}
 =
-\frac{r_i\beta_{i+1}w}{1+r_i},
+\frac{r^{(i)}\beta^{(i+1)}w}{1+r^{(i)}},
 \qquad
 i=1,\ldots,n_p-1
 \]</span></p>
 <p>Terminal money holdings satisfy</p>
 <p><span class="math display">\[
-h_{n_p}
+h^{(n_p)}
 =
-\frac{\beta_m w}{p_{m_{n_p}}}
+\frac{\beta_m w}{p_m^{(n_p)}}
 \]</span></p>
 <p>and, since the terminal money supply is one,</p>
 <p><span class="math display">\[
-p_{m_{n_p}}
+p_m^{(n_p)}
 =
 \beta_m w
 \]</span></p>
 <p>Money-market clearing therefore gives</p>
 <p><span class="math display">\[
-p_{m_1}
+p_m^{(1)}
 =
-\frac{r_1}{1+r_1}
+\frac{r^{(1)}}{1+r^{(1)}}
 \left(
-p_2y_1+\beta_2w
+p^{(2)}y^{(1)}+\beta^{(2)}w
 \right)
 \]</span></p>
 <p>for period 1, and</p>
 <p><span class="math display">\[
-p_{m_i}
+p_m^{(i)}
 =
-\frac{r_i}{1+r_i}
+\frac{r^{(i)}}{1+r^{(i)}}
 \left[
-(1-\theta)p_{i+1}y_i+\beta_{i+1}w
+(1-\theta)p^{(i+1)}y^{(i)}+\beta^{(i+1)}w
 \right],
 \qquad
 i=2,\ldots,n_p-1
@@ -532,70 +538,70 @@ i=2,\ldots,n_p-1
 <h3 class="anchored" data-anchor-id="recursive-analytical-solution-for-the-interest-rates">Recursive Analytical Solution for the Interest Rates</h3>
 <p>Define the tail value of money prices by</p>
 <p><span class="math display">\[
-v_i
+v^{(i)}
 :=
-\sum_{j=i}^{n_p}p_{m_j}
+\sum_{j=i}^{n_p}p_m^{(j)}
 \]</span></p>
 <p>and normalize it by consumer income:</p>
 <p><span class="math display">\[
-g_i
+g^{(i)}
 :=
-\frac{v_i}{w}
+\frac{v^{(i)}}{w}
 \]</span></p>
 <p>The terminal condition is</p>
 <p><span class="math display">\[
-g_{n_p}=\beta_m
+g^{(n_p)}=\beta_m
 \]</span></p>
 <p>From the definition of the interest rate,</p>
 <p><span class="math display">\[
-p_{m_i}
+p_m^{(i)}
 =
-r_iv_{i+1}
+r^{(i)}v^{(i+1)}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-v_i
+v^{(i)}
 =
-(1+r_i)v_{i+1}
+(1+r^{(i)})v^{(i+1)}
 \]</span></p>
 <p>Hence,</p>
 <p><span class="math display">\[
-1+r_i
+1+r^{(i)}
 =
-\frac{g_i}{g_{i+1}}
+\frac{g^{(i)}}{g^{(i+1)}}
 \]</span></p>
 <p>and the equilibrium interest rates are</p>
 <p><span class="math display">\[
-r_i^*
+r^{(i)*}
 =
-\frac{g_i}{g_{i+1}}-1,
+\frac{g^{(i)}}{g^{(i+1)}}-1,
 \qquad
 i=1,\ldots,n_p-1
 \]</span></p>
 <p>Moreover,</p>
 <p><span class="math display">\[
-\frac{p_{m_i}}{w}
+\frac{p_m^{(i)}}{w}
 =
-g_i-g_{i+1}
+g^{(i)}-g^{(i+1)}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-\frac{r_i}{1+r_i}
+\frac{r^{(i)}}{1+r^{(i)}}
 =
-\frac{g_i-g_{i+1}}{g_i}
+\frac{g^{(i)}-g^{(i+1)}}{g^{(i)}}
 \]</span></p>
-<p>For the strictly positive interest-rate solution, whose positivity is established below, <span class="math inline">\(g_i-g_{i+1}&gt;0\)</span>. Cancelling this factor in the period-1 money-market condition gives</p>
+<p>For the strictly positive interest-rate solution, whose positivity is established below, <span class="math inline">\(g^{(i)}-g^{(i+1)}&gt;0\)</span>. Cancelling this factor in the period-1 money-market condition gives</p>
 <p><span class="math display">\[
-\frac{p_2y_1}{w}
+\frac{p^{(2)}y^{(1)}}{w}
 =
-g_1-\beta_2
+g^{(1)}-\beta^{(2)}
 \]</span></p>
 <p>For periods <span class="math inline">\(i=2,\ldots,n_p-1\)</span>, money-market clearing gives</p>
 <p><span class="math display">\[
-\frac{p_{i+1}y_i}{w}
+\frac{p^{(i+1)}y^{(i)}}{w}
 =
 \frac{
-g_i-\beta_{i+1}
+g^{(i)}-\beta^{(i+1)}
 }{
 1-\theta
 }
@@ -603,44 +609,44 @@ g_i-\beta_{i+1}
 <p>These relations allow the interest-rate system to be solved independently of the levels of output and prices.</p>
 <p>In the terminal production period,</p>
 <p><span class="math display">\[
-y_{n_p-1}=c_{n_p}
+y^{(n_p-1)}=c^{(n_p)}
 \]</span></p>
 <p>and therefore</p>
 <p><span class="math display">\[
 \frac{
-g_{n_p-1}-\beta_{n_p}
+g^{(n_p-1)}-\beta^{(n_p)}
 }{
 1-\theta
 }
 =
-\beta_{n_p}
+\beta^{(n_p)}
 \frac{
-g_{n_p}
+g^{(n_p)}
 }{
-g_{n_p-1}
+g^{(n_p-1)}
 }
 \]</span></p>
 <p>Thus,</p>
 <p><span class="math display">\[
-g_{n_p-1}^2
+\left(g^{(n_p-1)}\right)^{2}
 -
-\beta_{n_p}g_{n_p-1}
+\beta^{(n_p)}g^{(n_p-1)}
 -
-(1-\theta)\beta_{n_p}g_{n_p}
+(1-\theta)\beta^{(n_p)}g^{(n_p)}
 =
 0
 \]</span></p>
 <p>and the positive solution is</p>
 <p><span class="math display">\[
-g_{n_p-1}
+g^{(n_p-1)}
 =
 \frac{
-\beta_{n_p}
+\beta^{(n_p)}
 +
 \sqrt{
-\beta_{n_p}^2
+\left(\beta^{(n_p)}\right)^{2}
 +
-4(1-\theta)\beta_{n_p}g_{n_p}
+4(1-\theta)\beta^{(n_p)}g^{(n_p)}
 }
 }{
 2
@@ -648,14 +654,14 @@ g_{n_p-1}
 \]</span></p>
 <p>For a nonterminal production period <span class="math inline">\(i\)</span>, the value of the product internally retained as next-period capital is determined by the capital value-share relation for period <span class="math inline">\(i+1\)</span>:</p>
 <p><span class="math display">\[
-p_{i+1}k_{i+1}
+p^{(i+1)}k^{(i+1)}
 =
-\theta p_{i+2}y_{i+1}
+\theta p^{(i+2)}y^{(i+1)}
 \]</span></p>
 <p>Hence,</p>
 <p><span class="math display">\[
 \frac{
-p_{i+1}k_{i+1}
+p^{(i+1)}k^{(i+1)}
 }{
 w
 }
@@ -666,28 +672,28 @@ w
 1-\theta
 }
 \left(
-g_{i+1}-\beta_{i+2}
+g^{(i+1)}-\beta^{(i+2)}
 \right)
 \]</span></p>
 <p>For periods <span class="math inline">\(i=2,\ldots,n_p-2\)</span>, product allocation requires</p>
 <p><span class="math display">\[
-p_{i+1}y_i
+p^{(i+1)}y^{(i)}
 =
-p_{i+1}c_{i+1}+p_{i+1}k_{i+1}
+p^{(i+1)}c^{(i+1)}+p^{(i+1)}k^{(i+1)}
 \]</span></p>
 <p>Using the preceding relations gives</p>
 <p><span class="math display">\[
 \frac{
-g_i-\beta_{i+1}
+g^{(i)}-\beta^{(i+1)}
 }{
 1-\theta
 }
 =
-\beta_{i+1}
+\beta^{(i+1)}
 \frac{
-g_{i+1}
+g^{(i+1)}
 }{
-g_i
+g^{(i)}
 }
 +
 \frac{
@@ -696,41 +702,41 @@ g_i
 1-\theta
 }
 \left(
-g_{i+1}-\beta_{i+2}
+g^{(i+1)}-\beta^{(i+2)}
 \right)
 \]</span></p>
 <p>Define</p>
 <p><span class="math display">\[
-d_i
+d^{(i)}
 :=
 \theta
 \left(
-g_{i+1}-\beta_{i+2}
+g^{(i+1)}-\beta^{(i+2)}
 \right),
 \qquad
 i=2,\ldots,n_p-2
 \]</span></p>
 <p>Then</p>
 <p><span class="math display">\[
-g_i^2
+\left(g^{(i)}\right)^{2}
 -
-(\beta_{i+1}+d_i)g_i
+(\beta^{(i+1)}+d^{(i)})g^{(i)}
 -
-(1-\theta)\beta_{i+1}g_{i+1}
+(1-\theta)\beta^{(i+1)}g^{(i+1)}
 =
 0
 \]</span></p>
 <p>and therefore</p>
 <p><span class="math display">\[
-g_i
+g^{(i)}
 =
 \frac{
-\beta_{i+1}+d_i
+\beta^{(i+1)}+d^{(i)}
 +
 \sqrt{
-(\beta_{i+1}+d_i)^2
+(\beta^{(i+1)}+d^{(i)})^2
 +
-4(1-\theta)\beta_{i+1}g_{i+1}
+4(1-\theta)\beta^{(i+1)}g^{(i+1)}
 }
 }{
 2
@@ -738,19 +744,19 @@ g_i
 \]</span></p>
 <p>The first production period differs because the purchase of initial capital requires money. Product-market clearing still gives</p>
 <p><span class="math display">\[
-p_2y_1
+p^{(2)}y^{(1)}
 =
-p_2c_2+p_2k_2
+p^{(2)}c^{(2)}+p^{(2)}k^{(2)}
 \]</span></p>
 <p>but</p>
 <p><span class="math display">\[
-\frac{p_2y_1}{w}
+\frac{p^{(2)}y^{(1)}}{w}
 =
-g_1-\beta_2
+g^{(1)}-\beta^{(2)}
 \]</span></p>
 <p>rather than the corresponding expression divided by <span class="math inline">\(1-\theta\)</span>. Define</p>
 <p><span class="math display">\[
-d_1
+d^{(1)}
 :=
 \frac{
 \theta
@@ -758,30 +764,30 @@ d_1
 1-\theta
 }
 \left(
-g_2-\beta_3
+g^{(2)}-\beta^{(3)}
 \right)
 \]</span></p>
 <p>Then</p>
 <p><span class="math display">\[
-g_1^2
+\left(g^{(1)}\right)^{2}
 -
-(\beta_2+d_1)g_1
+(\beta^{(2)}+d^{(1)})g^{(1)}
 -
-\beta_2g_2
+\beta^{(2)}g^{(2)}
 =
 0
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-g_1
+g^{(1)}
 =
 \frac{
-\beta_2+d_1
+\beta^{(2)}+d^{(1)}
 +
 \sqrt{
-(\beta_2+d_1)^2
+(\beta^{(2)}+d^{(1)})^2
 +
-4\beta_2g_2
+4\beta^{(2)}g^{(2)}
 }
 }{
 2
@@ -789,110 +795,110 @@ g_1
 \]</span></p>
 <p>The complete analytical solution can therefore be obtained by backward recursion. Starting from</p>
 <p><span class="math display">\[
-g_{n_p}=\beta_m
+g^{(n_p)}=\beta_m
 \]</span></p>
-<p>one first obtains <span class="math inline">\(g_{n_p-1}\)</span>, then successively computes</p>
+<p>one first obtains <span class="math inline">\(g^{(n_p-1)}\)</span>, then successively computes</p>
 <p><span class="math display">\[
-g_{n_p-2},
+g^{(n_p-2)},
 \ldots,
-g_2
+g^{(2)}
 \]</span></p>
-<p>using the common intermediate-period recursion, and finally computes <span class="math inline">\(g_1\)</span> using the first-period formula.</p>
+<p>using the common intermediate-period recursion, and finally computes <span class="math inline">\(g^{(1)}\)</span> using the first-period formula.</p>
 <p>The equilibrium interest rates then follow from</p>
 <p><span class="math display">\[
-r_i^*
+r^{(i)*}
 =
-\frac{g_i}{g_{i+1}}-1,
+\frac{g^{(i)}}{g^{(i+1)}}-1,
 \qquad
 i=1,\ldots,n_p-1
 \]</span></p>
-<p>The decreasing-share assumption guarantees that all the resulting interest rates are strictly positive. At the terminal step, <span class="math inline">\(g_{n_p}=\beta_m&lt;\beta_{n_p}\)</span>, and the terminal quadratic gives</p>
+<p>The decreasing-share assumption guarantees that all the resulting interest rates are strictly positive. At the terminal step, <span class="math inline">\(g^{(n_p)}=\beta_m&lt;\beta^{(n_p)}\)</span>, and the terminal quadratic gives</p>
 <p><span class="math display">\[
-\max\{g_{n_p},\beta_{n_p}\}&lt;g_{n_p-1}&lt;2\beta_{n_p}
+\max\{g^{(n_p)},\beta^{(n_p)}\}&lt;g^{(n_p-1)}&lt;2\beta^{(n_p)}
 \]</span></p>
 <p>For an intermediate period, define</p>
 <p><span class="math display">\[
-P_i(x)=x^2-[\beta_{i+1}+\theta(g_{i+1}-\beta_{i+2})]x-(1-\theta)\beta_{i+1}g_{i+1}
+P^{(i)}(x)=x^2-[\beta^{(i+1)}+\theta(g^{(i+1)}-\beta^{(i+2)})]x-(1-\theta)\beta^{(i+1)}g^{(i+1)}
 \]</span></p>
-<p>Suppose <span class="math inline">\(\beta_{i+2}&lt;g_{i+1}&lt;2\beta_{i+2}\)</span>. Since <span class="math inline">\(\beta_{i+1}&gt;\beta_{i+2}\)</span>, direct substitution gives <span class="math inline">\(P_i(g_{i+1})&lt;0\)</span>, <span class="math inline">\(P_i(\beta_{i+1})&lt;0\)</span>, and <span class="math inline">\(P_i(2\beta_{i+1})&gt;0\)</span>. Its positive root therefore satisfies</p>
+<p>Suppose <span class="math inline">\(\beta^{(i+2)}&lt;g^{(i+1)}&lt;2\beta^{(i+2)}\)</span>. Since <span class="math inline">\(\beta^{(i+1)}&gt;\beta^{(i+2)}\)</span>, direct substitution gives <span class="math inline">\(P^{(i)}(g^{(i+1)})&lt;0\)</span>, <span class="math inline">\(P^{(i)}(\beta^{(i+1)})&lt;0\)</span>, and <span class="math inline">\(P^{(i)}(2\beta^{(i+1)})&gt;0\)</span>. Its positive root therefore satisfies</p>
 <p><span class="math display">\[
-\max\{g_{i+1},\beta_{i+1}\}&lt;g_i&lt;2\beta_{i+1}
+\max\{g^{(i+1)},\beta^{(i+1)}\}&lt;g^{(i)}&lt;2\beta^{(i+1)}
 \]</span></p>
-<p>This proves the intermediate steps by backward induction. For period 1, the coefficient <span class="math inline">\(d_1\)</span> and the magnitude of the constant term in its quadratic are strictly larger than those obtained by applying the intermediate-period formula at <span class="math inline">\(i=1\)</span>. Its positive root is consequently larger as well, so <span class="math inline">\(g_1&gt;g_2\)</span>. Thus,</p>
+<p>This proves the intermediate steps by backward induction. For period 1, the coefficient <span class="math inline">\(d^{(1)}\)</span> and the magnitude of the constant term in its quadratic are strictly larger than those obtained by applying the intermediate-period formula at <span class="math inline">\(i=1\)</span>. Its positive root is consequently larger as well, so <span class="math inline">\(g^{(1)}&gt;g^{(2)}\)</span>. Thus,</p>
 <p><span class="math display">\[
-g_1&gt;g_2&gt;\cdots&gt;g_{n_p}&gt;0
+g^{(1)}&gt;g^{(2)}&gt;\cdots&gt;g^{(n_p)}&gt;0
 \]</span></p>
-<p>and <span class="math inline">\(r_i^*&gt;0\)</span> for every production period. This also validates the cancellation used to obtain the recursion.</p>
+<p>and <span class="math inline">\(r^{(i)*}&gt;0\)</span> for every production period. This also validates the cancellation used to obtain the recursion.</p>
 <p>Thus, despite the distinction between externally purchased initial capital and internally accumulated subsequent capital, the model retains an analytical backward-recursive solution.</p>
 <p>An important feature of the solution is that</p>
 <p><span class="math display">\[
-r_i^*
+r^{(i)*}
 =
-r_i^*
+r^{(i)*}
 \left(
 \boldsymbol\beta,
 \beta_m,
 \theta
 \right)
 \]</span></p>
-<p>The productivity parameters <span class="math inline">\(\alpha_i\)</span>, the labor endowments <span class="math inline">\(\omega_i\)</span>, and the initial capital endowment <span class="math inline">\(\bar k\)</span> do not enter the normalized interest-rate recursion directly. They determine the equilibrium quantities and price levels once the interest rates have been obtained.</p>
+<p>The productivity parameters <span class="math inline">\(\alpha^{(i)}\)</span>, the labor endowments <span class="math inline">\(\omega^{(i)}\)</span>, and the initial capital endowment <span class="math inline">\(\bar k\)</span> do not enter the normalized interest-rate recursion directly. They determine the equilibrium quantities and price levels once the interest rates have been obtained.</p>
 </section>
 <section id="capital-and-output-paths" class="level3">
 <h3 class="anchored" data-anchor-id="capital-and-output-paths">Capital and Output Paths</h3>
-<p>After solving for the <span class="math inline">\(g_i\)</span>, the capital path can also be obtained recursively. Labor-market clearing gives</p>
+<p>After solving for the <span class="math inline">\(g^{(i)}\)</span>, the capital path can also be obtained recursively. Labor-market clearing gives</p>
 <p><span class="math display">\[
-l_i^*=\omega_i,
+l^{(i)*}=\omega^{(i)},
 \qquad
 i=1,\ldots,n_p-1
 \]</span></p>
 <p>and production is</p>
 <p><span class="math display">\[
-y_i^*
+y^{(i)*}
 =
-\alpha_i
-(k_i^*)^\theta
-\omega_i^{1-\theta}
+\alpha^{(i)}
+(k^{(i)*})^\theta
+\left(\omega^{(i)}\right)^{1-\theta}
 \]</span></p>
 <p>For the first production period, the share of output retained as capital is</p>
 <p><span class="math display">\[
-s_1^*
+s^{(1)*}
 =
 \frac{
 \theta
 \left(
-g_2-\beta_3
+g^{(2)}-\beta^{(3)}
 \right)
 }{
 (1-\theta)
 \left(
-g_1-\beta_2
+g^{(1)}-\beta^{(2)}
 \right)
 }
 \]</span></p>
 <p>For periods <span class="math inline">\(i=2,\ldots,n_p-2\)</span>,</p>
 <p><span class="math display">\[
-s_i^*
+s^{(i)*}
 =
 \frac{
 \theta
 \left(
-g_{i+1}-\beta_{i+2}
+g^{(i+1)}-\beta^{(i+2)}
 \right)
 }{
-g_i-\beta_{i+1}
+g^{(i)}-\beta^{(i+1)}
 }
 \]</span></p>
 <p>Therefore,</p>
 <p><span class="math display">\[
-k_{i+1}^*
+k^{(i+1)*}
 =
-s_i^*y_i^*,
+s^{(i)*}y^{(i)*},
 \qquad
 i=1,\ldots,n_p-2
 \]</span></p>
 <p>Starting from</p>
 <p><span class="math display">\[
-k_1^*=\bar k
+k^{(1)*}=\bar k
 \]</span></p>
 <p>the entire sequence of capital, output, and consumption can be determined recursively.</p>
 </section>
@@ -902,22 +908,22 @@ k_1^*=\bar k
 <p><span class="math display">\[
 \beta_m\rightarrow0^+
 \]</span></p>
-<p>while maintaining the relative proportions of the consumption shares. More precisely, write <span class="math inline">\(\beta_t=(1-\varepsilon)b_t\)</span>, where <span class="math inline">\(\varepsilon=\beta_m\)</span>, <span class="math inline">\(b_2&gt;\cdots&gt;b_{n_p}&gt;0\)</span>, and <span class="math inline">\(\sum_{t=2}^{n_p}b_t=1\)</span>. The maintained decreasing-share assumption holds for all sufficiently small <span class="math inline">\(\varepsilon&gt;0\)</span>.</p>
+<p>while maintaining the relative proportions of the consumption shares. More precisely, write <span class="math inline">\(\beta^{(t)}=(1-\varepsilon)b^{(t)}\)</span>, where <span class="math inline">\(\varepsilon=\beta_m\)</span>, <span class="math inline">\(b^{(2)}&gt;\cdots&gt;b^{(n_p)}&gt;0\)</span>, and <span class="math inline">\(\sum_{t=2}^{n_p}b^{(t)}=1\)</span>. The maintained decreasing-share assumption holds for all sufficiently small <span class="math inline">\(\varepsilon&gt;0\)</span>.</p>
 <p>Since</p>
 <p><span class="math display">\[
-g_{n_p}=\beta_m
+g^{(n_p)}=\beta_m
 \]</span></p>
 <p>the terminal recursion implies</p>
 <p><span class="math display">\[
-g_{n_p-1}
+g^{(n_p-1)}
 \rightarrow
-\beta_{n_p}
+\beta^{(n_p)}
 \]</span></p>
 <p>More precisely, if <span class="math inline">\(\beta_m=\varepsilon\)</span>, then</p>
 <p><span class="math display">\[
-g_{n_p-1}
+g^{(n_p-1)}
 =
-\beta_{n_p}
+\beta^{(n_p)}
 +
 (1-\theta)\varepsilon
 +
@@ -925,10 +931,10 @@ O(\varepsilon^2)
 \]</span></p>
 <p>The terminal production-period interest rate therefore satisfies</p>
 <p><span class="math display">\[
-r_{n_p-1}^*
+r^{(n_p-1)*}
 =
 \frac{
-g_{n_p-1}
+g^{(n_p-1)}
 }{
 \beta_m
 }
@@ -938,7 +944,7 @@ g_{n_p-1}
 <p>At the same time, the value of capital carried into the terminal production period is</p>
 <p><span class="math display">\[
 \frac{
-p_{n_p-1}k_{n_p-1}
+p^{(n_p-1)}k^{(n_p-1)}
 }{
 w
 }
@@ -949,13 +955,13 @@ w
 1-\theta
 }
 \left(
-g_{n_p-1}-\beta_{n_p}
+g^{(n_p-1)}-\beta^{(n_p)}
 \right)
 \]</span></p>
 <p>and therefore</p>
 <p><span class="math display">\[
 \frac{
-p_{n_p-1}k_{n_p-1}
+p^{(n_p-1)}k^{(n_p-1)}
 }{
 w
 }
@@ -963,41 +969,41 @@ w
 \]</span></p>
 <p>To obtain the corresponding quantity limit, use the investment-share recursion. For <span class="math inline">\(n_p\geq4\)</span>,</p>
 <p><span class="math display">\[
-s_{n_p-2}^*=
-\frac{\theta(g_{n_p-1}-\beta_{n_p})}
-{g_{n_p-2}-\beta_{n_p-1}}
+s^{(n_p-2)*}=
+\frac{\theta(g^{(n_p-1)}-\beta^{(n_p)})}
+{g^{(n_p-2)}-\beta^{(n_p-1)}}
 \rightarrow0
 \]</span></p>
 <p>The numerator tends to zero, whereas the denominator has a strictly positive limit: the preceding quadratic retains a strictly negative constant term in the limit. For <span class="math inline">\(n_p=3\)</span>, the first-period investment-share formula gives the same conclusion. Earlier output remains bounded because the horizon and production parameters are fixed and each investment share lies between zero and one. Hence,</p>
 <p><span class="math display">\[
-k_{n_p-1}^*=s_{n_p-2}^*y_{n_p-2}^*\rightarrow0
+k^{(n_p-1)*}=s^{(n_p-2)*}y^{(n_p-2)*}\rightarrow0
 \]</span></p>
 <p>and the terminal production function implies</p>
 <p><span class="math display">\[
-y_{n_p-1}^*\rightarrow0
+y^{(n_p-1)*}\rightarrow0
 \]</span></p>
 <p>Since all terminal output is consumed,</p>
 <p><span class="math display">\[
-c_{n_p}^*\rightarrow0
+c^{(n_p)*}\rightarrow0
 \]</span></p>
 <p>Meanwhile,</p>
 <p><span class="math display">\[
-\frac{\partial y_{n_p-1}}{\partial k_{n_p-1}}
+\frac{\partial y^{(n_p-1)}}{\partial k^{(n_p-1)}}
 =
-\theta\alpha_{n_p-1}
-k_{n_p-1}^{\theta-1}
-\omega_{n_p-1}^{1-\theta}
+\theta\alpha^{(n_p-1)}
+\left(k^{(n_p-1)}\right)^{\theta-1}
+\left(\omega^{(n_p-1)}\right)^{1-\theta}
 \rightarrow+\infty
 \]</span></p>
 <p>Thus, as the terminal money value approaches zero,</p>
 <p><span class="math display">\[
-r_{n_p-1}^*\rightarrow+\infty,
+r^{(n_p-1)*}\rightarrow+\infty,
 \qquad
-k_{n_p-1}^*\rightarrow0,
+k^{(n_p-1)*}\rightarrow0,
 \qquad
-y_{n_p-1}^*\rightarrow0,
+y^{(n_p-1)*}\rightarrow0,
 \qquad
-c_{n_p}^*\rightarrow0
+c^{(n_p)*}\rightarrow0
 \]</span></p>
 <p>This is a terminal effect rather than a collapse of the entire economy. Production, consumption, and capital accumulation in earlier periods can remain positive and well defined. The vanishing terminal money value eliminates investment into the final production period, causing economic activity only in that final production period to approach zero.</p>
 </section>
@@ -1013,13 +1019,13 @@ n_p=4
 \]</span></p>
 <p>The production functions are</p>
 <p><span class="math display">\[
-y_i=k_i^{1/2}l_i^{1/2},
+y^{(i)}=\left(k^{(i)}\right)^{1/2}\left(l^{(i)}\right)^{1/2},
 \qquad
 i=1,2,3
 \]</span></p>
 <p>so that</p>
 <p><span class="math display">\[
-\alpha_1=\alpha_2=\alpha_3=1
+\alpha^{(1)}=\alpha^{(2)}=\alpha^{(3)}=1
 \]</span></p>
 <p>The consumer initially owns</p>
 <p><span class="math display">\[
@@ -1027,26 +1033,26 @@ i=1,2,3
 \]</span></p>
 <p>units of product 1 and supplies labor endowments</p>
 <p><span class="math display">\[
-(\omega_1,\omega_2,\omega_3)
+(\omega^{(1)},\omega^{(2)},\omega^{(3)})
 =
 (62,32,20)
 \]</span></p>
 <p>The supply of each dated money commodity, from money 1 through money 4, is one unit.</p>
 <p>Let the Cobb–Douglas shares for consumption and terminal money holdings be</p>
 <p><span class="math display">\[
-(\beta_2,\beta_3,\beta_4,\beta_m)
+(\beta^{(2)},\beta^{(3)},\beta^{(4)},\beta_m)
 =
 \frac1{775}
 (352,228,120,75)
 \]</span></p>
 <p>so that</p>
 <p><span class="math display">\[
-\beta_2+\beta_3+\beta_4+\beta_m=1
+\beta^{(2)}+\beta^{(3)}+\beta^{(4)}+\beta_m=1
 \]</span></p>
 <p>where <span class="math inline">\(\beta_m\)</span> is the share for terminal money holdings. Product 2 is the numeraire.</p>
 <p>Using the backward recursion, the normalized tail values of money prices are</p>
 <p><span class="math display">\[
-(g_1,g_2,g_3,g_4)
+(g^{(1)},g^{(2)},g^{(3)},g^{(4)})
 =
 \left(
 \frac{24}{31},
@@ -1057,13 +1063,13 @@ i=1,2,3
 \]</span></p>
 <p>Therefore,</p>
 <p><span class="math display">\[
-r_i^*
+r^{(i)*}
 =
-\frac{g_i}{g_{i+1}}-1
+\frac{g^{(i)}}{g^{(i+1)}}-1
 \]</span></p>
 <p>gives</p>
 <p><span class="math display">\[
-r_1^*=r_2^*=r_3^*=1
+r^{(1)*}=r^{(2)*}=r^{(3)*}=1
 \]</span></p>
 <p>The consumer’s equilibrium income is</p>
 <p><span class="math display">\[
@@ -1075,19 +1081,19 @@ w^*
 \]</span></p>
 <p>The equilibrium capital stocks are</p>
 <p><span class="math display">\[
-(k_1^*,k_2^*,k_3^*)
+(k^{(1)*},k^{(2)*},k^{(3)*})
 =
 (62,18,5)
 \]</span></p>
 <p>and the corresponding outputs are</p>
 <p><span class="math display">\[
-(y_1^*,y_2^*,y_3^*)
+(y^{(1)*},y^{(2)*},y^{(3)*})
 =
 (62,24,10)
 \]</span></p>
 <p>Hence, product consumption is</p>
 <p><span class="math display">\[
-(c_2^*,c_3^*,c_4^*)
+(c^{(2)*},c^{(3)*},c^{(4)*})
 =
 (44,19,10)
 \]</span></p>
@@ -1102,7 +1108,7 @@ w^*
 <p>while terminal consumption equals the terminal output of 10 units.</p>
 <p>The investment shares are therefore</p>
 <p><span class="math display">\[
-s_1^*
+s^{(1)*}
 =
 \frac{18}{62}
 =
@@ -1110,13 +1116,13 @@ s_1^*
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-s_2^*
+s^{(2)*}
 =
 \frac5{24}
 \]</span></p>
 <p>The equilibrium product prices are</p>
 <p><span class="math display">\[
-(p_1^*,p_2^*,p_3^*,p_4^*)
+(p^{(1)*},p^{(2)*},p^{(3)*},p^{(4)*})
 =
 \left(
 \frac14,
@@ -1127,7 +1133,7 @@ s_2^*
 \]</span></p>
 <p>and the labor prices are</p>
 <p><span class="math display">\[
-(p_{l_1}^*,p_{l_2}^*,p_{l_3}^*)
+(p_l^{(1)*},p_l^{(2)*},p_l^{(3)*})
 =
 \left(
 \frac14,
@@ -1137,7 +1143,7 @@ s_2^*
 \]</span></p>
 <p>The equilibrium money prices are</p>
 <p><span class="math display">\[
-(p_{m_1}^*,p_{m_2}^*,p_{m_3}^*,p_{m_4}^*)
+(p_m^{(1)*},p_m^{(2)*},p_m^{(3)*},p_m^{(4)*})
 =
 \left(
 75,
@@ -1148,69 +1154,69 @@ s_2^*
 \]</span></p>
 <p>These prices are consistent with the tail money values</p>
 <p><span class="math display">\[
-v_i^*
+v^{(i)*}
 =
-\sum_{j=i}^4p_{m_j}^*
+\sum_{j=i}^4p_m^{(j)*}
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-g_i
+g^{(i)}
 =
-\frac{v_i^*}{w^*}
+\frac{v^{(i)*}}{w^*}
 \]</span></p>
 <p>For example,</p>
 <p><span class="math display">\[
-v_1^*=150,
+v^{(1)*}=150,
 \qquad
-v_2^*=75,
+v^{(2)*}=75,
 \qquad
-v_3^*=\frac{75}{2},
+v^{(3)*}=\frac{75}{2},
 \qquad
-v_4^*=\frac{75}{4}
+v^{(4)*}=\frac{75}{4}
 \]</span></p>
 <p>so that</p>
 <p><span class="math display">\[
-\frac{v_1^*}{v_2^*}
+\frac{v^{(1)*}}{v^{(2)*}}
 =
-\frac{v_2^*}{v_3^*}
+\frac{v^{(2)*}}{v^{(3)*}}
 =
-\frac{v_3^*}{v_4^*}
+\frac{v^{(3)*}}{v^{(4)*}}
 =
 2
 \]</span></p>
 <p>which again implies</p>
 <p><span class="math display">\[
-r_1^*=r_2^*=r_3^*=1
+r^{(1)*}=r^{(2)*}=r^{(3)*}=1
 \]</span></p>
 <p>The first-period firm purchases both initial capital and labor from the consumer. Its expenditure is</p>
 <p><span class="math display">\[
-p_1^*k_1^*
+p^{(1)*}k^{(1)*}
 +
-p_{l_1}^*l_1^*
+p_l^{(1)*}l^{(1)*}
 =
 \frac14(62)+\frac14(62)
 =
 31
 \]</span></p>
-<p>Since <span class="math inline">\(r_1^*=1\)</span>, its period-1 money holdings are</p>
+<p>Since <span class="math inline">\(r^{(1)*}=1\)</span>, its period-1 money holdings are</p>
 <p><span class="math display">\[
-h_1^{f*}
+h_f^{(1)*}
 =
 \frac{31}{75}
 \]</span></p>
 <p>The consumer’s period-1 money holdings are</p>
 <p><span class="math display">\[
-h_1^{c*}
+h_c^{(1)*}
 =
 \frac{44}{75}
 \]</span></p>
 <p>and therefore</p>
 <p><span class="math display">\[
-h_1^{f*}+h_1^{c*}=1
+h_f^{(1)*}+h_c^{(1)*}=1
 \]</span></p>
 <p>From period 2 onward, capital is carried internally by the firm and does not require a monetary transaction. Only labor purchases generate the firm’s money demand. The firm and consumer money holdings are</p>
 <p><span class="math display">\[
-(h_2^{f*},h_2^{c*})
+(h_f^{(2)*},h_c^{(2)*})
 =
 \left(
 \frac6{25},
@@ -1219,7 +1225,7 @@ h_1^{f*}+h_1^{c*}=1
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-(h_3^{f*},h_3^{c*})
+(h_f^{(3)*},h_c^{(3)*})
 =
 \left(
 \frac15,
@@ -1228,13 +1234,13 @@ h_1^{f*}+h_1^{c*}=1
 \]</span></p>
 <p>so that each production-period money market clears:</p>
 <p><span class="math display">\[
-h_i^{f*}+h_i^{c*}=1,
+h_f^{(i)*}+h_c^{(i)*}=1,
 \qquad
 i=1,2,3
 \]</span></p>
 <p>Finally, the consumer holds the entire unit of terminal money:</p>
 <p><span class="math display">\[
-h_4^*=1
+h^{(4)*}=1
 \]</span></p>
 <p>Thus, this numerical example gives a particularly simple equilibrium in which all three endogenous interest rates equal one, while capital accumulation, production, consumption, and sequential monetary transactions remain nontrivial.</p>
 <div id="lst-gemb_intertemporalEquilibrium_endogenousInterestRateCapitalAccumulation_nct3_nat2" class="listing quarto-float quarto-figure quarto-figure-left anchored">
@@ -1533,48 +1539,48 @@ Listing&nbsp;1: A <span class="math inline">\(3\times2\)</span> Intertemporal Eq
 <p>Consider an infinite-horizon version of the model, with production periods <span class="math inline">\(i=1,2,\ldots\)</span>. There is no terminal money commodity in utility and no terminal production condition. The consumer owns the initial capital stock and one unit of each dated money commodity, and supplies labor in each production period.</p>
 <p>Let <span class="math inline">\(0&lt;\rho&lt;1\)</span> and consider the geometric consumption shares</p>
 <p><span class="math display">\[
-\beta_t=(1-\rho)\rho^{t-2},
+\beta^{(t)}=(1-\rho)\rho^{t-2},
 \qquad t=2,3,\ldots,
-\qquad \sum_{t=2}^{\infty}\beta_t=1
+\qquad \sum_{t=2}^{\infty}\beta^{(t)}=1
 \]</span></p>
 <p>We construct an infinite-horizon equilibrium with finite income <span class="math inline">\(w&gt;0\)</span> and summable positive dated-money prices. Define</p>
 <p><span class="math display">\[
-v_i=\sum_{j=i}^{\infty}p_{m_j},
-\qquad g_i=\frac{v_i}{w}
+v^{(i)}=\sum_{j=i}^{\infty}p_m^{(j)},
+\qquad g^{(i)}=\frac{v^{(i)}}{w}
 \]</span></p>
-<p>The claim-rate relation remains <span class="math inline">\(1+r_i=g_i/g_{i+1}\)</span>. The construction below directly solves the infinite-horizon equations; it does not rely on a finite-horizon truncation with a terminal money preference weight.</p>
+<p>The claim-rate relation remains <span class="math inline">\(1+r^{(i)}=g^{(i)}/g^{(i+1)}\)</span>. The construction below directly solves the infinite-horizon equations; it does not rely on a finite-horizon truncation with a terminal money preference weight.</p>
 <p>For production periods <span class="math inline">\(i\geq2\)</span>, the production, product-allocation, and money-market equations give</p>
 <p><span class="math display">\[
-d_i
+d^{(i)}
 =
 \theta
 \left(
-g_{i+1}-\beta_{i+2}
+g^{(i+1)}-\beta^{(i+2)}
 \right)
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-g_i^2
+\left(g^{(i)}\right)^{2}
 -
-(\beta_{i+1}+d_i)g_i
+(\beta^{(i+1)}+d^{(i)})g^{(i)}
 -
-(1-\theta)\beta_{i+1}g_{i+1}
+(1-\theta)\beta^{(i+1)}g^{(i+1)}
 =
 0
 \]</span></p>
 <p>Equivalently, the positive-root recursion is</p>
 <p><span class="math display">\[
-g_i
+g^{(i)}
 =
 \frac{
-\beta_{i+1}
+\beta^{(i+1)}
 +
-\theta(g_{i+1}-\beta_{i+2})
+\theta(g^{(i+1)}-\beta^{(i+2)})
 +
 \sqrt{
-[\beta_{i+1}+\theta(g_{i+1}-\beta_{i+2})]^2
+[\beta^{(i+1)}+\theta(g^{(i+1)}-\beta^{(i+2)})]^2
 +
-4(1-\theta)\beta_{i+1}g_{i+1}
+4(1-\theta)\beta^{(i+1)}g^{(i+1)}
 }
 }{
 2
@@ -1582,19 +1588,19 @@ g_i
 \]</span></p>
 <p>Because the preference weights are geometric, consider a stationary proportional solution of the form</p>
 <p><span class="math display">\[
-g_i=C\beta_{i+1},
+g^{(i)}=C\beta^{(i+1)},
 \qquad
 i\geq2
 \]</span></p>
 <p>Since</p>
 <p><span class="math display">\[
-\beta_{i+2}=\rho\beta_{i+1}
+\beta^{(i+2)}=\rho\beta^{(i+1)}
 \]</span></p>
 <p>we have</p>
 <p><span class="math display">\[
-g_{i+1}-\beta_{i+2}
+g^{(i+1)}-\beta^{(i+2)}
 =
-\rho\beta_{i+1}(C-1)
+\rho\beta^{(i+1)}(C-1)
 \]</span></p>
 <p>Substituting these expressions into the recursive equation gives</p>
 <p><span class="math display">\[
@@ -1608,15 +1614,15 @@ C
 \]</span></p>
 <p>The equilibrium interest rate therefore satisfies</p>
 <p><span class="math display">\[
-1+r_i^*
+1+r^{(i)*}
 =
-\frac{g_i}{g_{i+1}}
+\frac{g^{(i)}}{g^{(i+1)}}
 =
 \frac1{\rho}
 \]</span></p>
 <p>and hence</p>
 <p><span class="math display">\[
-r_i^*
+r^{(i)*}
 =
 \frac1{\rho}-1,
 \qquad
@@ -1625,67 +1631,67 @@ i\geq2
 <p>Thus, away from the initial period, the infinite-horizon economy admits a constant equilibrium interest rate determined by the intertemporal discount factor.</p>
 <p>Here <span class="math inline">\(C-1=\rho(1-\theta)/(1-\theta\rho)&gt;0\)</span>. The implied money prices are</p>
 <p><span class="math display">\[
-p_{m_i}=w(g_i-g_{i+1})=wC(1-\rho)\beta_{i+1},
+p_m^{(i)}=w(g^{(i)}-g^{(i+1)})=wC(1-\rho)\beta^{(i+1)},
 \qquad i\geq2
 \]</span></p>
 <p>They are positive and summable, and satisfy</p>
 <p><span class="math display">\[
-\sum_{j=i}^{\infty}p_{m_j}=wC\beta_{i+1}=wg_i,
+\sum_{j=i}^{\infty}p_m^{(j)}=wC\beta^{(i+1)}=wg^{(i)},
 \qquad i\geq2
 \]</span></p>
-<p>Thus the tail-value definition is satisfied and <span class="math inline">\(v_i\rightarrow0\)</span> as <span class="math inline">\(i\rightarrow\infty\)</span>.</p>
-<p>For the initial period, set <span class="math inline">\(g_2=C\beta_3\)</span> and use the first-period formula</p>
+<p>Thus the tail-value definition is satisfied and <span class="math inline">\(v^{(i)}\rightarrow0\)</span> as <span class="math inline">\(i\rightarrow\infty\)</span>.</p>
+<p>For the initial period, set <span class="math inline">\(g^{(2)}=C\beta^{(3)}\)</span> and use the first-period formula</p>
 <p><span class="math display">\[
-d_1=\frac{\theta}{1-\theta}(g_2-\beta_3),
+d^{(1)}=\frac{\theta}{1-\theta}(g^{(2)}-\beta^{(3)}),
 \qquad
-g_1=\frac{\beta_2+d_1+\sqrt{(\beta_2+d_1)^2+4\beta_2g_2}}{2}
+g^{(1)}=\frac{\beta^{(2)}+d^{(1)}+\sqrt{(\beta^{(2)}+d^{(1)})^2+4\beta^{(2)}g^{(2)}}}{2}
 \]</span></p>
-<p>Since <span class="math inline">\(1&lt;C&lt;2\)</span> and <span class="math inline">\(\beta_2&gt;\beta_3\)</span>, the same root comparison as in the finite-horizon model gives <span class="math inline">\(g_1&gt;g_2\)</span>. Consequently, <span class="math inline">\(r_1^*=g_1/g_2-1&gt;0\)</span> and <span class="math inline">\(p_{m_1}=w(g_1-g_2)&gt;0\)</span>. The first-period investment share remains the one given in the capital-path subsection; the constant investment share derived below applies from period 2 onward.</p>
+<p>Since <span class="math inline">\(1&lt;C&lt;2\)</span> and <span class="math inline">\(\beta^{(2)}&gt;\beta^{(3)}\)</span>, the same root comparison as in the finite-horizon model gives <span class="math inline">\(g^{(1)}&gt;g^{(2)}\)</span>. Consequently, <span class="math inline">\(r^{(1)*}=g^{(1)}/g^{(2)}-1&gt;0\)</span> and <span class="math inline">\(p_m^{(1)}=w(g^{(1)}-g^{(2)})&gt;0\)</span>. The first-period investment share remains the one given in the capital-path subsection; the constant investment share derived below applies from period 2 onward.</p>
 <p>The investment share also becomes constant. For <span class="math inline">\(i\geq2\)</span>,</p>
 <p><span class="math display">\[
-s_i^*
+s^{(i)*}
 =
 \frac{
-\theta(g_{i+1}-\beta_{i+2})
+\theta(g^{(i+1)}-\beta^{(i+2)})
 }{
-g_i-\beta_{i+1}
+g^{(i)}-\beta^{(i+1)}
 }
 \]</span></p>
-<p>Using <span class="math inline">\(g_i=C\beta_{i+1}\)</span> and <span class="math inline">\(\beta_{i+2}=\rho\beta_{i+1}\)</span> gives</p>
+<p>Using <span class="math inline">\(g^{(i)}=C\beta^{(i+1)}\)</span> and <span class="math inline">\(\beta^{(i+2)}=\rho\beta^{(i+1)}\)</span> gives</p>
 <p><span class="math display">\[
-s_i^*
+s^{(i)*}
 =
 \theta\rho
 \]</span></p>
 <p>Hence, capital accumulation satisfies</p>
 <p><span class="math display">\[
-k_{i+1}^*
+k^{(i+1)*}
 =
-\theta\rho y_i^*
+\theta\rho y^{(i)*}
 \]</span></p>
 <p>With the Cobb–Douglas production function</p>
 <p><span class="math display">\[
-y_i^*
+y^{(i)*}
 =
-\alpha_i
-(k_i^*)^\theta
-\omega_i^{1-\theta}
+\alpha^{(i)}
+(k^{(i)*})^\theta
+\left(\omega^{(i)}\right)^{1-\theta}
 \]</span></p>
 <p>the capital dynamics become</p>
 <p><span class="math display">\[
-k_{i+1}^*
+k^{(i+1)*}
 =
-\theta\rho\alpha_i
-(k_i^*)^\theta
-\omega_i^{1-\theta}
+\theta\rho\alpha^{(i)}
+(k^{(i)*})^\theta
+\left(\omega^{(i)}\right)^{1-\theta}
 \]</span></p>
 <p>If productivity and labor endowment are constant over time,</p>
 <p><span class="math display">\[
-\alpha_i=\alpha
+\alpha^{(i)}=\alpha
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-\omega_i=\omega
+\omega^{(i)}=\omega
 \]</span></p>
 <p>the economy admits a steady state satisfying</p>
 <p><span class="math display">\[
@@ -1731,7 +1737,7 @@ s^*
 \theta\rho
 \]</span></p>
 <p>respectively.</p>
-<p>The first production period remains structurally different because the initial capital stock is owned by the consumer and must be purchased using money. Consequently, <span class="math inline">\(r_1^*\)</span> need not equal the stationary interest rate. It represents an initial transition condition, whereas from period 2 onward capital is accumulated internally by the firm and the stationary recursion applies.</p>
+<p>The first production period remains structurally different because the initial capital stock is owned by the consumer and must be purchased using money. Consequently, <span class="math inline">\(r^{(1)*}\)</span> need not equal the stationary interest rate. It represents an initial transition condition, whereas from period 2 onward capital is accumulated internally by the firm and the stationary recursion applies.</p>
 </section>
 <section id="steady-state-a-4times2-equality-form-wide-sense-structural-equilibrium-model" class="level2">
 <h2 class="anchored" data-anchor-id="steady-state-a-4times2-equality-form-wide-sense-structural-equilibrium-model">Steady State: A <span class="math inline">\(4\times2\)</span> Equality-Form Wide-Sense Structural Equilibrium Model</h2>
@@ -1901,12 +1907,12 @@ p_l^*\omega+c^*
 \]</span></p>
 <p>The corresponding money holdings are</p>
 <p><span class="math display">\[
-h^{f*}
+h_f^*
 =
 \frac{\rho(1-\theta)}
 {1+\rho-2\theta\rho},
 \qquad
-h^{c*}
+h_c^*
 =
 \frac{1-\theta\rho}
 {1+\rho-2\theta\rho}
