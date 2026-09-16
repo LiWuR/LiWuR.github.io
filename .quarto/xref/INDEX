@@ -73,5 +73,14 @@
   },
   "models/IntertemporalExtended/ExchangeRates_PureExchange.qmd": {
     "ExchangeRates_PureExchange.html": "79b2f6f5"
+  },
+  "notes/economics/index.qmd": {
+    "index.html": "dc6ce188"
+  },
+  "notes/miscellaneous/index.qmd": {
+    "index.html": "db2ef7fe"
+  },
+  "notes/index.qmd": {
+    "index.html": "b7cb5338"
   }
 }

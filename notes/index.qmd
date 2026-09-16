@@ -1,0 +1,5 @@
+---
+title: "Notes"
+format: html
+---
+A collection of essays and thoughts in Chinese.

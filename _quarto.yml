@@ -11,6 +11,8 @@ website:
         text: Home
       - href: models/index.qmd
         text: Models        
+      - href: notes/index.qmd
+        text: Notes        
       - href: discussion.qmd
         text: Discussion
 
@@ -47,6 +49,20 @@ website:
             - models/IntertemporalExtended/EndogenousInterestRatesAndCapitalAccumulation.qmd
             - models/IntertemporalExtended/ExchangeRates.qmd
             - models/IntertemporalExtended/ExchangeRates_PureExchange.qmd
+
+    - title: "Notes"
+      style: "docked"
+      search: true
+      collapse-level: 1
+      contents:
+        - notes/index.qmd
+
+        - section: "Economics"
+          contents:
+             - notes/economics/index.qmd
+        - section: "Miscellaneous"
+          contents:
+             - notes/miscellaneous/index.qmd
 
 
 format:
